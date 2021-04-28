@@ -1,0 +1,24 @@
+{
+	"name": "nictiz.fhir.nl.stu3.iwlz",
+	"version": "dev",
+	"homepage": "",
+	"title": "FHIR implementation of iWlz",
+	"description": "NL package of FHIR STU3 conformance resources for iWlz.",
+	"dependencies": {
+		"hl7.fhir.r3.core": "3.0.2",
+		"nictiz.fhir.nl.stu3.zib2017": "2.1.x"
+	},
+	"keywords": [
+		"nl",
+		"Nictiz",
+		"iWlz"
+	],
+	"author": "Nictiz",
+	"maintainers": [
+		{
+			"name": "Nictiz",
+			"email": "info@nictiz.nl"
+		}
+	],
+	"license": "CC0-1.0"
+}
