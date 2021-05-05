@@ -101,6 +101,10 @@
       <path value="Condition.abatement[x]" />
       <max value="0" />
     </element>
+    <element id="Condition.assertedDate">
+      <path value="Condition.assertedDate" />
+      <max value="0" />
+    </element>
     <element id="Condition.asserter">
       <path value="Condition.asserter" />
       <max value="0" />
