@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="iwlz-Stoornis" />
-  <url value="http://fhir.nl/fhir/StructureDefinition/iwlz-Stoornis" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis" />
   <name value="iwlz-Stoornis" />
   <title value="iWlz Stoornis" />
   <status value="draft" />
@@ -31,9 +31,10 @@
     <element id="Condition.extension:prognose">
       <path value="Condition.extension" />
       <sliceName value="prognose" />
+      <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://fhir.nl/fhir/StructureDefinition/iwlz-Stoornis-Prognose" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis-Prognose" />
       </type>
     </element>
     <element id="Condition.extension:prognose.valueCodeableConcept:valueCodeableConcept">
@@ -41,7 +42,7 @@
       <sliceName value="valueCodeableConcept" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Prognose" />
+        <map value="Stoornis-Prognose" />
       </mapping>
     </element>
     <element id="Condition.identifier">
@@ -58,9 +59,11 @@
     </element>
     <element id="Condition.category">
       <path value="Condition.category" />
+      <min value="1" />
+      <max value="1" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Grondslag" />
+        <map value="Stoornis-Grondslag" />
       </mapping>
     </element>
     <element id="Condition.severity">
@@ -69,13 +72,20 @@
     </element>
     <element id="Condition.code">
       <path value="Condition.code" />
+      <min value="1" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Diagnose Codelijst" />
+        <map value="Stoornis-Diagnose Codelijst" />
+        <comment value="Af te leiden uit .system van Stoornis-Ziektebeeld stoornis" />
       </mapping>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Diagnose Subcodelijst" />
+        <map value="Stoornis-Diagnose Subcodelijst" />
+        <comment value="Af te leiden uit .system van Stoornis-Ziektebeeld stoornis" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Stoornis-Ziektebeeld stoornis" />
       </mapping>
     </element>
     <element id="Condition.bodySite">
@@ -86,7 +96,7 @@
       <path value="Condition.subject" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Burger" />
       </type>
     </element>
     <element id="Condition.context">
@@ -115,23 +125,20 @@
     </element>
     <element id="Condition.evidence.code">
       <path value="Condition.evidence.code" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Ziektebeeld stoornis" />
-      </mapping>
+      <max value="0" />
     </element>
     <element id="Condition.evidence.detail">
       <path value="Condition.evidence.detail" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/iwlz-Stoornisscore" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornisscore" />
       </type>
     </element>
     <element id="Condition.note">
       <path value="Condition.note" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Commentaar" />
+        <map value="Stoornis-Commentaar" />
       </mapping>
     </element>
   </differential>
