@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://example.org/fhir/StructureDefinition/iWlz-Client" />
+  <name value="iWlz-Client" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="iWlz" />
+    <uri value="https://informatiemodel.istandaarden.nl/iWlz22/" />
+    <name value="iWlz" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <mapping>
+        <identity value="iWlz" />
+        <map value="Client-Burger" />
+      </mapping>
+    </element>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.extension:geboorteplaats-geboorteland">
+      <path value="Patient.extension" />
+      <sliceName value="geboorteplaats-geboorteland" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
+      </type>
+    </element>
+    <element id="Patient.extension:geboorteplaats-geboorteland.valueAddress:valueAddress">
+      <path value="Patient.extension.valueAddress" />
+      <sliceName value="valueAddress" />
+    </element>
+    <element id="Patient.extension:geboorteplaats-geboorteland.valueAddress:valueAddress.city">
+      <path value="Patient.extension.valueAddress.city" />
+      <mapping>
+        <identity value="iWlz" />
+        <map value="Burger-Geboorteplaats" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:geboorteplaats-geboorteland.valueAddress:valueAddress.country">
+      <path value="Patient.extension.valueAddress.country" />
+      <mapping>
+        <identity value="iWlz" />
+        <map value="Burger-Geboorteland" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier:identificatienummerClient">
+      <path value="Patient.identifier" />
+      <sliceName value="identificatienummerClient" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="iWlz" />
+        <map value="Burger-Identificatienummer client" />
+      </mapping>
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <mapping>
+        <identity value="iWlz" />
+        <map value="Burger-Geslacht" />
+      </mapping>
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <mapping>
+        <identity value="iWlz" />
+        <map value="Burger-Geboortedatum" />
+      </mapping>
+    </element>
+    <element id="Patient.deceased[x]:deceasedDateTime">
+      <path value="Patient.deceasedDateTime" />
+      <sliceName value="deceasedDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="iWlz" />
+        <map value="Burger-Datum overlijden" />
+      </mapping>
+    </element>
+    <element id="Patient.address.country.extension">
+      <path value="Patient.address.country.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.address.country.extension:countryCode">
+      <path value="Patient.address.country.extension" />
+      <sliceName value="countryCode" />
+    </element>
+    <element id="Patient.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
+      <path value="Patient.address.country.extension.valueCodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.address.country.extension">
+      <path value="Patient.contact.address.country.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.address.country.extension:countryCode">
+      <path value="Patient.contact.address.country.extension" />
+      <sliceName value="countryCode" />
+    </element>
+    <element id="Patient.contact.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
+      <path value="Patient.contact.address.country.extension.valueCodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+  </differential>
+</StructureDefinition>

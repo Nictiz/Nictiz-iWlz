@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://example.org/fhir/StructureDefinition/iWlz-Naamgegevens" />
+  <name value="iWlz-Naamgegevens" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+    <mapping>
+        <identity value="iWlz" />
+        <uri value="https://informatiemodel.istandaarden.nl/iWlz22/" />
+        <name value="iWlz" />
+    </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="HumanName" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-humanname" />
+  <derivation value="constraint" />
+  <differential>
+      <element id="HumanName.extension">
+          <path value="HumanName.extension" />
+          <slicing>
+              <discriminator>
+                  <type value="value" />
+                  <path value="url" />
+              </discriminator>
+              <rules value="open" />
+          </slicing>
+      </element>
+      <element id="HumanName.extension:humannameAssemblyOrder">
+          <path value="HumanName.extension" />
+          <sliceName value="humannameAssemblyOrder" />
+          <mapping>
+              <identity value="iWlz" />
+              <map value="Naamgegevens-Aanduiding naamgebruik" />
+              <comment value="ConceptMap nodig?" />
+          </mapping>
+      </element>
+      <element id="HumanName.family.extension">
+          <path value="HumanName.family.extension" />
+          <slicing>
+              <discriminator>
+                  <type value="value" />
+                  <path value="url" />
+              </discriminator>
+              <rules value="open" />
+          </slicing>
+      </element>
+      <element id="HumanName.family.extension:humannameOwnPrefix">
+          <path value="HumanName.family.extension" />
+          <sliceName value="humannameOwnPrefix" />
+          <mapping>
+              <identity value="iWlz" />
+              <map value="Naamgegevens-Voorvoegsel geslachtsnaam" />
+          </mapping>
+      </element>
+      <element id="HumanName.family.extension:humannameOwnName">
+          <path value="HumanName.family.extension" />
+          <sliceName value="humannameOwnName" />
+          <mapping>
+              <identity value="iWlz" />
+              <map value="Naamgegevens-Geslachtsnaam" />
+          </mapping>
+      </element>
+      <element id="HumanName.family.extension:humannamePartnerPrefix">
+          <path value="HumanName.family.extension" />
+          <sliceName value="humannamePartnerPrefix" />
+          <mapping>
+              <identity value="iWlz" />
+              <map value="Naamgegevens-VoorvoegselsPartner" />
+          </mapping>
+      </element>
+      <element id="HumanName.family.extension:humannamePartnerName">
+          <path value="HumanName.family.extension" />
+          <sliceName value="humannamePartnerName" />
+          <mapping>
+              <identity value="iWlz" />
+              <map value="Naamgegevens-GeslachtsnaamPartner" />
+          </mapping>
+      </element>
+      <element id="HumanName.given">
+          <path value="HumanName.given" />
+          <mapping>
+              <identity value="iWlz" />
+              <map value="Naamgegevens-Voornamen. Qualifier 'BR'" />
+          </mapping>
+          <mapping>
+              <identity value="iWlz" />
+              <map value="Naamgegevens-Initialen. Qualifier 'IN'" />
+          </mapping>
+          <mapping>
+              <identity value="iWlz" />
+              <map value="Naamgegevens-Roepnaam. Qualifier 'CL'" />
+          </mapping>
+      </element>
+      <element id="HumanName.prefix">
+          <path value="HumanName.prefix" />
+          <mapping>
+              <identity value="iWlz" />
+              <map value="Naamgegevens-Adellijke titel/predikaat" />
+          </mapping>
+      </element>
+      
+  </differential>
+</StructureDefinition>
