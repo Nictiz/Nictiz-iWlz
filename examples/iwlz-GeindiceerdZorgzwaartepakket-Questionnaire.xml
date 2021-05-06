@@ -52,11 +52,8 @@
     <item>
         <linkId value="6"/>
         <text value="Identificerende code van de instelling die de voorkeur heeft van de client."/>
-        <type value="choice"/>
+        <type value="string"/>
         <required value="false"/>
-        <options>
-            <reference value="ValueSet/xxxx"/>
-        </options>
     </item>
     <item>
         <linkId value="7"/>
