@@ -179,8 +179,16 @@
         <map value="Indicatie-Grondslag 02" />
       </mapping>
     </element>
+    <element id="Composition.section:grondslagen.text">
+      <path value="Composition.section.text" />
+      <max value="0" />
+    </element>
     <element id="Composition.section:grondslagen.mode">
       <path value="Composition.section.mode" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:grondslagen.orderedBy">
+      <path value="Composition.section.orderedBy" />
       <max value="0" />
     </element>
     <element id="Composition.section:grondslagen.entry">
@@ -215,6 +223,14 @@
       <path value="Composition.section.title" />
       <min value="1" />
       <fixedString value="GeindiceerdZorgzwaartepakket" />
+    </element>
+    <element id="Composition.section:geindiceerdZorgzwaartepakket.code">
+      <path value="Composition.section.code" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:geindiceerdZorgzwaartepakket.text">
+      <path value="Composition.section.text" />
+      <max value="0" />
     </element>
     <element id="Composition.section:geindiceerdZorgzwaartepakket.mode">
       <path value="Composition.section.mode" />
