@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-GeindiceerdZorgzwaartepakket" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket" />
+  <name value="iwlz-GeindiceerdZorgzwaartepakket" />
+  <title value="iWlz GeindiceerdZorgzwaartepakket" />
+  <status value="draft" />
+  <description value="Gegevens over een geindiceerd zorgzwaartepakket." />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="iwlz-gegevensmatrix" />
+    <uri value="https://nictiznl.sharepoint.com/:x:/r/sites/MedMij-Standaarden2/_layouts/15/Doc.aspx?sourcedoc=%7B3BBAC9E3-7884-4BD2-98ED-A87AA4EE7AF7%7D&amp;file=iWlz-FHIR-v2.xlsx&amp;action=default&amp;mobileredirect=true" />
+    <name value="iWlz Gegevensmatrix" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="QuestionnaireResponse" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="QuestionnaireResponse.identifier">
+      <path value="QuestionnaireResponse.identifier" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.basedOn">
+      <path value="QuestionnaireResponse.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.parent">
+      <path value="QuestionnaireResponse.parent" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.questionnaire">
+      <path value="QuestionnaireResponse.questionnaire" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.subject">
+      <path value="QuestionnaireResponse.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Burger" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.context">
+      <path value="QuestionnaireResponse.context" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.authored">
+      <path value="QuestionnaireResponse.authored" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.author">
+      <path value="QuestionnaireResponse.author" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.source">
+      <path value="QuestionnaireResponse.source" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item">
+      <path value="QuestionnaireResponse.item" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="linkId" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="3" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="zzpCode" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="klasse" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="voorkeurClient" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="instellingVoorkeur" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="commentaar" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
