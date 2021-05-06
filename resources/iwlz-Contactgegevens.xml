@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-Contactgegevens" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Contactgegevens" />
+  <name value="iwlz-Contactgegevens" />
+  <title value="iWlz Contactgegevens" />
+  <status value="draft" />
+  <description value="Gegevens van de contactpersoon en cliënt." />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-contactinformation-v2.0.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)" />
+    <name value="ContactInformation as part of HCIM Patient-v2.0.1(2015EN)" />
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v3.0(2016EN)" />
+    <name value="ContactInformation as part of HCIM Patient-v3.0(2016EN)" />
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.0(2017EN)" />
+    <name value="HCIM ContactInformation-v1.0.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="iwlz-gegevensmatrix" />
+    <uri value="https://nictiznl.sharepoint.com/:x:/r/sites/MedMij-Standaarden2/_layouts/15/Doc.aspx?sourcedoc=%7B3BBAC9E3-7884-4BD2-98ED-A87AA4EE7AF7%7D&amp;file=iWlz-FHIR-v2.xlsx&amp;action=default&amp;mobileredirect=true" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="ContactPoint" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ContactPoint.extension">
+      <path value="ContactPoint.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ContactPoint.extension:toelichting">
+      <path value="ContactPoint.extension" />
+      <sliceName value="toelichting" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Toelichting" />
+      </type>
+    </element>
+    <element id="ContactPoint.extension:toelichting.valueString:valueString">
+      <path value="ContactPoint.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Contactgegevens-Toelichting" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.value">
+      <path value="ContactPoint.value" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Contactgegevens-Telefoonnummer" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Contactgegevens-Emailadres" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.use">
+      <path value="ContactPoint.use" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Contactgegevens-Nummersoort" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.period">
+      <path value="ContactPoint.period" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -5,7 +5,7 @@
   <name value="iwlz-Burger" />
   <title value="iWlz Burger" />
   <status value="draft" />
-  <description value="Een natuurlijk persoon" />
+  <description value="Een natuurlijk persoon&#xD;&#xA;&#xD;&#xA;Includes iwlz-Relatie" />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="iwlz-gegevensmatrix" />
@@ -179,6 +179,47 @@
       <path value="Patient.photo" />
       <max value="0" />
     </element>
+    <element id="Patient.contact">
+      <path value="Patient.contact" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Relatie" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.relationship:relationship">
+      <path value="Patient.contact.relationship" />
+      <sliceName value="relationship" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Relatie-Relatie" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.relationship:role">
+      <path value="Patient.contact.relationship" />
+      <sliceName value="role" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Relatie-Rol" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name">
+      <path value="Patient.contact.name" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Naamgegevens" />
+      </type>
+    </element>
+    <element id="Patient.contact.telecom">
+      <path value="Patient.contact.telecom" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Contactgegevens" />
+      </type>
+    </element>
+    <element id="Patient.contact.address">
+      <path value="Patient.contact.address" />
+      <max value="0" />
+    </element>
     <element id="Patient.contact.address.country.extension">
       <path value="Patient.contact.address.country.extension" />
       <slicing>
@@ -202,6 +243,18 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Patient.contact.gender">
+      <path value="Patient.contact.gender" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.organization">
+      <path value="Patient.contact.organization" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.period">
+      <path value="Patient.contact.period" />
+      <max value="0" />
     </element>
     <element id="Patient.animal">
       <path value="Patient.animal" />
