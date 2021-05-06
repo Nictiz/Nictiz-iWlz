@@ -50,11 +50,11 @@
     <evidence>
         <detail>
             <reference value="Observation/iwlz-StoornisScore-01"/>
-            <display value="Handhaving hoofdbalans - continu hulp, toezicht of sturing nodig"/>
+            <display value="Motorisch functioneren - Handhaving hoofdbalans - continu hulp, toezicht of sturing nodig"/>
         </detail>
         <detail>
             <reference value="Observation/iwlz-BeperkingScore-01"/>
-            <display value="TODO"/>
+            <display value="Mobiliteit - Zich voortbewegen binnenshuis - Kan dit slechts met veel moeite"/>
         </detail>
     </evidence>
     <note>
