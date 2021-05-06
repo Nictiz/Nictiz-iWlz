@@ -131,7 +131,7 @@
       <path value="Condition.evidence.detail" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornisscore" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-StoornisScore" />
       </type>
     </element>
     <element id="Condition.note">

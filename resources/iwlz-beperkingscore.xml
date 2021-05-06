@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="iwlz-StoornisScore" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-StoornisScore" />
-  <name value="iwlz-StoornisScore" />
-  <title value="iWlz StoornisScore" />
+  <id value="iwlz-BeperkingScore" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore" />
+  <name value="iwlz-BeperkingScore" />
+  <title value="iWlz BeperkingScore" />
   <status value="draft" />
-  <description value="Scoregegevens over ziektebeeld / stoornis van de client." />
+  <description value="Scoregegevens over beperkingen van de client." />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="iwlz-gegevensmatrix" />
@@ -28,13 +28,18 @@
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
-      <max value="0" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Beperking-Categorie" />
+      </mapping>
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornisscore-Stoornis vraag" />
+        <map value="Beperking score-Beperking vraag" />
       </mapping>
     </element>
     <element id="Observation.subject">
@@ -70,7 +75,7 @@
       </type>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornisscore-Stoornis score" />
+        <map value="Beperking score-Beperking score" />
       </mapping>
     </element>
     <element id="Observation.dataAbsentReason">
@@ -114,6 +119,51 @@
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <max value="1" />
+    </element>
+    <element id="Observation.component:duur">
+      <path value="Observation.component" />
+      <sliceName value="duur" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:duur.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="https://informatiemodel.istandaarden.nl/iWlz22/" />
+          <code value="LDT_Duur" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:duur.value[x]:valueCodeableConcept">
+      <path value="Observation.component.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Beperking-Duur" />
+      </mapping>
+    </element>
+    <element id="Observation.component:duur.dataAbsentReason">
+      <path value="Observation.component.dataAbsentReason" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component:duur.interpretation">
+      <path value="Observation.component.interpretation" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component:duur.referenceRange">
+      <path value="Observation.component.referenceRange" />
       <max value="0" />
     </element>
   </differential>
