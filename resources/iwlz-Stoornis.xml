@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-Stoornis" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis" />
+  <name value="iwlz-Stoornis" />
+  <title value="iWlz Stoornis" />
+  <status value="draft" />
+  <description value="Diagnostische gegevens m.b.t. ziektebeeld en/of stoornis van de client." />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="iwlz-gegevensmatrix" />
+    <uri value="https://nictiznl.sharepoint.com/:x:/r/sites/MedMij-Standaarden2/_layouts/15/Doc.aspx?sourcedoc=%7B3BBAC9E3-7884-4BD2-98ED-A87AA4EE7AF7%7D&amp;file=iWlz-FHIR-v2.xlsx&amp;action=default&amp;mobileredirect=true" />
+    <name value="iWlz Gegevensmatrix" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition.extension">
+      <path value="Condition.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.extension:prognose">
+      <path value="Condition.extension" />
+      <sliceName value="prognose" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis-Prognose" />
+      </type>
+    </element>
+    <element id="Condition.extension:prognose.valueCodeableConcept:valueCodeableConcept">
+      <path value="Condition.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Stoornis-Prognose" />
+      </mapping>
+    </element>
+    <element id="Condition.identifier">
+      <path value="Condition.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus" />
+      <max value="0" />
+    </element>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus" />
+      <max value="0" />
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Stoornis-Grondslag" />
+      </mapping>
+    </element>
+    <element id="Condition.severity">
+      <path value="Condition.severity" />
+      <max value="0" />
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Stoornis-Diagnose Codelijst" />
+        <comment value="Af te leiden uit .system van Stoornis-Ziektebeeld stoornis" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Stoornis-Diagnose Subcodelijst" />
+        <comment value="Af te leiden uit .system van Stoornis-Ziektebeeld stoornis" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Stoornis-Ziektebeeld stoornis" />
+      </mapping>
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+      <max value="0" />
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Burger" />
+      </type>
+    </element>
+    <element id="Condition.context">
+      <path value="Condition.context" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]">
+      <path value="Condition.onset[x]" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]">
+      <path value="Condition.abatement[x]" />
+      <max value="0" />
+    </element>
+    <element id="Condition.assertedDate">
+      <path value="Condition.assertedDate" />
+      <max value="0" />
+    </element>
+    <element id="Condition.asserter">
+      <path value="Condition.asserter" />
+      <max value="0" />
+    </element>
+    <element id="Condition.stage">
+      <path value="Condition.stage" />
+      <max value="0" />
+    </element>
+    <element id="Condition.evidence.code">
+      <path value="Condition.evidence.code" />
+      <max value="0" />
+    </element>
+    <element id="Condition.evidence.detail">
+      <path value="Condition.evidence.detail" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-StoornisScore" />
+      </type>
+    </element>
+    <element id="Condition.note">
+      <path value="Condition.note" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Stoornis-Commentaar" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

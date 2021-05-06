@@ -1,0 +1,63 @@
+<Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/condition.xsd">
+    <id value="iwlz-Stoornis-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis-Prognose">
+        <valueCodeableConcept>
+            <coding>
+                <!-- COD737: Prognose (Enumeratie) -->
+                <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31380"/>
+                <code value="01"/>
+                <display value="Uitzicht op volledig herstel binnen 1 jaar"/>
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <category>
+        <coding>
+            <!-- COD736: Grondslag zorg (Enumeratie) -->
+            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_4.html?object=38892"/>
+            <code value="04"/>
+            <display value="lichamelijke handicap (functiestoornis)"/>
+        </coding>
+    </category>
+    
+    <!-- Eveunteel een optie om hier de diagnosecodelijsten te gebruiken als category
+        https://informatiemodel.istandaarden.nl/iWlz22/views/view_30280.html -->
+    <category>
+        <coding>
+            <!-- COD392 + COD770 -->
+            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_4.html?object=38892"/>
+            <code value="014-06"/>
+            <display value="Classificatie van ziekten (CVZ/ICD-10) 3e aandoening"/>
+        </coding>
+    </category>
+    
+    <code>
+        <!-- Kunnen COD392: Diagnosecodelijst en COD770: Subcode diagnosecodelijst worden afgeleid uit het gebruikte system?  -->
+        <!-- https://informatiemodel.istandaarden.nl/iWlz22/views/view_30280.html -->
+        <coding>
+            <!-- COD923: ICD10/DSMIV (subset) (Enumeratie) - https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=32031 -->
+            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=32031"/>
+            <code value="19"/>
+            <display value="Letsel en gevolgen van uitwendige oorzaken"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/iwlz-Burger"/>
+        <display value="Johan XXX_Helleman"/>
+    </subject>
+    <evidence>
+        <detail>
+            <reference value="Observation/iwlz-StoornisScore-01"/>
+            <display value="Handhaving hoofdbalans - continu hulp, toezicht of sturing nodig"/>
+        </detail>
+        <detail>
+            <reference value="Observation/iwlz-BeperkingScore-01"/>
+            <display value="TODO"/>
+        </detail>
+    </evidence>
+    <note>
+        <text value="Dit is een voorbeeld van hoe een toelichting op de Stoornis in het bericht eruit kan zien."/>
+    </note>
+</Condition>

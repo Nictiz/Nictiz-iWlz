@@ -1,0 +1,28 @@
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
+    <id value="iwlz-Stoornisscore-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-StoornisScore"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <!-- COD824: Vraag stoornis (Enumeratie)  -->
+            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31341"/>
+            <code value="0305"/>
+            <display value="Motorisch functioneren - Handhaving hoofdbalans"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/iwlz-Burger-01"/>
+        <display value="Johan XXX_Helleman"/>
+    </subject>
+    <valueCodeableConcept>
+        <coding>
+            <!-- COD827: Score vraag stoornis (Enumeratie) -->
+            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31374"/>
+            <code value="03"/>
+            <display value="Wel probleem: continu hulp, toezicht of sturing nodig"/>
+        </coding>
+    </valueCodeableConcept>
+    <comment value="Dit is een voorbeeld van hoe een toelichting op de Stoornis in het bericht eruit kan zien."/>
+</Observation>
