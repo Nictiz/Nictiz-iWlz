@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="iwlz-Stoornisscore" />
-  <url value="http://fhir.nl/fhir/StructureDefinition/iwlz-Stoornisscore" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornisscore" />
   <name value="iwlz-Stoornisscore" />
   <title value="iWlz Stoornisscore" />
   <status value="draft" />
@@ -34,12 +34,16 @@
       <path value="Observation.code" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornis vraag" />
+        <map value="Stoornisscore-Stoornis vraag" />
       </mapping>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Burger" />
+      </type>
     </element>
     <element id="Observation.context">
       <path value="Observation.context" />
@@ -60,12 +64,13 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
+      <min value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornis score" />
+        <map value="Stoornisscore-Stoornis score" />
       </mapping>
     </element>
     <element id="Observation.dataAbsentReason">
@@ -80,7 +85,7 @@
       <path value="Observation.comment" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Commentaar" />
+        <map value="Stoornisscore-Commentaar" />
       </mapping>
     </element>
     <element id="Observation.bodySite">

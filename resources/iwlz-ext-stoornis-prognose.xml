@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="iwlz-Stoornis-Prognose" />
-  <url value="http://fhir.nl/fhir/StructureDefinition/iwlz-Stoornis-Prognose" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis-Prognose" />
   <name value="iwlz-Stoornis-Prognose" />
   <title value="iWlz Stoornis Prognose" />
   <status value="draft" />
@@ -16,7 +16,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://fhir.nl/fhir/StructureDefinition/iwlz-Stoornis-Prognose" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis-Prognose" />
     </element>
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
@@ -24,6 +24,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="COD737: Prognose (Enumeratie)" />
+        <valueSetUri value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31380" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
