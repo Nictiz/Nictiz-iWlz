@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-Idicatie" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Idicatie" />
+  <name value="iwlz-Idicatie" />
+  <title value="iWlz Idicatie" />
+  <status value="draft" />
+  <description value="Vastgestelde mate en aard van iemands zorgbehoefte." />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="iwlz-gegevensmatrix" />
+    <uri value="https://nictiznl.sharepoint.com/:x:/r/sites/MedMij-Standaarden2/_layouts/15/Doc.aspx?sourcedoc=%7B3BBAC9E3-7884-4BD2-98ED-A87AA4EE7AF7%7D&amp;file=iWlz-FHIR-v2.xlsx&amp;action=default&amp;mobileredirect=true" />
+    <name value="iWlz Gegevensmatrix" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Composition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Composition.extension">
+      <path value="Composition.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.extension:meerzorg">
+      <path value="Composition.extension" />
+      <sliceName value="meerzorg" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Idicatie-Meerzorg" />
+      </type>
+    </element>
+    <element id="Composition.extension:meerzorg.valueBoolean:valueBoolean">
+      <path value="Composition.extension.valueBoolean" />
+      <sliceName value="valueBoolean" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Indicatie-Meerzorg" />
+      </mapping>
+    </element>
+    <element id="Composition.identifier">
+      <path value="Composition.identifier" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Indicatie-Besluitnummer" />
+      </mapping>
+    </element>
+    <element id="Composition.identifier.system">
+      <path value="Composition.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Composition.identifier.value">
+      <path value="Composition.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/sid/icd-10" />
+          <code value="Indicatie" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.class">
+      <path value="Composition.class" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Indicatie-Soort indicatie" />
+      </mapping>
+    </element>
+    <element id="Composition.subject">
+      <path value="Composition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Burger" />
+      </type>
+    </element>
+    <element id="Composition.encounter">
+      <path value="Composition.encounter" />
+      <max value="0" />
+    </element>
+    <element id="Composition.date">
+      <path value="Composition.date" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Indicatie-Afgifte datum" />
+      </mapping>
+    </element>
+    <element id="Composition.confidentiality">
+      <path value="Composition.confidentiality" />
+      <max value="0" />
+    </element>
+    <element id="Composition.attester">
+      <path value="Composition.attester" />
+      <max value="0" />
+    </element>
+    <element id="Composition.custodian">
+      <path value="Composition.custodian" />
+      <max value="0" />
+    </element>
+    <element id="Composition.relatesTo">
+      <path value="Composition.relatesTo" />
+      <max value="0" />
+    </element>
+    <element id="Composition.event">
+      <path value="Composition.event" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.event.code">
+      <path value="Composition.event.code" />
+      <max value="0" />
+    </element>
+    <element id="Composition.event.period">
+      <path value="Composition.event.period" />
+      <min value="1" />
+    </element>
+    <element id="Composition.event.period.start">
+      <path value="Composition.event.period.start" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Indicatie-Ingangsdatum" />
+      </mapping>
+    </element>
+    <element id="Composition.event.period.end">
+      <path value="Composition.event.period.end" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Indicatie-Einddatum" />
+      </mapping>
+    </element>
+    <element id="Composition.event.detail">
+      <path value="Composition.event.detail" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section">
+      <path value="Composition.section" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="title" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Composition.section:grondslagen">
+      <path value="Composition.section" />
+      <sliceName value="grondslagen" />
+      <min value="1" />
+      <max value="2" />
+    </element>
+    <element id="Composition.section:grondslagen.title">
+      <path value="Composition.section.title" />
+      <min value="1" />
+      <fixedString value="Grondslagen" />
+    </element>
+    <element id="Composition.section:grondslagen.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Indicatie-Grondslag 01" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Indicatie-Grondslag 02" />
+      </mapping>
+    </element>
+    <element id="Composition.section:grondslagen.mode">
+      <path value="Composition.section.mode" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:grondslagen.entry">
+      <path value="Composition.section.entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-StoornisScore" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis" />
+      </type>
+    </element>
+    <element id="Composition.section:grondslagen.emptyReason">
+      <path value="Composition.section.emptyReason" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:grondslagen.section">
+      <path value="Composition.section.section" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:geindiceerdZorgzwaartepakket">
+      <path value="Composition.section" />
+      <sliceName value="geindiceerdZorgzwaartepakket" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:geindiceerdZorgzwaartepakket.title">
+      <path value="Composition.section.title" />
+      <min value="1" />
+      <fixedString value="GeindiceerdZorgzwaartepakket" />
+    </element>
+    <element id="Composition.section:geindiceerdZorgzwaartepakket.mode">
+      <path value="Composition.section.mode" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:geindiceerdZorgzwaartepakket.orderedBy">
+      <path value="Composition.section.orderedBy" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:geindiceerdZorgzwaartepakket.entry">
+      <path value="Composition.section.entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket" />
+      </type>
+    </element>
+    <element id="Composition.section:geindiceerdZorgzwaartepakket.emptyReason">
+      <path value="Composition.section.emptyReason" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:geindiceerdZorgzwaartepakket.section">
+      <path value="Composition.section.section" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -29,7 +29,7 @@
             <!-- COD828: Score beperking (Enumeratie) -->
             <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_4.html?object=33008"/>
             <code value="2"/>
-            <display value="WKan dit slechts met veel moeite/iemand anders moet helpen"/>
+            <display value="Kan dit slechts met veel moeite/iemand anders moet helpen"/>
         </coding>
     </valueCodeableConcept>
     <comment value="Dit is een voorbeeld van hoe een toelichting op de Stoornis in het bericht eruit kan zien."/>
