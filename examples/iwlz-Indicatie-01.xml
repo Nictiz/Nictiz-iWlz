@@ -45,19 +45,30 @@
         </period>
     </event>
     <section>
-        <title value=""/>
+        <title value="Grondslagen"/>
         <code>
+            <!-- Dit zit ook in Condition.code - zelfde gegeven -->
             <coding>
-                <system value=""/>
-                <code value=""/>
-                <display value=""/>
+                <!-- COD736: Grondslag zorg (Enumeratie) -->
+                <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_4.html?object=38892"/>
+                <code value="04"/>
+                <display value="lichamelijke handicap (functiestoornis)"/>
             </coding>
         </code>
+        <entry>
+            <reference value="Condition/iwlz-Stoornis-01"/>
+        </entry>
         <entry>
             <reference value="Observation/iwlz-StoornisScore-01"/>
         </entry>
         <entry>
             <reference value="Observation/iwlz-BeperkingScore-01"/>
+        </entry>
+    </section>
+    <section>
+        <title value="GeindiceerdZorgzwaartepakket"/>
+        <entry>
+            <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-01"/>
         </entry>
     </section>
 </Composition>
