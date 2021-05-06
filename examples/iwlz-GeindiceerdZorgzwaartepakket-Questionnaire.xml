@@ -21,9 +21,6 @@
         <text value="De datum die aangeeft vanaf welke datum de geindiceerde zorgeenheid rechtsgeldig is. "/>
         <type value="date"/>
         <required value="true"/>
-        <options>
-            <reference value="ValueSet/xxxx"/>
-        </options>
     </item>
     <item>
         <linkId value="3"/>
