@@ -1,0 +1,67 @@
+<Questionnaire xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/Questionnaire.xsd">
+    <id value="iwlz-GeindiceerdZorgzwaartepakket-Questionnaire"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire"/>
+    </meta>
+    <url value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket"/>
+    <name value="GeindiceerdZorgzwaartepakket"/>
+    <title value="GeindiceerdZorgzwaartepakket"/>
+    <status value="active"/>
+    <item>
+        <linkId value="1"/>
+        <text value="Gecodeerde aanduiding van een zorgzwaartepakket."/>
+        <type value="choice"/>
+        <required value="true"/>
+        <options>
+            <reference value="ValueSet/xxxx"/>
+        </options>
+    </item>
+    <item>
+        <linkId value="2"/>
+        <text value="De datum die aangeeft vanaf welke datum de geindiceerde zorgeenheid rechtsgeldig is. "/>
+        <type value="date"/>
+        <required value="true"/>
+        <options>
+            <reference value="ValueSet/xxxx"/>
+        </options>
+    </item>
+    <item>
+        <linkId value="3"/>
+        <text value="De datum die aangeeft tot en met welke datum de geindiceerde zorgeenheid rechtsgeldig is."/>
+        <type value="date"/>
+        <required value="false"/>
+    </item>
+    <item>
+        <linkId value="4"/>
+        <text value="Gegevens over een geindiceerd zorgzwaartepakket"/>
+        <type value="choice"/>
+        <required value="true"/>
+        <options>
+            <reference value="ValueSet/xxxx"/>
+        </options>
+    </item>
+    <item>
+        <linkId value="5"/>
+        <text value="Gecodeerde aanduiding van de voorkeur van de client ten aanzien van plaats en vorm van zorglevering. "/>
+        <type value="choice"/>
+        <required value="false"/>
+        <options>
+            <reference value="ValueSet/xxxx"/>
+        </options>
+    </item>
+    <item>
+        <linkId value="6"/>
+        <text value="Identificerende code van de instelling die de voorkeur heeft van de client."/>
+        <type value="choice"/>
+        <required value="false"/>
+        <options>
+            <reference value="ValueSet/xxxx"/>
+        </options>
+    </item>
+    <item>
+        <linkId value="7"/>
+        <text value="Vrije tekst (bijvoorbeeld toelichting) in een bericht."/>
+        <type value="string"/>
+        <required value="false"/>
+    </item>
+</Questionnaire>

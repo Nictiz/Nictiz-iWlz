@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="iwlz-GeindiceerdZorgzwaartepakket" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket" />
-  <name value="iwlz-GeindiceerdZorgzwaartepakket" />
-  <title value="iWlz GeindiceerdZorgzwaartepakket" />
+  <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse" />
+  <name value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse" />
+  <title value="iWlz GeindiceerdZorgzwaartepakket QuestionnaireResponse" />
   <status value="draft" />
   <description value="Gegevens over een geindiceerd zorgzwaartepakket." />
   <fhirVersion value="3.0.2" />
@@ -85,7 +85,7 @@
     </element>
     <element id="QuestionnaireResponse.item:zzpCode.text">
       <path value="QuestionnaireResponse.item.text" />
-      <max value="0" />
+      <fixedString value="Gecodeerde aanduiding van een zorgzwaartepakket." />
     </element>
     <element id="QuestionnaireResponse.item:zzpCode.subject">
       <path value="QuestionnaireResponse.item.subject" />
@@ -96,7 +96,92 @@
       <min value="1" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:zzpCode.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
     <element id="QuestionnaireResponse.item:zzpCode.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="ingangsdatum" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="De datum die aangeeft vanaf welke datum de geindiceerde zorgeenheid rechtsgeldig is." />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.answer.value[x]:valueDate">
+      <path value="QuestionnaireResponse.item.answer.valueDate" />
+      <sliceName value="valueDate" />
+      <min value="1" />
+      <type>
+        <code value="date" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="einddatum" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.answer.value[x]:valueDate">
+      <path value="QuestionnaireResponse.item.answer.valueDate" />
+      <sliceName value="valueDate" />
+      <min value="1" />
+      <type>
+        <code value="date" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.item">
       <path value="QuestionnaireResponse.item.item" />
       <max value="0" />
     </element>
@@ -112,10 +197,27 @@
     </element>
     <element id="QuestionnaireResponse.item:klasse.text">
       <path value="QuestionnaireResponse.item.text" />
-      <max value="0" />
+      <fixedString value="Gegevens over een geindiceerd zorgzwaartepakket" />
     </element>
     <element id="QuestionnaireResponse.item:klasse.subject">
       <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
       <max value="0" />
     </element>
     <element id="QuestionnaireResponse.item:klasse.item">
@@ -133,7 +235,7 @@
     </element>
     <element id="QuestionnaireResponse.item:voorkeurClient.text">
       <path value="QuestionnaireResponse.item.text" />
-      <max value="0" />
+      <fixedString value="Gecodeerde aanduiding van de voorkeur van de client ten aanzien van plaats en vorm van zorglevering." />
     </element>
     <element id="QuestionnaireResponse.item:voorkeurClient.subject">
       <path value="QuestionnaireResponse.item.subject" />
@@ -141,6 +243,19 @@
     </element>
     <element id="QuestionnaireResponse.item:voorkeurClient.answer">
       <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
       <min value="1" />
       <max value="1" />
     </element>
@@ -159,7 +274,7 @@
     </element>
     <element id="QuestionnaireResponse.item:instellingVoorkeur.text">
       <path value="QuestionnaireResponse.item.text" />
-      <max value="0" />
+      <fixedString value="Identificerende code van de instelling die de voorkeur heeft van de client." />
     </element>
     <element id="QuestionnaireResponse.item:instellingVoorkeur.subject">
       <path value="QuestionnaireResponse.item.subject" />
@@ -169,6 +284,18 @@
       <path value="QuestionnaireResponse.item.answer" />
       <min value="1" />
       <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.answer.value[x]:valueString">
+      <path value="QuestionnaireResponse.item.answer.valueString" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
     </element>
     <element id="QuestionnaireResponse.item:instellingVoorkeur.item">
       <path value="QuestionnaireResponse.item.item" />
@@ -185,11 +312,29 @@
     </element>
     <element id="QuestionnaireResponse.item:commentaar.text">
       <path value="QuestionnaireResponse.item.text" />
-      <max value="0" />
+      <fixedString value="Vrije tekst (bijvoorbeeld toelichting) in een bericht." />
     </element>
     <element id="QuestionnaireResponse.item:commentaar.subject">
       <path value="QuestionnaireResponse.item.subject" />
       <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.answer.value[x]:valueString">
+      <path value="QuestionnaireResponse.item.answer.valueString" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="QuestionnaireResponse.item:commentaar.item">
       <path value="QuestionnaireResponse.item.item" />
