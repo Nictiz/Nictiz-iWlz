@@ -42,7 +42,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="3" />
+      <min value="7" />
     </element>
     <element id="Questionnaire.item:ZZPcode">
       <path value="Questionnaire.item" />
@@ -68,6 +68,7 @@
     </element>
     <element id="Questionnaire.item:ZZPcode.text">
       <path value="Questionnaire.item.text" />
+      <min value="1" />
       <fixedString value="Gecodeerde aanduiding van een zorgzwaartepakket." />
     </element>
     <element id="Questionnaire.item:ZZPcode.type">
@@ -136,6 +137,7 @@
     </element>
     <element id="Questionnaire.item:ingangsdatum.text">
       <path value="Questionnaire.item.text" />
+      <min value="1" />
       <fixedString value="De datum die aangeeft vanaf welke datum de geindiceerde zorgeenheid rechtsgeldig is." />
     </element>
     <element id="Questionnaire.item:ingangsdatum.type">
@@ -182,6 +184,7 @@
     <element id="Questionnaire.item:einddatum">
       <path value="Questionnaire.item" />
       <sliceName value="einddatum" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element id="Questionnaire.item:einddatum.linkId">
@@ -202,6 +205,7 @@
     </element>
     <element id="Questionnaire.item:einddatum.text">
       <path value="Questionnaire.item.text" />
+      <min value="1" />
       <fixedString value="De datum die aangeeft tot en met welke datum de geindiceerde zorgeenheid rechtsgeldig is." />
     </element>
     <element id="Questionnaire.item:einddatum.type">
@@ -211,6 +215,11 @@
     <element id="Questionnaire.item:einddatum.enableWhen">
       <path value="Questionnaire.item.enableWhen" />
       <max value="0" />
+    </element>
+    <element id="Questionnaire.item:einddatum.required">
+      <path value="Questionnaire.item.required" />
+      <min value="1" />
+      <fixedBoolean value="false" />
     </element>
     <element id="Questionnaire.item:einddatum.repeats">
       <path value="Questionnaire.item.repeats" />
@@ -264,6 +273,7 @@
     </element>
     <element id="Questionnaire.item:klasse.text">
       <path value="Questionnaire.item.text" />
+      <min value="1" />
       <fixedString value="Gegevens over een geindiceerd zorgzwaartepakket" />
     </element>
     <element id="Questionnaire.item:klasse.type">
@@ -300,6 +310,13 @@
       <min value="1" />
       <max value="1" />
     </element>
+    <element id="Questionnaire.item:klasse.option.value[x]:valueCoding">
+      <path value="Questionnaire.item.option.valueCoding" />
+      <sliceName value="valueCoding" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
     <element id="Questionnaire.item:klasse.initial[x]">
       <path value="Questionnaire.item.initial[x]" />
       <max value="0" />
@@ -311,6 +328,7 @@
     <element id="Questionnaire.item:voorkeurClient">
       <path value="Questionnaire.item" />
       <sliceName value="voorkeurClient" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element id="Questionnaire.item:voorkeurClient.linkId">
@@ -331,6 +349,7 @@
     </element>
     <element id="Questionnaire.item:voorkeurClient.text">
       <path value="Questionnaire.item.text" />
+      <min value="1" />
       <fixedString value="Gecodeerde aanduiding van de voorkeur van de client ten aanzien van plaats en vorm van zorglevering." />
     </element>
     <element id="Questionnaire.item:voorkeurClient.type">
@@ -364,6 +383,7 @@
     </element>
     <element id="Questionnaire.item:voorkeurClient.option">
       <path value="Questionnaire.item.option" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element id="Questionnaire.item:voorkeurClient.option.value[x]:valueCoding">
@@ -384,6 +404,7 @@
     <element id="Questionnaire.item:instellingVoorkeur">
       <path value="Questionnaire.item" />
       <sliceName value="instellingVoorkeur" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element id="Questionnaire.item:instellingVoorkeur.linkId">
@@ -404,6 +425,7 @@
     </element>
     <element id="Questionnaire.item:instellingVoorkeur.text">
       <path value="Questionnaire.item.text" />
+      <min value="1" />
       <fixedString value="Identificerende code van de instelling die de voorkeur heeft van de client." />
     </element>
     <element id="Questionnaire.item:instellingVoorkeur.type">
@@ -437,6 +459,7 @@
     </element>
     <element id="Questionnaire.item:instellingVoorkeur.option">
       <path value="Questionnaire.item.option" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element id="Questionnaire.item:instellingVoorkeur.option.value[x]:valueCoding">
@@ -457,6 +480,8 @@
     <element id="Questionnaire.item:commentaar">
       <path value="Questionnaire.item" />
       <sliceName value="commentaar" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Questionnaire.item:commentaar.linkId">
       <path value="Questionnaire.item.linkId" />
@@ -476,6 +501,7 @@
     </element>
     <element id="Questionnaire.item:commentaar.text">
       <path value="Questionnaire.item.text" />
+      <min value="1" />
       <fixedString value="Vrije tekst (bijvoorbeeld toelichting) in een bericht." />
     </element>
     <element id="Questionnaire.item:commentaar.type">
