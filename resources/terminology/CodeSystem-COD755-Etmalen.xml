@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="TODO"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+   </meta>
+   <language value="nl-NL"/>
+   <url value="https://www.istandaarden.nl/ibieb/codesystemen/COD755"/>
+   <version value="1.1-20201001"/>
+   <name value="COD755"/>
+   <title value="COD755: Etmalen"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Zorginstituut Nederland"/>
+   <contact>
+      <name value="iStandaarden of iWlz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="info@istandaarden.nl"/>
+      </telecom>
+   </contact>
+   <description value="Gecodeerde aanduiding van het aantal etmalen verblijf per week."/>
+   <caseSensitive value="false"/>
+   <content value="complete"/>
+   <count value="2"/>
+</CodeSystem>

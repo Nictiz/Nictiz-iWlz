@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.[branch valuesets istandaarden].165"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+   </meta>
+   <url value="http://istandaarden.nl/ibieb/codelijsten/COD825"/>
+   <name value="COD825"/>
+   <title value="COD825: Vraag beperking"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Zorginstituut Nederland"/>
+   <contact>
+      <name value="iStandaarden of iWlz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="info@istandaarden.nl"/>
+      </telecom>
+   </contact>
+   <description value="Indicatie van het soort toewijzing."/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="http://istandaarden.nl/ibieb/codesystemen/COD825"/>
+         <version value="1.1-20201001"/>
+      </include>
+   </compose>
+</ValueSet>

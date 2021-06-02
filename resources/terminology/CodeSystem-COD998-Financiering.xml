@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="TODO"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+   </meta>
+   <language value="nl-NL"/>
+   <url value="https://www.istandaarden.nl/ibieb/codesystemen/COD998"/>
+   <version value="1.1-20201001"/>
+   <name value="COD998"/>
+   <title value="COD998: Financiering"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Zorginstituut Nederland"/>
+   <contact>
+      <name value="iStandaarden of iWlz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="info@istandaarden.nl"/>
+      </telecom>
+   </contact>
+   <description value="Codering die aangeeft op basis van welke regeling de zorg gefinancierd wordt."/>
+   <caseSensitive value="false"/>
+   <content value="complete"/>
+   <count value="2"/>
+</CodeSystem>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="TODO"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+   </meta>
+   <language value="nl-NL"/>
+   <url value="https://www.istandaarden.nl/ibieb/codesystemen/COD392"/>
+   <version value="1.1-20201001"/>
+   <name value="COD392"/>
+   <title value="COD392: Diagnosecodelijst"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Zorginstituut Nederland"/>
+   <contact>
+      <name value="iStandaarden of iWlz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="info@istandaarden.nl"/>
+      </telecom>
+   </contact>
+   <description value="Code die aangeeft welke diagnosecodelijst gebruikt is, met aanduiding van de oorsprong van de codes en/of de beheerder ervan."/>
+   <caseSensitive value="false"/>
+   <content value="complete"/>
+   <count value="2"/>
+</CodeSystem>
