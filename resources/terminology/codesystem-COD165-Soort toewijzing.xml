@@ -1,0 +1,108 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="TODO"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/CodeSystem"/>-->
+   </meta>
+   <language value="nl-NL"/>
+   <url value="https://www.istandaarden.nl/ibieb/codelijsten/COD165"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://art-decor.org/ns/oids/cs"/>
+      <value value="2.16.840.1.113883.2.4.3.11.[branch codesystemen istandaarden].165"/>
+   </identifier>
+   <version value="1.1-20201001"/>
+   <name value="COD165"/>
+   <title value="COD165: Soort toewijzing"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Zorginstituut Nederland"/>
+   <contact>
+      <name value="iStandaarden of iWlz"/>
+      <telecom>
+         <system value="email"/>
+         <value value="info@istandaarden.nl"/>
+      </telecom>
+   </contact>
+   <description value="Alle codelijsten die van toepassing zijn op een release van een iStandaard."/>
+   <caseSensitive value="false"/>
+   <content value="complete"/>
+   <count value="2"/>
+   <property>
+      <code value="status"/>
+      <uri value="http://hl7.org/fhir/concept-properties"/>
+      <description value="A code that indicates the status of the concept. Values found in this version of the code system are: active, deprecated"/>
+      <type value="code"/>
+   </property>
+   <property>
+      <code value="deprecated"/>
+      <uri value="http://hl7.org/fhir/concept-properties"/>
+      <description value="The date at which a concept was deprecated. Concepts that are deprecated but not inactive can still be used, but their use is discouraged, and they should be expected to be made inactive in a future release. Property type is dateTime. Note that the status property may also be used to indicate that a concept is deprecated"/>
+      <type value="dateTime"/>
+   </property>
+   <property>
+      <code value="effectiveDate"/>
+      <uri value="http://hl7.org/fhir/concept-properties"/>
+      <description value="The date at which the concept was status was last changed. This is calculated based on the highest of 'creation date', 'expiration date', and 'official release date'"/>
+      <type value="dateTime"/>
+   </property>
+   
+   <!-- Example concepts! For the POC this should me made empty and a link to the codes will be given in the description. -->
+   
+   <concept>
+      <code value="1"/>
+      <display value="Regulier"/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="2"/>
+      <display value="Alternatief"/>
+      <property>
+         <code value="inactive"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="deprecated"/>
+         <valueDateTime value="2018-04-01"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2018-04-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="3"/>
+      <display value="Overbrugging"/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="4"/>
+      <display value="Transfer"/>
+      <property>
+         <code value="inactive"/>
+         <valueCode value="active"/>
+      </property>
+      <property>
+         <code value="deprecated"/>
+         <valueDateTime value="2018-04-01"/>
+      </property>
+      <property>
+         <code value="effectiveDate"/>
+         <valueDateTime value="2018-04-01"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="5"/>
+      <display value="Administratief"/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+</CodeSystem>
