@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-Voorkeurscriteria-QuestionnaireResponse" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-QuestionnaireResponse" />
+  <name value="iwlz-Voorkeurscriteria-QuestionnaireResponse" />
+  <title value="iWlz Voorkeurscriteria QuestionnaireResponse" />
+  <status value="draft" />
+  <description value="Gegevens over een geindiceerd zorgzwaartepakket." />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="iwlz-gegevensmatrix" />
+    <uri value="https://nictiznl.sharepoint.com/:x:/r/sites/MedMij-Standaarden2/_layouts/15/Doc.aspx?sourcedoc=%7B3BBAC9E3-7884-4BD2-98ED-A87AA4EE7AF7%7D&amp;file=iWlz-FHIR-v2.xlsx&amp;action=default&amp;mobileredirect=true" />
+    <name value="iWlz Gegevensmatrix" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="QuestionnaireResponse" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="QuestionnaireResponse.identifier">
+      <path value="QuestionnaireResponse.identifier" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.basedOn">
+      <path value="QuestionnaireResponse.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.parent">
+      <path value="QuestionnaireResponse.parent" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.questionnaire">
+      <path value="QuestionnaireResponse.questionnaire" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/Questionnaire/iwlz-Voorkeurscriteria-Questionnaire" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.subject">
+      <path value="QuestionnaireResponse.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Burger" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.context">
+      <path value="QuestionnaireResponse.context" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.authored">
+      <path value="QuestionnaireResponse.authored" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.author">
+      <path value="QuestionnaireResponse.author" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.source">
+      <path value="QuestionnaireResponse.source" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item">
+      <path value="QuestionnaireResponse.item" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="linkId" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="3" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="soortZorgLeveringsvorm" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Gecodeerde aanduiding van voorkeur ten aanzien van de vorm van zorglevering." />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeuraanbieders">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="voorkeuraanbieders" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeuraanbieders.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeuraanbieders.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Gecodeerde aanduiding van voorkeur ten aanzien van de plaats van zorglevering." />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeuraanbieders.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeuraanbieders.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeuraanbieders.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeuraanbieders.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeuraanbieders.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="voorkeurlocaties" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Identificerende code van locatie(s) van voorkeur van de cliënt." />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.answer.value[x]:valueString">
+      <path value="QuestionnaireResponse.item.answer.valueString" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="partneropname" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Wens van de client om zijn niet- geindiceerde partner ook mee te verhuizen naar een Wlz-instelling. Of verhuizen naar zijn partner met een Wlz-indicatie die al verblijft in een instelling." />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorg">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="soortZorg" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorg.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorg.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Zorg die de client wenst te ontvangen." />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorg.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorg.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorg.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorg.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:soortZorg.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

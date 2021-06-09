@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-Voorkeurscriteria-Questionnaire" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-Questionnaire" />
+  <name value="iwlz-Voorkeurscriteria-Questionnaire" />
+  <title value="iWlz Voorkeurscriteria Questionnaire" />
+  <status value="draft" />
+  <description value="De voorkeuren van de cliënt ten aanzien van de nog te ontvangen zorg." />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="iwlz-gegevensmatrix" />
+    <uri value="https://nictiznl.sharepoint.com/:x:/r/sites/MedMij-Standaarden2/_layouts/15/Doc.aspx?sourcedoc=%7B3BBAC9E3-7884-4BD2-98ED-A87AA4EE7AF7%7D&amp;file=iWlz-FHIR-v2.xlsx&amp;action=default&amp;mobileredirect=true" />
+    <name value="iWlz Gegevensmatrix" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Questionnaire" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Questionnaire" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Questionnaire.name">
+      <path value="Questionnaire.name" />
+      <fixedString value="Voorkeurscriteria" />
+    </element>
+    <element id="Questionnaire.title">
+      <path value="Questionnaire.title" />
+      <fixedString value="Voorkeurscriteria" />
+    </element>
+    <element id="Questionnaire.item">
+      <path value="Questionnaire.item" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="linkId" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="7" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm">
+      <path value="Questionnaire.item" />
+      <sliceName value="soortZorgLeveringsvorm" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.linkId">
+      <path value="Questionnaire.item.linkId" />
+      <fixedString value="1" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.definition">
+      <path value="Questionnaire.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.code">
+      <path value="Questionnaire.item.code" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.prefix">
+      <path value="Questionnaire.item.prefix" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.text">
+      <path value="Questionnaire.item.text" />
+      <min value="1" />
+      <fixedString value="Gecodeerde aanduiding van voorkeur ten aanzien van de vorm van zorglevering." />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.type">
+      <path value="Questionnaire.item.type" />
+      <fixedCode value="choice" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.enableWhen">
+      <path value="Questionnaire.item.enableWhen" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.required">
+      <path value="Questionnaire.item.required" />
+      <min value="1" />
+      <fixedBoolean value="true" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.repeats">
+      <path value="Questionnaire.item.repeats" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.readOnly">
+      <path value="Questionnaire.item.readOnly" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.maxLength">
+      <path value="Questionnaire.item.maxLength" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.options">
+      <path value="Questionnaire.item.options" />
+      <min value="1" />
+      <fixedReference>
+        <reference value="http://istandaarden.nl/ibieb/codelijsten/COD999" />
+        <display value="COD999: Voorkeur client" />
+      </fixedReference>
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.option">
+      <path value="Questionnaire.item.option" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.initial[x]">
+      <path value="Questionnaire.item.initial[x]" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorgLeveringsvorm.item">
+      <path value="Questionnaire.item.item" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders">
+      <path value="Questionnaire.item" />
+      <sliceName value="voorkeuraanbieders" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.linkId">
+      <path value="Questionnaire.item.linkId" />
+      <fixedString value="2" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.definition">
+      <path value="Questionnaire.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.code">
+      <path value="Questionnaire.item.code" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.prefix">
+      <path value="Questionnaire.item.prefix" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.text">
+      <path value="Questionnaire.item.text" />
+      <min value="1" />
+      <fixedString value="Gecodeerde aanduiding van voorkeur ten aanzien van de plaats van zorglevering." />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.type">
+      <path value="Questionnaire.item.type" />
+      <fixedCode value="choice" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.enableWhen">
+      <path value="Questionnaire.item.enableWhen" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.required">
+      <path value="Questionnaire.item.required" />
+      <min value="1" />
+      <fixedBoolean value="true" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.repeats">
+      <path value="Questionnaire.item.repeats" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.readOnly">
+      <path value="Questionnaire.item.readOnly" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.maxLength">
+      <path value="Questionnaire.item.maxLength" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.option">
+      <path value="Questionnaire.item.option" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.initial[x]">
+      <path value="Questionnaire.item.initial[x]" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeuraanbieders.item">
+      <path value="Questionnaire.item.item" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties">
+      <path value="Questionnaire.item" />
+      <sliceName value="voorkeurlocaties" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.linkId">
+      <path value="Questionnaire.item.linkId" />
+      <fixedString value="3" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.definition">
+      <path value="Questionnaire.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.code">
+      <path value="Questionnaire.item.code" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.prefix">
+      <path value="Questionnaire.item.prefix" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.text">
+      <path value="Questionnaire.item.text" />
+      <min value="1" />
+      <fixedString value="Identificerende code van locatie(s) van voorkeur van de cliënt." />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.type">
+      <path value="Questionnaire.item.type" />
+      <fixedCode value="string" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.enableWhen">
+      <path value="Questionnaire.item.enableWhen" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.required">
+      <path value="Questionnaire.item.required" />
+      <min value="1" />
+      <fixedBoolean value="false" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.repeats">
+      <path value="Questionnaire.item.repeats" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.readOnly">
+      <path value="Questionnaire.item.readOnly" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.maxLength">
+      <path value="Questionnaire.item.maxLength" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.options">
+      <path value="Questionnaire.item.options" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.option">
+      <path value="Questionnaire.item.option" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.initial[x]">
+      <path value="Questionnaire.item.initial[x]" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:voorkeurlocaties.item">
+      <path value="Questionnaire.item.item" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:partneropname">
+      <path value="Questionnaire.item" />
+      <sliceName value="partneropname" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Questionnaire.item:partneropname.linkId">
+      <path value="Questionnaire.item.linkId" />
+      <fixedString value="4" />
+    </element>
+    <element id="Questionnaire.item:partneropname.definition">
+      <path value="Questionnaire.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:partneropname.code">
+      <path value="Questionnaire.item.code" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:partneropname.prefix">
+      <path value="Questionnaire.item.prefix" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:partneropname.text">
+      <path value="Questionnaire.item.text" />
+      <min value="1" />
+      <fixedString value="Wens van de client om zijn niet- geindiceerde partner ook mee te verhuizen naar een Wlz-instelling. Of verhuizen naar zijn partner met een Wlz-indicatie die al verblijft in een instelling." />
+    </element>
+    <element id="Questionnaire.item:partneropname.type">
+      <path value="Questionnaire.item.type" />
+      <fixedCode value="choice" />
+    </element>
+    <element id="Questionnaire.item:partneropname.enableWhen">
+      <path value="Questionnaire.item.enableWhen" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:partneropname.required">
+      <path value="Questionnaire.item.required" />
+      <min value="1" />
+      <fixedBoolean value="true" />
+    </element>
+    <element id="Questionnaire.item:partneropname.repeats">
+      <path value="Questionnaire.item.repeats" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:partneropname.readOnly">
+      <path value="Questionnaire.item.readOnly" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:partneropname.maxLength">
+      <path value="Questionnaire.item.maxLength" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:partneropname.options">
+      <path value="Questionnaire.item.options" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.item:partneropname.option">
+      <path value="Questionnaire.item.option" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:partneropname.initial[x]">
+      <path value="Questionnaire.item.initial[x]" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:partneropname.item">
+      <path value="Questionnaire.item.item" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorg">
+      <path value="Questionnaire.item" />
+      <sliceName value="soortZorg" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.linkId">
+      <path value="Questionnaire.item.linkId" />
+      <fixedString value="5" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.definition">
+      <path value="Questionnaire.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.code">
+      <path value="Questionnaire.item.code" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.prefix">
+      <path value="Questionnaire.item.prefix" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.text">
+      <path value="Questionnaire.item.text" />
+      <min value="1" />
+      <fixedString value="Zorg die de client wenst te ontvangen." />
+    </element>
+    <element id="Questionnaire.item:soortZorg.type">
+      <path value="Questionnaire.item.type" />
+      <fixedCode value="choice" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.enableWhen">
+      <path value="Questionnaire.item.enableWhen" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.required">
+      <path value="Questionnaire.item.required" />
+      <min value="1" />
+      <fixedBoolean value="false" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.repeats">
+      <path value="Questionnaire.item.repeats" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.readOnly">
+      <path value="Questionnaire.item.readOnly" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.maxLength">
+      <path value="Questionnaire.item.maxLength" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.options">
+      <path value="Questionnaire.item.options" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.option">
+      <path value="Questionnaire.item.option" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.initial[x]">
+      <path value="Questionnaire.item.initial[x]" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item:soortZorg.item">
+      <path value="Questionnaire.item.item" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
