@@ -243,7 +243,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse" />
       </type>
     </element>
     <element id="Composition.section:geindiceerdZorgzwaartepakket.emptyReason">
