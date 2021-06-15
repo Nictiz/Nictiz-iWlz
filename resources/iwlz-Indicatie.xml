@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="iwlz-Idicatie" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Idicatie" />
-  <name value="iwlz-Idicatie" />
-  <title value="iWlz Idicatie" />
+  <id value="iwlz-Indicatie" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Indicatie" />
+  <name value="iwlz-Indicatie" />
+  <title value="iWlz Indicatie" />
   <status value="draft" />
   <description value="Vastgestelde mate en aard van iemands zorgbehoefte." />
   <fhirVersion value="3.0.2" />
@@ -31,7 +31,6 @@
     <element id="Composition.extension:meerzorg">
       <path value="Composition.extension" />
       <sliceName value="meerzorg" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -66,8 +65,8 @@
       <path value="Composition.type" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/sid/icd-10" />
-          <code value="Indicatie" />
+          <system value="http://snomed.info/sct" />
+          <code value="304784009" />
         </coding>
       </patternCodeableConcept>
     </element>
