@@ -77,6 +77,13 @@
         <identity value="iwlz-gegevensmatrix" />
         <map value="Indicatie-Soort indicatie" />
       </mapping>
+        <binding>
+            <strength value="required" />
+            <description value="COD169: Soort indicatie" />
+            <valueSetReference>
+                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD169" />
+            </valueSetReference>
+        </binding>
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
@@ -177,6 +184,13 @@
         <identity value="iwlz-gegevensmatrix" />
         <map value="Indicatie-Grondslag 02" />
       </mapping>
+        <binding>
+            <strength value="required" />
+            <description value="COD736: Grondslag zorg" />
+            <valueSetReference>
+                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD736" />
+            </valueSetReference>
+        </binding>
     </element>
     <element id="Composition.section:grondslagen.text">
       <path value="Composition.section.text" />

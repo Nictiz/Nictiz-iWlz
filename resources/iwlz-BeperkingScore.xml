@@ -41,6 +41,13 @@
         <identity value="iwlz-gegevensmatrix" />
         <map value="Beperking score-Beperking vraag" />
       </mapping>
+        <binding>
+            <strength value="required" />
+            <description value="COD825: Vraag beperking" />
+            <valueSetReference>
+                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD825" />
+            </valueSetReference>
+        </binding>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -77,6 +84,13 @@
         <identity value="iwlz-gegevensmatrix" />
         <map value="Beperking score-Beperking score" />
       </mapping>
+        <binding>
+            <strength value="required" />
+            <description value="COD827: Score vraag stoornis" />
+            <valueSetReference>
+                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD827" />
+            </valueSetReference>
+        </binding>
     </element>
     <element id="Observation.dataAbsentReason">
       <path value="Observation.dataAbsentReason" />

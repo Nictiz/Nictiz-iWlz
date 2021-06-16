@@ -36,6 +36,13 @@
         <identity value="iwlz-gegevensmatrix" />
         <map value="Stoornisscore-Stoornis vraag" />
       </mapping>
+        <binding>
+            <strength value="required" />
+            <description value="COD824: Vraag stoornis" />
+            <valueSetReference>
+                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD824" />
+            </valueSetReference>
+        </binding>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -72,6 +79,13 @@
         <identity value="iwlz-gegevensmatrix" />
         <map value="Stoornisscore-Stoornis score" />
       </mapping>
+        <binding>
+            <strength value="required" />
+            <description value="COD827: Score vraag stoornis" />
+            <valueSetReference>
+                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD827" />
+            </valueSetReference>
+        </binding>
     </element>
     <element id="Observation.dataAbsentReason">
       <path value="Observation.dataAbsentReason" />

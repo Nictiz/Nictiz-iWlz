@@ -34,7 +34,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-          <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-Prognose" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-Prognose" />
       </type>
     </element>
     <element id="Condition.extension:prognose.valueCodeableConcept:valueCodeableConcept">
@@ -61,6 +61,13 @@
       <path value="Condition.category" />
       <min value="1" />
       <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="COD736: Grondslag zorg" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD736" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="Stoornis-Grondslag" />

@@ -270,7 +270,7 @@
     </element>
     <element id="Questionnaire.item:partneropname.type">
       <path value="Questionnaire.item.type" />
-      <fixedCode value="choice" />
+      <fixedCode value="boolean" />
     </element>
     <element id="Questionnaire.item:partneropname.enableWhen">
       <path value="Questionnaire.item.enableWhen" />
@@ -295,7 +295,7 @@
     </element>
     <element id="Questionnaire.item:partneropname.options">
       <path value="Questionnaire.item.options" />
-      <min value="1" />
+      <min value="0" />
     </element>
     <element id="Questionnaire.item:partneropname.option">
       <path value="Questionnaire.item.option" />

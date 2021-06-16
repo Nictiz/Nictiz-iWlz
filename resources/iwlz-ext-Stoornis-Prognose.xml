@@ -2,8 +2,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="iwlz-ext-Stoornis-Prognose" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-Prognose" />
-    <name value="iwlz-ext-Stoornis-Prognose" />
-    <title value="iWlz ext Stoornis Prognose" />
+  <name value="iwlz-ext-Stoornis-Prognose" />
+  <title value="iWlz ext Stoornis Prognose" />
   <status value="draft" />
   <fhirVersion value="3.0.2" />
   <kind value="complex-type" />
@@ -26,8 +26,8 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="COD737: Prognose (Enumeratie)" />
-        <valueSetUri value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31380" />
+        <description value="COD737: Prognose" />
+        <valueSetUri value="http://istandaarden.nl/ibieb/codelijsten/COD737" />
       </binding>
     </element>
   </differential>

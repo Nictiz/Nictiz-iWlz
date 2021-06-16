@@ -92,6 +92,10 @@
     <element id="Questionnaire.item:ZZPcode.options">
       <path value="Questionnaire.item.options" />
       <min value="1" />
+        <fixedReference>
+            <reference value="http://istandaarden.nl/ibieb/codelijsten/COD163" />
+            <display value="COD163: Zorgzwaartepakket" />
+        </fixedReference>
     </element>
     <element id="Questionnaire.item:ZZPcode.option">
       <path value="Questionnaire.item.option" />
@@ -296,6 +300,10 @@
     <element id="Questionnaire.item:klasse.options">
       <path value="Questionnaire.item.options" />
       <min value="1" />
+        <fixedReference>
+            <reference value="http://istandaarden.nl/ibieb/codelijsten/COD756" />
+            <display value="COD756: Klasse" />
+        </fixedReference>
     </element>
     <element id="Questionnaire.item:klasse.option">
       <path value="Questionnaire.item.option" />
@@ -364,6 +372,10 @@
     <element id="Questionnaire.item:voorkeurClient.options">
       <path value="Questionnaire.item.options" />
       <min value="1" />
+        <fixedReference>
+            <reference value="http://istandaarden.nl/ibieb/codelijsten/COD999" />
+            <display value="COD999: Voorkeur client" />
+        </fixedReference>
     </element>
     <element id="Questionnaire.item:voorkeurClient.option">
       <path value="Questionnaire.item.option" />
