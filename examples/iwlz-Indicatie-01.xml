@@ -3,7 +3,7 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Indicatie"/>
     </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Idicatie-Meerzorg">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Meerzorg">
         <valueBoolean value="true"/>
     </extension>
     <identifier>

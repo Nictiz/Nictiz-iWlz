@@ -30,18 +30,34 @@
     <element id="HumanName.extension:humannameAssemblyOrder">
       <path value="HumanName.extension" />
       <sliceName value="humannameAssemblyOrder" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Naamgegevens-Aanduiding naamgebruik" />
-        <comment value="ConceptMap nodig?" />
-      </mapping>
+      <max value="0" />
     </element>
     <element id="HumanName.extension:humannameAssemblyOrder.valueCode:valueCode">
       <path value="HumanName.extension.valueCode" />
       <sliceName value="valueCode" />
     </element>
+    <element id="HumanName.extension:organisatienaam">
+      <path value="HumanName.extension" />
+      <sliceName value="organisatienaam" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Naamgegevens-Organisatienaam" />
+      </type>
+    </element>
+    <element id="HumanName.extension:organisatienaam.valueString:valueString">
+      <path value="HumanName.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Naamgegevens-Organisatienaam" />
+      </mapping>
+    </element>
     <element id="HumanName.use">
       <path value="HumanName.use" />
+      <max value="0" />
+    </element>
+    <element id="HumanName.text">
+      <path value="HumanName.text" />
       <max value="0" />
     </element>
     <element id="HumanName.family.extension">
@@ -65,6 +81,7 @@
     <element id="HumanName.family.extension:humannameOwnName">
       <path value="HumanName.family.extension" />
       <sliceName value="humannameOwnName" />
+      <min value="1" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="Naamgegevens-Geslachtsnaam" />
@@ -73,40 +90,46 @@
     <element id="HumanName.family.extension:humannamePartnerPrefix">
       <path value="HumanName.family.extension" />
       <sliceName value="humannamePartnerPrefix" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Naamgegevens-VoorvoegselsPartner" />
-      </mapping>
+      <max value="0" />
     </element>
     <element id="HumanName.family.extension:humannamePartnerName">
       <path value="HumanName.family.extension" />
       <sliceName value="humannamePartnerName" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Naamgegevens-GeslachtsnaamPartner" />
-      </mapping>
+      <max value="0" />
     </element>
     <element id="HumanName.given">
       <path value="HumanName.given" />
+      <comment value="To be conformant to the iWlz implementation of NameInformation, at least the following qualifiers SHALL be supported: CL. The qualifier 'CL' maps to GivenName." />
+      <min value="1" />
+      <max value="1" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Naamgegevens-Voornamen. Qualifier 'BR'" />
+        <map value="Naamgegevens-Roepnaam" />
       </mapping>
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Naamgegevens-Initialen. Qualifier 'IN'" />
-      </mapping>
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Naamgegevens-Roepnaam. Qualifier 'CL'" />
-      </mapping>
+    </element>
+    <element id="HumanName.given.extension">
+      <path value="HumanName.given.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="HumanName.given.extension:iso21090EnQualifier">
+      <path value="HumanName.given.extension" />
+      <sliceName value="iso21090EnQualifier" />
+      <min value="1" />
+    </element>
+    <element id="HumanName.given.extension:iso21090EnQualifier.valueCode:valueCode">
+      <path value="HumanName.given.extension.valueCode" />
+      <sliceName value="valueCode" />
+      <fixedCode value="CL" />
     </element>
     <element id="HumanName.prefix">
       <path value="HumanName.prefix" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Naamgegevens-Adellijke titel/predikaat" />
-      </mapping>
+      <max value="0" />
     </element>
     <element id="HumanName.suffix">
       <path value="HumanName.suffix" />

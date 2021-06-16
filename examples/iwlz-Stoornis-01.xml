@@ -3,7 +3,7 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis"/>
     </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis-Prognose">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-Prognose">
         <valueCodeableConcept>
             <coding>
                 <!-- COD737: Prognose (Enumeratie) -->

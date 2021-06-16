@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-ext-Indicatie-Meerzorg" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Meerzorg" />
+  <name value="iwlz-ext-Indicatie-Meerzorg" />
+  <title value="iwlz ext Indicatie Meerzorg" />
+  <status value="draft" />
+  <description value="Gecodeerde aanduiding waarmee het CIZ aangeeft of meerzorg van toepassing zou kunnen zijn." />
+  <fhirVersion value="3.0.2" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Composition" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Meerzorg" />
+    </element>
+    <element id="Extension.value[x]:valueBoolean">
+      <path value="Extension.valueBoolean" />
+      <sliceName value="valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

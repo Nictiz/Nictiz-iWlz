@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="iwlz-Burger" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Burger" />
-  <name value="iwlz-Burger" />
-  <title value="iWlz Burger" />
+  <id value="iwlz-Persoon" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Persoon" />
+  <name value="iwlz-Persoon" />
+  <title value="iWlz Persoon" />
   <status value="draft" />
   <description value="Een natuurlijk persoon&#xD;&#xA;&#xD;&#xA;Includes iwlz-Relatie" />
   <fhirVersion value="3.0.2" />
@@ -22,7 +22,7 @@
       <path value="Patient" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Client-Burger" />
+        <map value="Client-Persoon" />
       </mapping>
     </element>
     <element id="Patient.extension">
@@ -55,31 +55,26 @@
       <sliceName value="lifeStance" />
       <max value="0" />
     </element>
-    <element id="Patient.extension:geboorteplaats-geboorteland">
+    <element id="Patient.extension:voorkeurContactwijze">
       <path value="Patient.extension" />
-      <sliceName value="geboorteplaats-geboorteland" />
+      <sliceName value="voorkeurContactwijze" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze" />
       </type>
     </element>
-    <element id="Patient.extension:geboorteplaats-geboorteland.valueAddress:valueAddress">
-      <path value="Patient.extension.valueAddress" />
-      <sliceName value="valueAddress" />
-    </element>
-    <element id="Patient.extension:geboorteplaats-geboorteland.valueAddress:valueAddress.city">
-      <path value="Patient.extension.valueAddress.city" />
+    <element id="Patient.extension:voorkeurContactwijze.valueCodeableConcept:valueCodeableConcept">
+      <path value="Patient.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Burger-Geboorteplaats" />
+        <map value="Contactgegevens-Voorkeur contactwijze" />
       </mapping>
     </element>
-    <element id="Patient.extension:geboorteplaats-geboorteland.valueAddress:valueAddress.country">
-      <path value="Patient.extension.valueAddress.country" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Burger-Geboorteland" />
-      </mapping>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Patient.identifier:BSN">
       <path value="Patient.identifier" />
@@ -93,7 +88,7 @@
       <max value="1" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Burger-Identificatienummer client" />
+        <map value="Persoon-Identificatienummer client" />
       </mapping>
     </element>
     <element id="Patient.active">
@@ -102,10 +97,15 @@
     </element>
     <element id="Patient.name">
       <path value="Patient.name" />
+      <min value="1" />
       <type>
         <code value="HumanName" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Naamgegevens" />
       </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Naamgegevens" />
+      </mapping>
     </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom" />
@@ -113,31 +113,26 @@
         <code value="ContactPoint" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Contactgegevens" />
       </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Contactgegevens" />
+      </mapping>
     </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
+      <min value="1" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Burger-Geslacht" />
+        <map value="Persoon-Geslacht" />
       </mapping>
     </element>
     <element id="Patient.birthDate">
       <path value="Patient.birthDate" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Burger-Geboortedatum" />
-      </mapping>
+      <max value="0" />
     </element>
-    <element id="Patient.deceased[x]:deceasedDateTime">
-      <path value="Patient.deceasedDateTime" />
-      <sliceName value="deceasedDateTime" />
-      <type>
-        <code value="dateTime" />
-      </type>
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Burger-Datum overlijden" />
-      </mapping>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+      <max value="0" />
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
@@ -183,7 +178,7 @@
       <path value="Patient.contact" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Relatie" />
+        <map value="Contactpersoon" />
       </mapping>
     </element>
     <element id="Patient.contact.relationship:relationship">
@@ -191,7 +186,7 @@
       <sliceName value="relationship" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Relatie-Relatie" />
+        <map value="Contactpersoon-Relatie" />
       </mapping>
     </element>
     <element id="Patient.contact.relationship:role">
@@ -199,7 +194,7 @@
       <sliceName value="role" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Relatie-Rol" />
+        <map value="Contactpersoon-Rol" />
       </mapping>
     </element>
     <element id="Patient.contact.name">

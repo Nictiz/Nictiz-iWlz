@@ -8,23 +8,6 @@
   <description value="Gegevens van de contactpersoon en cliënt." />
   <fhirVersion value="3.0.2" />
   <mapping>
-    <identity value="hcim-contactinformation-v2.0.1-2015EN" />
-    <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)" />
-    <name value="ContactInformation as part of HCIM Patient-v2.0.1(2015EN)" />
-    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs" />
-  </mapping>
-  <mapping>
-    <identity value="hcim-contactinformation-v3.0-2016EN" />
-    <uri value="https://zibs.nl/wiki/Patient-v3.0(2016EN)" />
-    <name value="ContactInformation as part of HCIM Patient-v3.0(2016EN)" />
-    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs" />
-  </mapping>
-  <mapping>
-    <identity value="hcim-contactinformation-v1.0-2017EN" />
-    <uri value="https://zibs.nl/wiki/ContactInformation-v1.0(2017EN)" />
-    <name value="HCIM ContactInformation-v1.0.1(2017EN)" />
-  </mapping>
-  <mapping>
     <identity value="iwlz-gegevensmatrix" />
     <uri value="https://nictiznl.sharepoint.com/:x:/r/sites/MedMij-Standaarden2/_layouts/15/Doc.aspx?sourcedoc=%7B3BBAC9E3-7884-4BD2-98ED-A87AA4EE7AF7%7D&amp;file=iWlz-FHIR-v2.xlsx&amp;action=default&amp;mobileredirect=true" />
   </mapping>
@@ -34,6 +17,10 @@
   <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint" />
   <derivation value="constraint" />
   <differential>
+    <element id="ContactPoint">
+      <path value="ContactPoint" />
+      <comment value="TODO: extra guidance on the use of .rank within the mapping of Volgnummer-telefoon and Volgnummer-email" />
+    </element>
     <element id="ContactPoint.extension">
       <path value="ContactPoint.extension" />
       <slicing>
@@ -76,6 +63,17 @@
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="Contactgegevens-Nummersoort" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.rank">
+      <path value="ContactPoint.rank" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Contactgegevens-Volgnummer-telefoon" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Contactgegevens-Volgnummer-email" />
       </mapping>
     </element>
     <element id="ContactPoint.period">
