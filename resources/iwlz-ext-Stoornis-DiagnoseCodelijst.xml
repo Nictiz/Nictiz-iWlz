@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-ext-Stoornis-DiagnoseCodelijst" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-DiagnoseCodelijst" />
+  <name value="iwlz-ext-Stoornis-DiagnoseCodelijst" />
+  <title value="iWlz Stoornis DiagnoseCodelijst extensie" />
+  <status value="draft" />
+  <description value="Code die aangeeft welke diagnosecodelijst gebruikt is, met aanduiding van de oorsprong van de codes en/of de beheerder ervan." />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="iwlz-gegevensmatrix" />
+    <uri value="https://nictiznl.sharepoint.com/:x:/r/sites/MedMij-Standaarden2/_layouts/15/Doc.aspx?sourcedoc=%7B3BBAC9E3-7884-4BD2-98ED-A87AA4EE7AF7%7D&amp;file=iWlz-FHIR-v2.xlsx&amp;action=default&amp;mobileredirect=true" />
+    <name value="iWlz Gegevensmatrix" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Condition.code" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-DiagnoseCodelijst" />
+    </element>
+    <element id="Extension.value[x]:valueCodeableConcept">
+      <path value="Extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <short value="Diagnose Codelijst" />
+      <definition value="Code die aangeeft welke diagnosecodelijst gebruikt is, met aanduiding van de oorsprong van de codes en/of de beheerder ervan." />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="COD392: Diagnosecodelijst" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD392" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="Diagnose Codelijst" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
