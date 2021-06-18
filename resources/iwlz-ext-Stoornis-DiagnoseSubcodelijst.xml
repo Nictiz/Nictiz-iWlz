@@ -41,7 +41,7 @@
       </binding>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Diagnose Codelijst" />
+        <map value="Stoornis-Diagnose Subcodelijst" />
       </mapping>
     </element>
   </differential>

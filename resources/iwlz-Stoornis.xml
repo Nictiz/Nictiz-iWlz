@@ -82,16 +82,6 @@
       <min value="1" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornis-Diagnose Codelijst" />
-        <comment value="Af te leiden uit .system van Stoornis-Ziektebeeld stoornis" />
-      </mapping>
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornis-Diagnose Subcodelijst" />
-        <comment value="Af te leiden uit .system van Stoornis-Ziektebeeld stoornis" />
-      </mapping>
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
         <map value="Stoornis-Ziektebeeld stoornis" />
       </mapping>
     </element>
@@ -108,7 +98,6 @@
     <element id="Condition.code.extension:diagnoseCodelijst">
       <path value="Condition.code.extension" />
       <sliceName value="diagnoseCodelijst" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -118,7 +107,6 @@
     <element id="Condition.code.extension:diagnoseSubcodelijst">
       <path value="Condition.code.extension" />
       <sliceName value="diagnoseSubcodelijst" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
