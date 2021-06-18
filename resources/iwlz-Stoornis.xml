@@ -95,6 +95,77 @@
         <map value="Stoornis-Ziektebeeld stoornis" />
       </mapping>
     </element>
+    <element id="Condition.code.coding">
+      <path value="Condition.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding:COD923-ICD10-DSMIV">
+      <path value="Condition.code.coding" />
+      <sliceName value="COD923-ICD10-DSMIV" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="COD923: ICD10/DSMIV (subset)" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD923" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Condition.code.coding:COD924-IQ">
+      <path value="Condition.code.coding" />
+      <sliceName value="COD924-IQ" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="COD924: IQ" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD924" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Condition.code.coding:COD925-ICF">
+      <path value="Condition.code.coding" />
+      <sliceName value="COD925-ICF" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="COD925: ICF" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD925" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Condition.code.coding:COD926-Visueel">
+      <path value="Condition.code.coding" />
+      <sliceName value="COD926-Visueel" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="COD926: Visueel" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD926" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Condition.code.coding:COD927-Auditief">
+      <path value="Condition.code.coding" />
+      <sliceName value="COD927-Auditief" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="COD927: Auditief" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD927" />
+        </valueSetReference>
+      </binding>
+    </element>
     <element id="Condition.bodySite">
       <path value="Condition.bodySite" />
       <max value="0" />
