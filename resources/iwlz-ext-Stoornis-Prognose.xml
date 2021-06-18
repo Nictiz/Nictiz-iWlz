@@ -27,7 +27,9 @@
       <binding>
         <strength value="extensible" />
         <description value="COD737: Prognose" />
-        <valueSetUri value="http://istandaarden.nl/ibieb/codelijsten/COD737" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD737"/>
+        </valueSetReference>  
       </binding>
     </element>
   </differential>
