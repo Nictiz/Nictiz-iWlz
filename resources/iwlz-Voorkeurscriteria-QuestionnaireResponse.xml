@@ -73,81 +73,42 @@
       </slicing>
       <min value="3" />
     </element>
-    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm">
+    <element id="QuestionnaireResponse.item:voorkeurZorg">
       <path value="QuestionnaireResponse.item" />
-      <sliceName value="soortZorgLeveringsvorm" />
+      <sliceName value="voorkeurZorg" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.definition">
+    <element id="QuestionnaireResponse.item:voorkeurZorg.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
     </element>
-    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.text">
+    <element id="QuestionnaireResponse.item:voorkeurZorg.text">
       <path value="QuestionnaireResponse.item.text" />
-      <fixedString value="Gecodeerde aanduiding van voorkeur ten aanzien van de vorm van zorglevering." />
+        <fixedString value="Voorkeuren van de client m.b.t. de zorg" />
     </element>
-    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.subject">
+    <element id="QuestionnaireResponse.item:voorkeurZorg.subject">
       <path value="QuestionnaireResponse.item.subject" />
       <max value="0" />
     </element>
-    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.answer">
+    <element id="QuestionnaireResponse.item:voorkeurZorg.answer">
       <path value="QuestionnaireResponse.item.answer" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.answer.value[x]:valueCoding">
-      <path value="QuestionnaireResponse.item.answer.valueCoding" />
-      <sliceName value="valueCoding" />
-      <min value="1" />
-      <type>
-        <code value="Coding" />
-      </type>
-    </element>
-    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.answer.item">
+      <element id="QuestionnaireResponse.item:voorkeurZorg.answer.value[x]:valueString">
+          <path value="QuestionnaireResponse.item.answer.valueString" />
+          <sliceName value="valueString" />
+          <min value="1" />
+          <type>
+              <code value="string" />
+          </type>
+      </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
       <max value="0" />
     </element>
-    <element id="QuestionnaireResponse.item:soortZorgLeveringsvorm.item">
-      <path value="QuestionnaireResponse.item.item" />
-      <max value="0" />
-    </element>
-    <element id="QuestionnaireResponse.item:voorkeuraanbieders">
-      <path value="QuestionnaireResponse.item" />
-      <sliceName value="voorkeuraanbieders" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="QuestionnaireResponse.item:voorkeuraanbieders.definition">
-      <path value="QuestionnaireResponse.item.definition" />
-      <max value="0" />
-    </element>
-    <element id="QuestionnaireResponse.item:voorkeuraanbieders.text">
-      <path value="QuestionnaireResponse.item.text" />
-      <fixedString value="Gecodeerde aanduiding van voorkeur ten aanzien van de plaats van zorglevering." />
-    </element>
-    <element id="QuestionnaireResponse.item:voorkeuraanbieders.subject">
-      <path value="QuestionnaireResponse.item.subject" />
-      <max value="0" />
-    </element>
-    <element id="QuestionnaireResponse.item:voorkeuraanbieders.answer">
-      <path value="QuestionnaireResponse.item.answer" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="QuestionnaireResponse.item:voorkeuraanbieders.answer.value[x]:valueCoding">
-      <path value="QuestionnaireResponse.item.answer.valueCoding" />
-      <sliceName value="valueCoding" />
-      <min value="1" />
-      <type>
-        <code value="Coding" />
-      </type>
-    </element>
-    <element id="QuestionnaireResponse.item:voorkeuraanbieders.answer.item">
-      <path value="QuestionnaireResponse.item.answer.item" />
-      <max value="0" />
-    </element>
-    <element id="QuestionnaireResponse.item:voorkeuraanbieders.item">
+    <element id="QuestionnaireResponse.item:voorkeurZorg.item">
       <path value="QuestionnaireResponse.item.item" />
       <max value="0" />
     </element>
@@ -163,7 +124,7 @@
     </element>
     <element id="QuestionnaireResponse.item:voorkeurlocaties.text">
       <path value="QuestionnaireResponse.item.text" />
-      <fixedString value="Identificerende code van locatie(s) van voorkeur van de cliënt." />
+        <fixedString value="Voorkeurlocatie(s)" />
     </element>
     <element id="QuestionnaireResponse.item:voorkeurlocaties.subject">
       <path value="QuestionnaireResponse.item.subject" />
@@ -226,46 +187,6 @@
       <max value="0" />
     </element>
     <element id="QuestionnaireResponse.item:partneropname.item">
-      <path value="QuestionnaireResponse.item.item" />
-      <max value="0" />
-    </element>
-    <element id="QuestionnaireResponse.item:soortZorg">
-      <path value="QuestionnaireResponse.item" />
-      <sliceName value="soortZorg" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="QuestionnaireResponse.item:soortZorg.definition">
-      <path value="QuestionnaireResponse.item.definition" />
-      <max value="0" />
-    </element>
-    <element id="QuestionnaireResponse.item:soortZorg.text">
-      <path value="QuestionnaireResponse.item.text" />
-      <fixedString value="Zorg die de client wenst te ontvangen." />
-    </element>
-    <element id="QuestionnaireResponse.item:soortZorg.subject">
-      <path value="QuestionnaireResponse.item.subject" />
-      <max value="0" />
-    </element>
-    <element id="QuestionnaireResponse.item:soortZorg.answer">
-      <path value="QuestionnaireResponse.item.answer" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="QuestionnaireResponse.item:soortZorg.answer.value[x]:valueCoding">
-      <path value="QuestionnaireResponse.item.answer.valueCoding" />
-      <sliceName value="valueCoding" />
-      <min value="1" />
-      <type>
-        <code value="Coding" />
-      </type>
-    </element>
-    <element id="QuestionnaireResponse.item:soortZorg.answer.item">
-      <path value="QuestionnaireResponse.item.answer.item" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="QuestionnaireResponse.item:soortZorg.item">
       <path value="QuestionnaireResponse.item.item" />
       <max value="0" />
     </element>
