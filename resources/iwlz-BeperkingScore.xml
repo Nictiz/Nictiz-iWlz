@@ -9,7 +9,7 @@
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="iwlz-gegevensmatrix" />
-    <uri value="https://nictiznl.sharepoint.com/:x:/r/sites/MedMij-Standaarden2/_layouts/15/Doc.aspx?sourcedoc=%7B3BBAC9E3-7884-4BD2-98ED-A87AA4EE7AF7%7D&amp;file=iWlz-FHIR-v2.xlsx&amp;action=default&amp;mobileredirect=true" />
+    <uri value="https://decor.nictiz.nl/decor/services/RetrieveDataSet?id=2.16.840.1.113883.2.4.3.11.60.128.1.1&amp;language=nl-NL&amp;effectiveDate=2021-05-19T17:43:12&amp;format=html" />
     <name value="iWlz Gegevensmatrix" />
   </mapping>
   <kind value="resource" />
@@ -30,16 +30,25 @@
       <path value="Observation.category" />
       <min value="1" />
       <max value="1" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Beperking-Categorie" />
-      </mapping>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-42" />
+            <comment value="Categorie"/>
+        </mapping>
+        <binding>
+            <strength value="required" />
+            <description value="COD539: Beperking" />
+            <valueSetReference>
+                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD539" />
+            </valueSetReference>
+        </binding>
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Beperking score-Beperking vraag" />
+          <map value="iwlz-dataelement-46" />
+          <comment value="Beperking vraag"/>
       </mapping>
         <binding>
             <strength value="required" />
@@ -82,7 +91,8 @@
       </type>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Beperking score-Beperking score" />
+          <map value="iwlz-dataelement-47" />
+          <comment value="Beperking score"/>
       </mapping>
         <binding>
             <strength value="required" />
@@ -104,8 +114,14 @@
       <path value="Observation.comment" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornisscore-Commentaar" />
+          <map value="iwlz-dataelement-44" />
+          <comment value="Commentaar"/>
       </mapping>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-48" />
+            <comment value="Commentaar"/>
+        </mapping>
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
@@ -163,10 +179,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Beperking-Duur" />
-      </mapping>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-43" />
+            <comment value="Duur"/>
+        </mapping>
     </element>
     <element id="Observation.component:duur.dataAbsentReason">
       <path value="Observation.component.dataAbsentReason" />
