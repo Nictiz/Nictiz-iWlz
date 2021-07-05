@@ -20,6 +20,7 @@
       </telecom>
    </contact>
    <description value="Gecodeerde aanduiding van een (reeks van) activiteit(en) in functionele termen die losgekoppeld is van een bepaalde leverancier, waarbij wordt beschreven wat de inhoud en aard van die activiteit is in termen van hulpverlening (wonen, zorg en welzijn)."/>
+   <purpose value="This CodeSystem resource represents the the COD732 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
    <caseSensitive value="false"/>
    <content value="complete"/>
    <count value="2"/>

@@ -20,6 +20,7 @@
       </telecom>
    </contact>
    <description value="Aanduiding welke prognose er is inzake het ziektebeeld of de stoornis."/>
+   <purpose value="This CodeSystem resource represents the the COD737 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
    <caseSensitive value="false"/>
    <content value="complete"/>
    <count value="2"/>

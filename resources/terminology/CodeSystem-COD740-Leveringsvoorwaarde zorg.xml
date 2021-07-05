@@ -20,6 +20,7 @@
       </telecom>
    </contact>
    <description value="Codering die aangeeft welke leveringsvoorwaarde van toepassing is voor de zorg."/>
+   <purpose value="This CodeSystem resource represents the the COD740 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
    <caseSensitive value="false"/>
    <content value="complete"/>
    <count value="2"/>

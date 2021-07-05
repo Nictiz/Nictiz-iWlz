@@ -20,6 +20,7 @@
       </telecom>
    </contact>
    <description value="Unieke aanduiding die de rechtspositie van een client al dan niet in relatie tot één of meer personen beschrijft."/>
+   <purpose value="This CodeSystem resource represents the the COD366 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
    <caseSensitive value="false"/>
    <content value="complete"/>
    <count value="2"/>

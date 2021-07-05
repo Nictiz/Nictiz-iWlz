@@ -20,6 +20,7 @@
       </telecom>
    </contact>
    <description value="Andere reden (dan EKT en Beademingstoeslag) voor ophoging van het basisbudget voor het geindiceerde zorgprofiel."/>
+   <purpose value="This CodeSystem resource represents the the COD983 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
    <caseSensitive value="false"/>
    <content value="complete"/>
    <count value="2"/>

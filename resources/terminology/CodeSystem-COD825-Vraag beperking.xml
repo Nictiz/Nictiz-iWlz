@@ -20,6 +20,7 @@
       </telecom>
    </contact>
    <description value="Gecodeerde aanduiding van de vraag over beperking."/>
+   <purpose value="This CodeSystem resource represents the the COD825 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
    <caseSensitive value="false"/>
    <content value="complete"/>
    <count value="2"/>

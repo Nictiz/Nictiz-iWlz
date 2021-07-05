@@ -19,6 +19,7 @@
    </contact>
    <description value="Indicatie van het soort toewijzing."/>
    <immutable value="false"/>
+   <purpose value="This ValueSet resource represents the the COD732 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
    <compose>
       <include>
          <system value="http://istandaarden.nl/ibieb/codesystemen/COD732"/>

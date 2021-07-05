@@ -20,6 +20,7 @@
       </telecom>
    </contact>
    <description value="Code die aangeeft wat de verwachte duur is van de categorie beperking."/>
+   <purpose value="This CodeSystem resource represents the the COD749 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
    <caseSensitive value="false"/>
    <content value="complete"/>
    <count value="2"/>

@@ -57,6 +57,7 @@
                             </telecom>
                         </contact>
                         <description value="{$documentation}"/>
+                        <purpose value="This CodeSystem resource represents the the {$codeSystemCode} 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
                         <caseSensitive value="false"/>
                         <content value="complete"/>
                         <count value="2"/>
@@ -113,6 +114,7 @@
                         </contact>
                         <description value="Indicatie van het soort toewijzing."/>
                         <immutable value="false"/>
+                        <purpose value="This ValueSet resource represents the the {$codeSystemCode} 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
                         <!--<copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>-->
                         <compose>
                             <include>
