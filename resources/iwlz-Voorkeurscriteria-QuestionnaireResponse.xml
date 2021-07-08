@@ -18,6 +18,14 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
   <derivation value="constraint" />
   <differential>
+    <element id="QuestionnaireResponse">
+      <path value="QuestionnaireResponse" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-49" />
+        <comment value="Voorkeurscriteria" />
+      </mapping>
+    </element>
     <element id="QuestionnaireResponse.identifier">
       <path value="QuestionnaireResponse.identifier" />
       <max value="0" />
@@ -85,7 +93,7 @@
     </element>
     <element id="QuestionnaireResponse.item:voorkeurZorg.text">
       <path value="QuestionnaireResponse.item.text" />
-        <fixedString value="Voorkeuren van de client m.b.t. de zorg" />
+      <fixedString value="Voorkeuren van de client m.b.t. de zorg" />
     </element>
     <element id="QuestionnaireResponse.item:voorkeurZorg.subject">
       <path value="QuestionnaireResponse.item.subject" />
@@ -96,14 +104,19 @@
       <min value="1" />
       <max value="1" />
     </element>
-      <element id="QuestionnaireResponse.item:voorkeurZorg.answer.value[x]:valueString">
-          <path value="QuestionnaireResponse.item.answer.valueString" />
-          <sliceName value="valueString" />
-          <min value="1" />
-          <type>
-              <code value="string" />
-          </type>
-      </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.answer.value[x]:valueString">
+      <path value="QuestionnaireResponse.item.answer.valueString" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-53" />
+        <comment value="Voorkeur zorg" />
+      </mapping>
+    </element>
     <element id="QuestionnaireResponse.item:voorkeurZorg.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
       <max value="0" />
@@ -124,7 +137,7 @@
     </element>
     <element id="QuestionnaireResponse.item:voorkeurlocaties.text">
       <path value="QuestionnaireResponse.item.text" />
-        <fixedString value="Voorkeurlocatie(s)" />
+      <fixedString value="Voorkeurlocatie(s)" />
     </element>
     <element id="QuestionnaireResponse.item:voorkeurlocaties.subject">
       <path value="QuestionnaireResponse.item.subject" />
@@ -142,6 +155,11 @@
       <type>
         <code value="string" />
       </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-51" />
+        <comment value="Voorkeurlocatie(s)" />
+      </mapping>
     </element>
     <element id="QuestionnaireResponse.item:voorkeurlocaties.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -181,6 +199,11 @@
       <type>
         <code value="Coding" />
       </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-52" />
+        <comment value="Partneropname" />
+      </mapping>
     </element>
     <element id="QuestionnaireResponse.item:partneropname.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />

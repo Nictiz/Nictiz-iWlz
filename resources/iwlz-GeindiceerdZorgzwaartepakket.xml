@@ -18,6 +18,14 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
   <derivation value="constraint" />
   <differential>
+      <element id="QuestionnaireResponse">
+          <path value="QuestionnaireResponse" />
+          <mapping>
+              <identity value="iwlz-gegevensmatrix" />
+              <map value="iwlz-dataelement-22" />
+              <comment value="Geindiceerd zorgzwaartepakket"/>
+          </mapping>
+      </element>
     <element id="QuestionnaireResponse.identifier">
       <path value="QuestionnaireResponse.identifier" />
       <max value="0" />
@@ -103,6 +111,11 @@
       <type>
         <code value="Coding" />
       </type>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-23" />
+            <comment value="ZZPcode"/>
+        </mapping>
     </element>
     <element id="QuestionnaireResponse.item:zzpCode.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -142,6 +155,11 @@
       <type>
         <code value="date" />
       </type>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-24" />
+            <comment value="Ingangsdatum"/>
+        </mapping>
     </element>
     <element id="QuestionnaireResponse.item:ingangsdatum.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -176,6 +194,11 @@
       <type>
         <code value="date" />
       </type>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-25" />
+            <comment value="Einddatum"/>
+        </mapping>
     </element>
     <element id="QuestionnaireResponse.item:einddatum.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -215,6 +238,11 @@
       <type>
         <code value="Coding" />
       </type>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-26" />
+            <comment value="Klasse"/>
+        </mapping>
     </element>
     <element id="QuestionnaireResponse.item:klasse.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -253,6 +281,11 @@
       <type>
         <code value="Coding" />
       </type>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-27" />
+            <comment value="Voorkeur client"/>
+        </mapping>
     </element>
     <element id="QuestionnaireResponse.item:voorkeurClient.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -292,6 +325,11 @@
       <type>
         <code value="string" />
       </type>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-28" />
+            <comment value="Instelling voorkeur"/>
+        </mapping>
     </element>
     <element id="QuestionnaireResponse.item:instellingVoorkeur.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -330,6 +368,11 @@
       <type>
         <code value="string" />
       </type>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-29" />
+            <comment value="Commentaar"/>
+        </mapping>
     </element>
     <element id="QuestionnaireResponse.item:commentaar.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
