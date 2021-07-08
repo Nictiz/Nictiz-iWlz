@@ -192,12 +192,12 @@
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="QuestionnaireResponse.item:partneropname.answer.value[x]:valueCoding">
-      <path value="QuestionnaireResponse.item.answer.valueCoding" />
-      <sliceName value="valueCoding" />
+    <element id="QuestionnaireResponse.item:partneropname.answer.value[x]:valueBoolean">
+        <path value="QuestionnaireResponse.item.answer.valueBoolean" />
+      <sliceName value="valueBoolean" />
       <min value="1" />
       <type>
-        <code value="Coding" />
+        <code value="boolean" />
       </type>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />

@@ -1,0 +1,56 @@
+<QuestionnaireResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/QuestionnaireResponse.xsd">
+    <id value="iwlz-Voorkeurscriteria-QuestionnaireResponse-01"/>
+    <questionnaire>
+        <reference value="Questionnaire/iwlz-Voorkeurscriteria-Questionnaire-01"/>
+    </questionnaire>
+    <status value="completed"/>
+    <subject>
+        <reference value="Patient/iwlz-Persoon-01"/>
+    </subject>
+    <item>
+        <linkId value="1"/>
+        <answer>
+            <valueString value="Geen verdere voorkeuren"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="2"/>
+        <answer>
+            <valueString value="Rode Kruis Ziekenhuis Beverwijk"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="3"/>
+        <answer>
+            <valueBoolean value="true"/>
+        </answer>
+    </item>
+</QuestionnaireResponse>
+<Questionnaire xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/Questionnaire.xsd">
+    <id value="iwlz-Voorkeurscriteria-Questionnaire-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-Questionnaire"/>
+    </meta>
+    <url value="http://nictiz.nl/fhir/Questionnaire/iwlz-Voorkeurscriteria"/>
+    <name value="Voorkeurscriteria"/>
+    <title value="Voorkeurscriteria"/>
+    <status value="active"/>
+    <item>
+        <linkId value="1"/>
+        <text value="Voorkeuren van de client m.b.t. de zorg"/>
+        <type value="string"/>
+        <required value="false"/>
+    </item>
+    <item>
+        <linkId value="2"/>
+        <text value="Voorkeurlocatie(s)"/>
+        <type value="string"/>
+        <required value="false"/>
+    </item>
+    <item>
+        <linkId value="3"/>
+        <text value="Wens van de client om zijn niet- geindiceerde partner ook mee te verhuizen naar een Wlz-instelling. Of verhuizen naar zijn partner met een Wlz-indicatie die al verblijft in een instelling."/>
+        <type value="boolean"/>
+        <required value="false"/>
+    </item>
+</Questionnaire>

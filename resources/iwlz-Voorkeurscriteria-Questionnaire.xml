@@ -75,7 +75,7 @@
     <element id="Questionnaire.item:voorkeurZorg.required">
       <path value="Questionnaire.item.required" />
       <min value="1" />
-      <fixedBoolean value="true" />
+      <fixedBoolean value="false" />
     </element>
     <element id="Questionnaire.item:voorkeurZorg.repeats">
       <path value="Questionnaire.item.repeats" />
@@ -91,15 +91,11 @@
     </element>
     <element id="Questionnaire.item:voorkeurZorg.options">
       <path value="Questionnaire.item.options" />
-      <min value="1" />
-      <fixedReference>
-        <reference value="http://istandaarden.nl/ibieb/codelijsten/COD999" />
-        <display value="COD999: Voorkeur client" />
-      </fixedReference>
+        <max value="0" />
     </element>
     <element id="Questionnaire.item:voorkeurZorg.option">
       <path value="Questionnaire.item.option" />
-      <max value="0" />
+        <max value="0" />
     </element>
     <element id="Questionnaire.item:voorkeurZorg.initial[x]">
       <path value="Questionnaire.item.initial[x]" />
@@ -215,7 +211,7 @@
     <element id="Questionnaire.item:partneropname.required">
       <path value="Questionnaire.item.required" />
       <min value="1" />
-      <fixedBoolean value="true" />
+      <fixedBoolean value="false" />
     </element>
     <element id="Questionnaire.item:partneropname.repeats">
       <path value="Questionnaire.item.repeats" />

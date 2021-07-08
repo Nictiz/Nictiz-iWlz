@@ -1,16 +1,19 @@
 <QuestionnaireResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/QuestionnaireResponse.xsd">
-    <id value="iwlz-GeindiceerdZorgzwaartepakket-Questionnaire"/>
+    <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
     <questionnaire>
-        <reference value="Questionnaire/iwlz-GeindiceerdZorgzwaartepakket"/>
+        <reference value="Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
     </questionnaire>
     <status value="completed"/>
+    <subject>
+        <reference value="Patient/iwlz-Persoon-01"/>
+    </subject>
     <item>
         <linkId value="1"/>
         <answer>
             <valueCoding>
                 <!-- COD163: Zorgzwaartepakket (Enumeratie) -->
-                <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31339"/>
-                <code value="756 7VV"/>
+                <system value="http://istandaarden.nl/ibieb/codelijsten/COD163"/>
+                <code value="756"/>
                 <display value="Beschermd wonen met zeer intensieve zorg, vanwege specifieke aandoeningen, met nadruk op begeleiding"/>
             </valueCoding>
         </answer>
@@ -32,7 +35,7 @@
         <answer>
             <valueCoding>
                 <!-- COD756: Klasse (Enumeratie) -->
-                <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=32746"/>
+                <system value="http://istandaarden.nl/ibieb/codelijsten/COD756"/>
                 <code value="KD15"/>
                 <display value="Vijftien dagdelen per week"/>
             </valueCoding>
@@ -43,7 +46,7 @@
         <answer>
             <valueCoding>
                 <!-- COD999: Voorkeur client -->
-                <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31037"/>
+                <system value="http://istandaarden.nl/ibieb/codelijsten/COD999"/>
                 <code value="2"/>
                 <display value="Persoonsgebonden budget (PGB)"/>
             </valueCoding>
