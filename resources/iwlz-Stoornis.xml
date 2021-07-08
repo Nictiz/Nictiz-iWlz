@@ -9,7 +9,7 @@
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="iwlz-gegevensmatrix" />
-    <uri value="https://nictiznl.sharepoint.com/:x:/r/sites/MedMij-Standaarden2/_layouts/15/Doc.aspx?sourcedoc=%7B3BBAC9E3-7884-4BD2-98ED-A87AA4EE7AF7%7D&amp;file=iWlz-FHIR-v2.xlsx&amp;action=default&amp;mobileredirect=true" />
+    <uri value="https://decor.nictiz.nl/decor/services/RetrieveDataSet?id=2.16.840.1.113883.2.4.3.11.60.128.1.1&amp;language=nl-NL&amp;effectiveDate=2021-05-19T17:43:12&amp;format=html" />
     <name value="iWlz Gegevensmatrix" />
   </mapping>
   <kind value="resource" />
@@ -18,6 +18,14 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
   <derivation value="constraint" />
   <differential>
+      <element id="Condition">
+          <path value="Condition" />
+          <mapping>
+              <identity value="iwlz-gegevensmatrix" />
+              <map value="iwlz-dataelement-1" />
+              <comment value="Stoornis" />
+          </mapping>
+      </element>
     <element id="Condition.extension">
       <path value="Condition.extension" />
       <slicing>
@@ -40,10 +48,11 @@
     <element id="Condition.extension:prognose.valueCodeableConcept:valueCodeableConcept">
       <path value="Condition.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornis-Prognose" />
-      </mapping>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-8" />
+            <comment value="Prognose" />
+        </mapping>
     </element>
     <element id="Condition.identifier">
       <path value="Condition.identifier" />
@@ -68,10 +77,11 @@
           <reference value="http://istandaarden.nl/ibieb/codelijsten/COD736" />
         </valueSetReference>
       </binding>
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornis-Grondslag" />
-      </mapping>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-4" />
+            <comment value="Stoornis Grondslag" />
+        </mapping>
     </element>
     <element id="Condition.severity">
       <path value="Condition.severity" />
@@ -80,10 +90,11 @@
     <element id="Condition.code">
       <path value="Condition.code" />
       <min value="1" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornis-Ziektebeeld stoornis" />
-      </mapping>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-7" />
+            <comment value="Ziektebeeld stoornis" />
+        </mapping>
     </element>
     <element id="Condition.code.extension">
       <path value="Condition.code.extension" />
@@ -232,10 +243,11 @@
     </element>
     <element id="Condition.note">
       <path value="Condition.note" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="Stoornis-Commentaar" />
-      </mapping>
+        <mapping>
+            <identity value="iwlz-gegevensmatrix" />
+            <map value="iwlz-dataelement-9" />
+            <comment value="Commentaar" />
+        </mapping>
     </element>
   </differential>
 </StructureDefinition>

@@ -18,6 +18,19 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
+      <element id="Observation">
+          <path value="Observation" />
+          <mapping>
+              <identity value="iwlz-gegevensmatrix" />
+              <map value="iwlz-dataelement-41" />
+              <comment value="Beperking"/>
+          </mapping>
+          <mapping>
+              <identity value="iwlz-gegevensmatrix" />
+              <map value="iwlz-dataelement-45" />
+              <comment value="Beperking score"/>
+          </mapping>
+      </element>
     <element id="Observation.identifier">
       <path value="Observation.identifier" />
       <max value="0" />
