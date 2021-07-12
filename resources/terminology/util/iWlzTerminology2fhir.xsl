@@ -31,18 +31,12 @@
                 
                 <xsl:result-document method="xml" indent="yes" href="{concat($sheetPath,'/../../../../CodeSystem-', $codeSystemCode, '-', $codeSystemName, '.xml')}">
                     <CodeSystem xmlns="http://hl7.org/fhir">
-                        <id value="TODO"/>
+                        <id value="{$codeSystemCode}-CodeSystem"/>
                         <meta>
                             <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
-                            <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/CodeSystem"/>-->
                         </meta>
                         <language value="nl-NL"/>
                         <url value="https://www.istandaarden.nl/ibieb/codesystemen/{$codeSystemCode}"/>
-                        <!--<identifier>
-                        <use value="official"/>
-                        <system value="http://art-decor.org/ns/oids/cs"/>
-                        <value value="2.16.840.1.113883.2.4.3.11.[branch codesystemen istandaarden].165"/>
-                    </identifier>-->
                         <version value="1.1-20201001"/>
                         <name value="{$codeSystemCode}"/>
                         <title value="{$codeSystemCode}: {$codeSystemName}"/>
@@ -50,7 +44,7 @@
                         <experimental value="false"/>
                         <publisher value="Zorginstituut Nederland"/>
                         <contact>
-                            <name value="iStandaarden of iWlz"/>
+                            <name value="Zorginstituut Nederland"/>
                             <telecom>
                                 <system value="email"/>
                                 <value value="info@istandaarden.nl"/>
@@ -60,53 +54,23 @@
                         <purpose value="This CodeSystem resource represents the the {$codeSystemCode} 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
                         <caseSensitive value="false"/>
                         <content value="complete"/>
-                        <count value="2"/>
-                        <!--<property>
-                        <code value="status"/>
-                        <uri value="http://hl7.org/fhir/concept-properties"/>
-                        <description value="A code that indicates the status of the concept. Values found in this version of the code system are: active, deprecated"/>
-                        <type value="code"/>
-                    </property>
-                    <property>
-                        <code value="deprecated"/>
-                        <uri value="http://hl7.org/fhir/concept-properties"/>
-                        <description value="The date at which a concept was deprecated. Concepts that are deprecated but not inactive can still be used, but their use is discouraged, and they should be expected to be made inactive in a future release. Property type is dateTime. Note that the status property may also be used to indicate that a concept is deprecated"/>
-                        <type value="dateTime"/>
-                    </property>
-                    <property>
-                        <code value="effectiveDate"/>
-                        <uri value="http://hl7.org/fhir/concept-properties"/>
-                        <description value="The date at which the concept was status was last changed. This is calculated based on the highest of 'creation date', 'expiration date', and 'official release date'"/>
-                        <type value="dateTime"/>
-                    </property>-->
                     </CodeSystem>
                 </xsl:result-document>
                 <xsl:result-document method="xml" indent="yes" href="{concat($sheetPath,'/../../../../', $codeSystemCode, '-', $codeSystemName, '.xml')}">
                     <ValueSet xmlns="http://hl7.org/fhir">
-                        <id value="2.16.840.1.113883.2.4.3.11.[branch valuesets istandaarden].165"/>
+                        <id value="{$codeSystemCode}-ValueSet"/>
                         <meta>
                             <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
-                            <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
                         </meta>
-                        <!--<extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2017-12-31T00:00:00+02:00"/>
-        </valuePeriod>
-    </extension>-->
                         <url value="http://istandaarden.nl/ibieb/codelijsten/{$codeSystemCode}"/>
-                        <!--<identifier>
-                            <use value="official"/>
-                            <system value="http://art-decor.org/ns/oids/cs"/>
-                            <value value="2.16.840.1.113883.2.4.3.11.[branch valuesets istandaarden].165"/>
-                        </identifier>-->
-                        <!--<version value="2017-12-31T00:00:00"/>-->
+                        <version value="1.1-20201001"/>
                         <name value="{$codeSystemCode}"/>
                         <title value="{$codeSystemCode}: {$codeSystemName}"/>
                         <status value="active"/>
                         <experimental value="false"/>
                         <publisher value="Zorginstituut Nederland"/>
                         <contact>
-                            <name value="iStandaarden of iWlz"/>
+                            <name value="Zorginstituut Nederland"/>
                             <telecom>
                                 <system value="email"/>
                                 <value value="info@istandaarden.nl"/>
@@ -115,7 +79,6 @@
                         <description value="Indicatie van het soort toewijzing."/>
                         <immutable value="false"/>
                         <purpose value="This ValueSet resource represents the the {$codeSystemCode} 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
-                        <!--<copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>-->
                         <compose>
                             <include>
                                 <system value="http://istandaarden.nl/ibieb/codesystemen/{$codeSystemCode}"/>

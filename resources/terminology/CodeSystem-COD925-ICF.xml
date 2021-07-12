@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-   <id value="TODO"/>
+   <id value="COD925-CodeSystem"/>
    <meta>
       <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
    </meta>
@@ -13,7 +13,7 @@
    <experimental value="false"/>
    <publisher value="Zorginstituut Nederland"/>
    <contact>
-      <name value="iStandaarden of iWlz"/>
+      <name value="Zorginstituut Nederland"/>
       <telecom>
          <system value="email"/>
          <value value="info@istandaarden.nl"/>
@@ -23,5 +23,4 @@
    <purpose value="This CodeSystem resource represents the the COD925 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
    <caseSensitive value="false"/>
    <content value="complete"/>
-   <count value="2"/>
 </CodeSystem>
