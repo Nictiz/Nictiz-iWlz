@@ -7,9 +7,9 @@
     <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze">
         <valueCodeableConcept>
             <!-- Codelijst unknown -->
-            <system value=""/>
+            <!--<system value=""/>
             <code value=""/>
-            <display value=""/>
+            <display value=""/>-->
         </valueCodeableConcept>
     </extension>
     <identifier>
@@ -36,7 +36,7 @@
         <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
             <valueCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
                     <code value="LL"/>
                     <display value="Primary Home Land Line"/>
                 </coding>
@@ -74,9 +74,9 @@
         <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze">
             <valueCodeableConcept>
                 <!-- Codelijst unknown -->
-                <system value=""/>
+                <!--<system value=""/>
                 <code value=""/>
-                <display value=""/>
+                <display value=""/>-->
             </valueCodeableConcept>
         </extension>
         <relationship>
