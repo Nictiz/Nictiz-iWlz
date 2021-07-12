@@ -12,11 +12,6 @@
             <display value=""/>-->
         </valueCodeableConcept>
     </extension>
-    <identifier>
-        <!-- Need to know the right system -->
-        <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=28906"/>
-        <value value="1"/>
-    </identifier>
     <name>
         <family value="string string">
             <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">

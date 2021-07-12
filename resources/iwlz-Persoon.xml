@@ -77,27 +77,6 @@
         <comment value="Voorkeur contactwijze" />
       </mapping>
     </element>
-    <element id="Patient.identifier">
-      <path value="Patient.identifier" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Patient.identifier:BSN">
-      <path value="Patient.identifier" />
-      <sliceName value="BSN" />
-      <max value="0" />
-    </element>
-    <element id="Patient.identifier:identificatienummerClient">
-      <path value="Patient.identifier" />
-      <sliceName value="identificatienummerClient" />
-      <min value="1" />
-      <max value="1" />
-      <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="iwlz-dataelement-82" />
-        <comment value="Identificatienummer client" />
-      </mapping>
-    </element>
     <element id="Patient.active">
       <path value="Patient.active" />
       <max value="0" />
@@ -140,7 +119,7 @@
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-112" />
-          <comment value="Geslachtsnaam"/>
+        <comment value="Geslachtsnaam" />
       </mapping>
     </element>
     <element id="Patient.name.family.extension">
@@ -159,7 +138,7 @@
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-113" />
-          <comment value="Voorvoegsels"/>
+        <comment value="Voorvoegsels" />
       </mapping>
     </element>
     <element id="Patient.name.family.extension:humannameOwnName">
@@ -169,7 +148,7 @@
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-114" />
-          <comment value="Achternaam"/>
+        <comment value="Achternaam" />
       </mapping>
     </element>
     <element id="Patient.name.family.extension:humannamePartnerPrefix">
@@ -190,7 +169,7 @@
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-110" />
-          <comment value="Roepnaam"/>
+        <comment value="Roepnaam" />
       </mapping>
     </element>
     <element id="Patient.name.given.extension">
@@ -294,6 +273,7 @@
     </element>
     <element id="Patient.telecom.rank">
       <path value="Patient.telecom.rank" />
+      <comment value="iWlz defines separate ranks for 'Emailadressen' and 'Telefoonnummers', so there may be multiple telecom.rank's with the same value. These ranks combined with the value of Patient.extension:voorkeurContactwijze leads to the order in which clients would like to be contacted. Note that rank does not necessarily follow the order in which the contacts are represented in the instance." />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-77" />
@@ -478,7 +458,7 @@
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-95" />
-          <comment value="Geslachtsnaam"/>
+        <comment value="Geslachtsnaam" />
       </mapping>
     </element>
     <element id="Patient.contact.name.family.extension">
@@ -497,7 +477,7 @@
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-96" />
-          <comment value="Voorvoegsels"/>
+        <comment value="Voorvoegsels" />
       </mapping>
     </element>
     <element id="Patient.contact.name.family.extension:humannameOwnName">
@@ -507,7 +487,7 @@
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-97" />
-          <comment value="Achternaam"/>
+        <comment value="Achternaam" />
       </mapping>
     </element>
     <element id="Patient.contact.name.family.extension:humannamePartnerPrefix">
@@ -528,7 +508,7 @@
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-93" />
-          <comment value="Roepnaam"/>
+        <comment value="Roepnaam" />
       </mapping>
     </element>
     <element id="Patient.contact.name.given.extension">
@@ -632,6 +612,7 @@
     </element>
     <element id="Patient.contact.telecom.rank">
       <path value="Patient.contact.telecom.rank" />
+      <comment value="iWlz defines separate ranks for 'Emailadressen' and 'Telefoonnummers', so there may be multiple telecom.rank's with the same value. These ranks combined with the value of Patient.contact.extension:voorkeurContactwijze leads to the order in which contacts would like to be contacted. Note that rank does not necessarily follow the order in which the contacts are represented in the instance." />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-81" />
