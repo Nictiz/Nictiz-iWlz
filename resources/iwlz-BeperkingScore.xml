@@ -193,6 +193,13 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <description value="COD749: Duur" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD749" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-43" />
