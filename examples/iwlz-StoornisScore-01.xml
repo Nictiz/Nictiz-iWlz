@@ -6,20 +6,18 @@
     <status value="final"/>
     <code>
         <coding>
-            <!-- COD824: Vraag stoornis (Enumeratie)  -->
-            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31341"/>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD824"/>
             <code value="0305"/>
             <display value="Motorisch functioneren - Handhaving hoofdbalans"/>
         </coding>
     </code>
     <subject>
-        <reference value="Patient/iwlz-Burger-01"/>
+        <reference value="Patient/iwlz-Persoon-01"/>
         <display value="Johan XXX_Helleman"/>
     </subject>
     <valueCodeableConcept>
         <coding>
-            <!-- COD827: Score vraag stoornis (Enumeratie) -->
-            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31374"/>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD827"/>
             <code value="03"/>
             <display value="Wel probleem: continu hulp, toezicht of sturing nodig"/>
         </coding>

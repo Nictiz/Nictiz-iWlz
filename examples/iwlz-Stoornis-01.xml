@@ -6,8 +6,7 @@
     <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-Prognose">
         <valueCodeableConcept>
             <coding>
-                <!-- COD737: Prognose (Enumeratie) -->
-                <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31380"/>
+                <system value="http://istandaarden.nl/ibieb/codesystemen/COD737"/>
                 <code value="01"/>
                 <display value="Uitzicht op volledig herstel binnen 1 jaar"/>
             </coding>
@@ -15,36 +14,38 @@
     </extension>
     <category>
         <coding>
-            <!-- COD736: Grondslag zorg (Enumeratie) -->
-            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_4.html?object=38892"/>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD736"/>
             <code value="04"/>
             <display value="lichamelijke handicap (functiestoornis)"/>
         </coding>
     </category>
-    
-    <!-- Eveunteel een optie om hier de diagnosecodelijsten te gebruiken als category
-        https://informatiemodel.istandaarden.nl/iWlz22/views/view_30280.html -->
-    <category>
-        <coding>
-            <!-- COD392 + COD770 -->
-            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_4.html?object=38892"/>
-            <code value="014-06"/>
-            <display value="Classificatie van ziekten (CVZ/ICD-10) 3e aandoening"/>
-        </coding>
-    </category>
-    
     <code>
-        <!-- Kunnen COD392: Diagnosecodelijst en COD770: Subcode diagnosecodelijst worden afgeleid uit het gebruikte system?  -->
-        <!-- https://informatiemodel.istandaarden.nl/iWlz22/views/view_30280.html -->
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-DiagnoseCodelijst">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://istandaarden.nl/ibieb/codesystemen/COD392"/>
+                    <code value="014"/>
+                    <display value="Classificatie van ziekten (ZIN/ICD-10)"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-DiagnoseSubcodelijst">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://istandaarden.nl/ibieb/codesystemen/COD770"/>
+                    <code value="03"/>
+                    <display value="Fysiek"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
         <coding>
-            <!-- COD923: ICD10/DSMIV (subset) (Enumeratie) - https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=32031 -->
-            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=32031"/>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD923"/>
             <code value="19"/>
             <display value="Letsel en gevolgen van uitwendige oorzaken"/>
         </coding>
     </code>
     <subject>
-        <reference value="Patient/iwlz-Burger"/>
+        <reference value="Patient/iwlz-Persoon-01"/>
         <display value="Johan XXX_Helleman"/>
     </subject>
     <evidence>

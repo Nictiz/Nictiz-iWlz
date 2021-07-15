@@ -6,6 +6,7 @@
     <status value="completed"/>
     <subject>
         <reference value="Patient/iwlz-Persoon-01"/>
+        <display value="Johan XXX_Helleman"/>
     </subject>
     <item>
         <linkId value="1"/>

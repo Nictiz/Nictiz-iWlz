@@ -6,12 +6,12 @@
     <status value="completed"/>
     <subject>
         <reference value="Patient/iwlz-Persoon-01"/>
+        <display value="Johan XXX_Helleman"/>
     </subject>
     <item>
         <linkId value="1"/>
         <answer>
             <valueCoding>
-                <!-- COD163: Zorgzwaartepakket (Enumeratie) -->
                 <system value="http://istandaarden.nl/ibieb/codelijsten/COD163"/>
                 <code value="756"/>
                 <display value="Beschermd wonen met zeer intensieve zorg, vanwege specifieke aandoeningen, met nadruk op begeleiding"/>
@@ -34,7 +34,6 @@
         <linkId value="4"/>
         <answer>
             <valueCoding>
-                <!-- COD756: Klasse (Enumeratie) -->
                 <system value="http://istandaarden.nl/ibieb/codelijsten/COD756"/>
                 <code value="KD15"/>
                 <display value="Vijftien dagdelen per week"/>
@@ -45,7 +44,6 @@
         <linkId value="5"/>
         <answer>
             <valueCoding>
-                <!-- COD999: Voorkeur client -->
                 <system value="http://istandaarden.nl/ibieb/codelijsten/COD999"/>
                 <code value="2"/>
                 <display value="Persoonsgebonden budget (PGB)"/>

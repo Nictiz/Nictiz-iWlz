@@ -13,7 +13,7 @@
         <type value="choice"/>
         <required value="true"/>
         <options>
-            <reference value="ValueSet/xxxx"/>
+            <reference value="ValueSet/COD163-ValueSet"/>
         </options>
     </item>
     <item>
@@ -34,7 +34,7 @@
         <type value="choice"/>
         <required value="true"/>
         <options>
-            <reference value="ValueSet/xxxx"/>
+            <reference value="ValueSet/COD756-ValueSet"/>
         </options>
     </item>
     <item>
@@ -43,7 +43,7 @@
         <type value="choice"/>
         <required value="false"/>
         <options>
-            <reference value="ValueSet/xxxx"/>
+            <reference value="ValueSet/COD999-ValueSet"/>
         </options>
     </item>
     <item>

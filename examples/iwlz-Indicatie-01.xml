@@ -7,50 +7,45 @@
         <valueBoolean value="true"/>
     </extension>
     <identifier>
-        <!-- Need to know the right system - LDT_Besluitnummer (Datatype) -->
-        <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=28906"/>
+        <system value="http://example.istandaarden.nl/ibieb/namingsystem/besluitnummer"/>
         <value value="987654123"/>
     </identifier>
     <status value="final"/>
     <type>
         <coding>
-            <!-- NEED TO FIND RIGHT TERMINOLOGY -->
-            <system value="https://informatiemodel.istandaarden.nl/iWlz22/"/>
-            <code value="Indicatie"/>
-            <display value="Vastgestelde mate en aard van iemands zorgbehoefte"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="304784009"/>
+            <display value="Administrative form"/>
         </coding>
     </type>
     <class>
         <coding>
-            <!-- COD169: Soort indicatie (Enumeratie) -->
-            <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_1.html?object=31174"/>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD169"/>
             <code value="1"/>
             <display value="CIZ indicatie"/>
         </coding>
     </class>
     <subject>
-        <reference value="Patient/iwlz-Burger-01"/>
+        <reference value="Patient/iwlz-Persoon-01"/>
         <display value="Johan XXX_Helleman"/>
     </subject>
     <date value="2021-05-06T15:11:32+01:00"/>
     <author>
-        <reference value="Practitioner/iwlz-Practitioner-01"/>
-        <display value="Pietje Puk"/>
+        <reference value="Practitioner/nl-core-practitioner-01"/>
+        <display value="Henk de Vries"/>
     </author>
     <title value="Indicatie"/>
     <event>
         <period>
             <start value="2021-05-06"/>
-            <end value="2025-05-06"/>
+            <end value="2031-05-06"/>
         </period>
     </event>
     <section>
         <title value="Grondslagen"/>
         <code>
-            <!-- Dit zit ook in Condition.code - zelfde gegeven -->
             <coding>
-                <!-- COD736: Grondslag zorg (Enumeratie) -->
-                <system value="https://informatiemodel.istandaarden.nl/iWlz22/object_4.html?object=38892"/>
+                <system value="http://istandaarden.nl/ibieb/codesystemen/COD736"/>
                 <code value="04"/>
                 <display value="lichamelijke handicap (functiestoornis)"/>
             </coding>
