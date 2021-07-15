@@ -203,7 +203,7 @@
       <path value="Condition.subject" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Burger" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Persoon" />
       </type>
     </element>
     <element id="Condition.context">
