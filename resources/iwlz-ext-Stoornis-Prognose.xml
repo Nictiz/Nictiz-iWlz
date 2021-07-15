@@ -25,11 +25,11 @@
         <code value="CodeableConcept" />
       </type>
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="COD737: Prognose" />
         <valueSetReference>
-          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD737"/>
-        </valueSetReference>  
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD737" />
+        </valueSetReference>
       </binding>
     </element>
   </differential>
