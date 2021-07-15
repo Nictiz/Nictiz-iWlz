@@ -18,14 +18,14 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
   <derivation value="constraint" />
   <differential>
-      <element id="Composition">
-          <path value="Composition" />
-          <mapping>
-              <identity value="iwlz-gegevensmatrix" />
-              <map value="iwlz-dataelement-2" />
-              <comment value="Indicatie" />
-          </mapping>
-      </element>
+    <element id="Composition">
+      <path value="Composition" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-2" />
+        <comment value="Indicatie" />
+      </mapping>
+    </element>
     <element id="Composition.extension">
       <path value="Composition.extension" />
       <slicing>
@@ -50,18 +50,18 @@
       <sliceName value="valueBoolean" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-          <map value="iwlz-dataelement-21" />
-          <comment value="Meerzorg"/>
+        <map value="iwlz-dataelement-21" />
+        <comment value="Meerzorg" />
       </mapping>
     </element>
     <element id="Composition.identifier">
       <path value="Composition.identifier" />
       <min value="1" />
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-14" />
-            <comment value="Besluitnummer"/>
-        </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-14" />
+        <comment value="Besluitnummer" />
+      </mapping>
     </element>
     <element id="Composition.identifier.system">
       <path value="Composition.identifier.system" />
@@ -83,18 +83,18 @@
     <element id="Composition.class">
       <path value="Composition.class" />
       <min value="1" />
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-15" />
-            <comment value="Soort indicatie"/>
-        </mapping>
-        <binding>
-            <strength value="required" />
-            <description value="COD169: Soort indicatie" />
-            <valueSetReference>
-                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD169" />
-            </valueSetReference>
-        </binding>
+      <binding>
+        <strength value="required" />
+        <description value="COD169: Soort indicatie" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD169" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-15" />
+        <comment value="Soort indicatie" />
+      </mapping>
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
@@ -109,11 +109,11 @@
     </element>
     <element id="Composition.date">
       <path value="Composition.date" />
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-18" />
-            <comment value="Afgifte datum"/>
-        </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-18" />
+        <comment value="Afgifte datum" />
+      </mapping>
     </element>
     <element id="Composition.confidentiality">
       <path value="Composition.confidentiality" />
@@ -147,19 +147,19 @@
     <element id="Composition.event.period.start">
       <path value="Composition.event.period.start" />
       <min value="1" />
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-19" />
-            <comment value="Ingangsdatum"/>
-        </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-19" />
+        <comment value="Ingangsdatum" />
+      </mapping>
     </element>
     <element id="Composition.event.period.end">
       <path value="Composition.event.period.end" />
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-20" />
-            <comment value="Einddatum"/>
-        </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-20" />
+        <comment value="Einddatum" />
+      </mapping>
     </element>
     <element id="Composition.event.detail">
       <path value="Composition.event.detail" />
@@ -190,18 +190,18 @@
     <element id="Composition.section:grondslagen.code">
       <path value="Composition.section.code" />
       <min value="1" />
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-16" />
-            <comment value="Indicatie Grondslag"/>
-        </mapping>
-        <binding>
-            <strength value="required" />
-            <description value="COD736: Grondslag zorg" />
-            <valueSetReference>
-                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD736" />
-            </valueSetReference>
-        </binding>
+      <binding>
+        <strength value="required" />
+        <description value="COD736: Grondslag zorg" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD736" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-16" />
+        <comment value="Indicatie Grondslag" />
+      </mapping>
     </element>
     <element id="Composition.section:grondslagen.text">
       <path value="Composition.section.text" />

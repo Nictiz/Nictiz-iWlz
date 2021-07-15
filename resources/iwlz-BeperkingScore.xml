@@ -18,19 +18,19 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
-      <element id="Observation">
-          <path value="Observation" />
-          <mapping>
-              <identity value="iwlz-gegevensmatrix" />
-              <map value="iwlz-dataelement-41" />
-              <comment value="Beperking"/>
-          </mapping>
-          <mapping>
-              <identity value="iwlz-gegevensmatrix" />
-              <map value="iwlz-dataelement-45" />
-              <comment value="Beperking score"/>
-          </mapping>
-      </element>
+    <element id="Observation">
+      <path value="Observation" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-41" />
+        <comment value="Beperking" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-45" />
+        <comment value="Beperking score" />
+      </mapping>
+    </element>
     <element id="Observation.identifier">
       <path value="Observation.identifier" />
       <max value="0" />
@@ -43,33 +43,33 @@
       <path value="Observation.category" />
       <min value="1" />
       <max value="1" />
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-42" />
-            <comment value="Categorie"/>
-        </mapping>
-        <binding>
-            <strength value="required" />
-            <description value="COD539: Beperking" />
-            <valueSetReference>
-                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD539" />
-            </valueSetReference>
-        </binding>
+      <binding>
+        <strength value="required" />
+        <description value="COD539: Beperking" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD539" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-42" />
+        <comment value="Categorie" />
+      </mapping>
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
+      <binding>
+        <strength value="required" />
+        <description value="COD825: Vraag beperking" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD825" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-          <map value="iwlz-dataelement-46" />
-          <comment value="Beperking vraag"/>
+        <map value="iwlz-dataelement-46" />
+        <comment value="Beperking vraag" />
       </mapping>
-        <binding>
-            <strength value="required" />
-            <description value="COD825: Vraag beperking" />
-            <valueSetReference>
-                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD825" />
-            </valueSetReference>
-        </binding>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -102,18 +102,18 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <description value="COD827: Score vraag stoornis" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD827" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-          <map value="iwlz-dataelement-47" />
-          <comment value="Beperking score"/>
+        <map value="iwlz-dataelement-47" />
+        <comment value="Beperking score" />
       </mapping>
-        <binding>
-            <strength value="required" />
-            <description value="COD827: Score vraag stoornis" />
-            <valueSetReference>
-                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD827" />
-            </valueSetReference>
-        </binding>
     </element>
     <element id="Observation.dataAbsentReason">
       <path value="Observation.dataAbsentReason" />
@@ -127,14 +127,14 @@
       <path value="Observation.comment" />
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
-          <map value="iwlz-dataelement-44" />
-          <comment value="Commentaar"/>
+        <map value="iwlz-dataelement-44" />
+        <comment value="Commentaar" />
       </mapping>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-48" />
-            <comment value="Commentaar"/>
-        </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-48" />
+        <comment value="Commentaar" />
+      </mapping>
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
@@ -178,6 +178,7 @@
     </element>
     <element id="Observation.component:duur.code">
       <path value="Observation.component.code" />
+      <comment value="TODO needs a better terminology code." />
       <patternCodeableConcept>
         <coding>
           <system value="https://informatiemodel.istandaarden.nl/iWlz22/" />
@@ -192,11 +193,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-43" />
-            <comment value="Duur"/>
-        </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-43" />
+        <comment value="Duur" />
+      </mapping>
     </element>
     <element id="Observation.component:duur.dataAbsentReason">
       <path value="Observation.component.dataAbsentReason" />
