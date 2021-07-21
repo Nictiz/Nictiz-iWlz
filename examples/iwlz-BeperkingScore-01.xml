@@ -1,7 +1,7 @@
 <Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
     <id value="iwlz-BeperkingScore-01"/>
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore-01"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore"/>
     </meta>
     <status value="final"/>
     <category>

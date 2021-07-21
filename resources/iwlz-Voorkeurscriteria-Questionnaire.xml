@@ -35,7 +35,8 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="7" />
+      <min value="3" />
+      <max value="3" />
     </element>
     <element id="Questionnaire.item:voorkeurZorg">
       <path value="Questionnaire.item" />
@@ -62,7 +63,7 @@
     <element id="Questionnaire.item:voorkeurZorg.text">
       <path value="Questionnaire.item.text" />
       <min value="1" />
-        <fixedString value="Voorkeuren van de client m.b.t. de zorg" />
+      <fixedString value="Voorkeuren van de client m.b.t. de zorg" />
     </element>
     <element id="Questionnaire.item:voorkeurZorg.type">
       <path value="Questionnaire.item.type" />
@@ -91,11 +92,11 @@
     </element>
     <element id="Questionnaire.item:voorkeurZorg.options">
       <path value="Questionnaire.item.options" />
-        <max value="0" />
+      <max value="0" />
     </element>
     <element id="Questionnaire.item:voorkeurZorg.option">
       <path value="Questionnaire.item.option" />
-        <max value="0" />
+      <max value="0" />
     </element>
     <element id="Questionnaire.item:voorkeurZorg.initial[x]">
       <path value="Questionnaire.item.initial[x]" />
@@ -113,7 +114,7 @@
     </element>
     <element id="Questionnaire.item:voorkeurlocaties.linkId">
       <path value="Questionnaire.item.linkId" />
-      <fixedString value="3" />
+      <fixedString value="2" />
     </element>
     <element id="Questionnaire.item:voorkeurlocaties.definition">
       <path value="Questionnaire.item.definition" />
@@ -130,7 +131,7 @@
     <element id="Questionnaire.item:voorkeurlocaties.text">
       <path value="Questionnaire.item.text" />
       <min value="1" />
-      <fixedString value="Voorkeulocatie(s)" />
+      <fixedString value="Voorkeurlocatie(s)" />
     </element>
     <element id="Questionnaire.item:voorkeurlocaties.type">
       <path value="Questionnaire.item.type" />
@@ -181,7 +182,7 @@
     </element>
     <element id="Questionnaire.item:partneropname.linkId">
       <path value="Questionnaire.item.linkId" />
-      <fixedString value="4" />
+      <fixedString value="3" />
     </element>
     <element id="Questionnaire.item:partneropname.definition">
       <path value="Questionnaire.item.definition" />
@@ -224,10 +225,6 @@
     <element id="Questionnaire.item:partneropname.maxLength">
       <path value="Questionnaire.item.maxLength" />
       <max value="0" />
-    </element>
-    <element id="Questionnaire.item:partneropname.options">
-      <path value="Questionnaire.item.options" />
-      <min value="0" />
     </element>
     <element id="Questionnaire.item:partneropname.option">
       <path value="Questionnaire.item.option" />

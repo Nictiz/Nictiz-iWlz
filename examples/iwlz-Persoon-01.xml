@@ -14,7 +14,6 @@
         </valueCodeableConcept>
     </extension>
     <name>
-        <use value="official"/>
         <family value="XXX_Helleman">
             <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
                 <valueString value="XXX_Helleman"/>
@@ -89,7 +88,6 @@
             </coding>
         </relationship>
         <name>
-            <use value="official"/>
             <family value="van Putten">
                 <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
                     <valueString value="van"/>
