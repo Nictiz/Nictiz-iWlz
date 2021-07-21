@@ -18,14 +18,14 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
   <derivation value="constraint" />
   <differential>
-      <element id="QuestionnaireResponse">
-          <path value="QuestionnaireResponse" />
-          <mapping>
-              <identity value="iwlz-gegevensmatrix" />
-              <map value="iwlz-dataelement-22" />
-              <comment value="Geindiceerd zorgzwaartepakket"/>
-          </mapping>
-      </element>
+    <element id="QuestionnaireResponse">
+      <path value="QuestionnaireResponse" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-22" />
+        <comment value="Geindiceerd zorgzwaartepakket" />
+      </mapping>
+    </element>
     <element id="QuestionnaireResponse.identifier">
       <path value="QuestionnaireResponse.identifier" />
       <max value="0" />
@@ -111,11 +111,18 @@
       <type>
         <code value="Coding" />
       </type>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-23" />
-            <comment value="ZZPcode"/>
-        </mapping>
+      <binding>
+        <strength value="required" />
+        <description value="COD163: Zorgzwaartepakket" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD163" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-23" />
+        <comment value="ZZPcode" />
+      </mapping>
     </element>
     <element id="QuestionnaireResponse.item:zzpCode.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -155,11 +162,11 @@
       <type>
         <code value="date" />
       </type>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-24" />
-            <comment value="Ingangsdatum"/>
-        </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-24" />
+        <comment value="Ingangsdatum" />
+      </mapping>
     </element>
     <element id="QuestionnaireResponse.item:ingangsdatum.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -194,11 +201,11 @@
       <type>
         <code value="date" />
       </type>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-25" />
-            <comment value="Einddatum"/>
-        </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-25" />
+        <comment value="Einddatum" />
+      </mapping>
     </element>
     <element id="QuestionnaireResponse.item:einddatum.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -238,11 +245,18 @@
       <type>
         <code value="Coding" />
       </type>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-26" />
-            <comment value="Klasse"/>
-        </mapping>
+      <binding>
+        <strength value="required" />
+        <description value="COD756: Klasse" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD756" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-26" />
+        <comment value="Klasse" />
+      </mapping>
     </element>
     <element id="QuestionnaireResponse.item:klasse.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -281,16 +295,22 @@
       <type>
         <code value="Coding" />
       </type>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-27" />
-            <comment value="Voorkeur client"/>
-        </mapping>
+      <binding>
+        <strength value="required" />
+        <description value="COD999: Voorkeur client" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD999" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-27" />
+        <comment value="Voorkeur client" />
+      </mapping>
     </element>
     <element id="QuestionnaireResponse.item:voorkeurClient.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
-      <min value="1" />
-      <max value="1" />
+      <max value="0" />
     </element>
     <element id="QuestionnaireResponse.item:voorkeurClient.item">
       <path value="QuestionnaireResponse.item.item" />
@@ -325,11 +345,12 @@
       <type>
         <code value="string" />
       </type>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-28" />
-            <comment value="Instelling voorkeur"/>
-        </mapping>
+      <maxLength value="8" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-28" />
+        <comment value="Instelling voorkeur" />
+      </mapping>
     </element>
     <element id="QuestionnaireResponse.item:instellingVoorkeur.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
@@ -368,16 +389,15 @@
       <type>
         <code value="string" />
       </type>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-29" />
-            <comment value="Commentaar"/>
-        </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-29" />
+        <comment value="Commentaar" />
+      </mapping>
     </element>
     <element id="QuestionnaireResponse.item:commentaar.answer.item">
       <path value="QuestionnaireResponse.item.answer.item" />
-      <min value="1" />
-      <max value="1" />
+      <max value="0" />
     </element>
     <element id="QuestionnaireResponse.item:commentaar.item">
       <path value="QuestionnaireResponse.item.item" />
