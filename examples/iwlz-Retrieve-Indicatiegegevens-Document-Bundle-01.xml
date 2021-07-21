@@ -12,7 +12,7 @@
         <relation value="self"/>
         <url value="https://example.com/fhir/Composition/iwlz-Indicatie-01/$document"/>
     </link>
-    <!--      The Composition resource as first resource      -->
+    <!-- The Composition resource as first resource      -->
     <entry>
         <fullUrl value="https://example.com/fhir/Composition/iwlz-Indicatie-01"/>
         <resource>
@@ -101,7 +101,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- Preferabbly a RESTfull Patient resource that can be retrieved with a read too. -->
+        <!-- Preferably a RESTfull Patient resource that can be retrieved with a read so this can be used in the 'send client preference' use case. -->
         <fullUrl value="https://example.com/fhir/Patient/iwlz-Persoon-01"/>
         <resource>
             <Patient>
