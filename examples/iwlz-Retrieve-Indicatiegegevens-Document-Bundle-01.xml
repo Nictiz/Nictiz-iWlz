@@ -1,0 +1,145 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="iwlz-Retrieve-Indicatiegegevens-Document-Bundle-01"/>
+    <meta>
+        <lastUpdated value="2021-05-28T22:12:21Z"/>
+    </meta>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c6e0"/>
+    </identifier>
+    <type value="document"/>
+    <link>
+        <relation value="self"/>
+        <url value="https://example.com/fhir/Composition/iwlz-Indicatie-01/$document"/>
+    </link>
+    <!--      The Composition resource as first resource      -->
+    <entry>
+        <fullUrl value="https://example.com/fhir/Composition/iwlz-Indicatie-01"/>
+        <resource>
+            <Composition>
+                <id value="iwlz-Indicatie-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Indicatie"/>
+                </meta>
+                <extension
+                    url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Meerzorg">
+                    <valueBoolean value="true"/>
+                </extension>
+                <identifier>
+                    <system value="http://example.istandaarden.nl/ibieb/namingsystem/besluitnummer"/>
+                    <value value="987654123"/>
+                </identifier>
+                <status value="final"/>
+                <type>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="304784009"/>
+                        <display value="Administrative form"/>
+                    </coding>
+                </type>
+                <class>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD169"/>
+                        <code value="1"/>
+                        <display value="CIZ indicatie"/>
+                    </coding>
+                </class>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Johan XXX_Helleman"/>
+                </subject>
+                <date value="2021-05-06T15:11:32+01:00"/>
+                <author>
+                    <reference value="urn:uuid:a776e6d9-2047-4daa-a875-4c160f7158f1"/>
+                    <display value="Henk de Vries"/>
+                </author>
+                <title value="Indicatie"/>
+                <event>
+                    <period>
+                        <start value="2021-05-06"/>
+                        <end value="2031-05-06"/>
+                    </period>
+                </event>
+                <section>
+                    <title value="Grondslagen"/>
+                    <code>
+                        <coding>
+                            <system value="http://istandaarden.nl/ibieb/codesystemen/COD736"/>
+                            <code value="04"/>
+                            <display value="lichamelijke handicap (functiestoornis)"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <reference value="urn:uuid:b65b7311-59aa-481d-87a9-e8b4b447306b"/>
+                        <display value="iwlz-Stoornis-01"/>
+                    </entry>
+                    <entry>
+                        <reference value="urn:uuid:5996fc7a-a1de-4c83-bd37-0775ae8f2604"/>
+                        <display value="iwlz-StoornisScore-01"/>
+                    </entry>
+                    <entry>
+                        <reference value="urn:uuid:a776e6d9-2047-4daa-a875-4c160f7158f1"/>
+                        <display value="iwlz-BeperkingScore-01"/>
+                    </entry>
+                </section>
+                <section>
+                    <title value="GeindiceerdZorgzwaartepakket"/>
+                    <entry>
+                        <reference value="urn:uuid:5fb0878a-4c97-4c7e-9720-69cfd2e2d9bb"/>
+                        <display value="iwlz-GeindiceerdZorgzwaartepakket-01"/>
+                    </entry>
+                </section>
+            </Composition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:a776e6d9-2047-4daa-a875-4c160f7158f1"/>
+        <resource>
+            <Practitioner>
+                <!-- snip -->
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
+        <!-- Preferabbly a RESTfull Patient resource that can be retrieved with a read too. -->
+        <fullUrl value="https://example.com/fhir/Patient/iwlz-Persoon-01"/>
+        <resource>
+            <Patient>
+                <id value="iwlz-Persoon-01"/>
+                <!-- snip -->
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:b65b7311-59aa-481d-87a9-e8b4b447306b"/>
+        <resource>
+            <Condition>
+                <!-- snip -->
+            </Condition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:5996fc7a-a1de-4c83-bd37-0775ae8f2604"/>
+        <resource>
+            <Observation>
+                <!-- snip -->
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:a776e6d9-2047-4daa-a875-4c160f7158f1"/>
+        <resource>
+            <Observation>
+                <!-- snip -->
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:5fb0878a-4c97-4c7e-9720-69cfd2e2d9bb"/>
+        <resource>
+            <QuestionnaireResponse>
+                <!-- snip -->
+            </QuestionnaireResponse>
+        </resource>
+    </entry>
+</Bundle>

@@ -1,4 +1,4 @@
-<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/Composition.xsd">
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/Patient.xsd">
     <id value="iwlz-Persoon-01"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Persoon"/>
@@ -14,15 +14,13 @@
         </valueCodeableConcept>
     </extension>
     <name>
-        <family value="string string">
-            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
-                <valueString value="string"/>
-            </extension>
+        <use value="official"/>
+        <family value="XXX_Helleman">
             <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-                <valueString value="string"/>
+                <valueString value="XXX_Helleman"/>
             </extension>
         </family>
-        <given value="string">
+        <given value="Johan">
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
                 <valueCode value="CL"/>
             </extension>
@@ -48,7 +46,7 @@
     </telecom>
     <telecom>
         <system value="email"/>
-        <value value="test@testmail.nl"/>
+        <value value="XXX_Helleman@hotmail.com"/>
         <use value="home"/>
         <rank value="1"/>
     </telecom>
@@ -91,15 +89,19 @@
             </coding>
         </relationship>
         <name>
-            <family value="van String">
+            <use value="official"/>
+            <family value="van Putten XXX_Helleman">
                 <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
                     <valueString value="van"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-                    <valueString value="String"/>
+                    <valueString value="Putten"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+                    <valueString value="XXX_Helleman"/>
                 </extension>
             </family>
-            <given value="string">
+            <given value="Jannie">
                 <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
                     <valueCode value="CL"/>
                 </extension>
