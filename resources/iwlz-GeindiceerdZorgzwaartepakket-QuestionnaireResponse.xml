@@ -345,7 +345,13 @@
       <type>
         <code value="string" />
       </type>
-      <maxLength value="8" />
+      <constraint>
+        <key value="RS036" />
+        <requirements value="AGB-code" />
+        <severity value="error" />
+        <human value="Vullen met 8 cijfers." />
+        <expression value="matches('[0-9]{8}')" />
+      </constraint>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-28" />
