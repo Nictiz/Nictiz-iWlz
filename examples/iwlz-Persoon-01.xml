@@ -6,10 +6,11 @@
     <!-- Contents based on a mix of nl-core-patient examples and SwaggerUI Viewer contents at https://petstore.swagger.io/?url=https://raw.githubusercontent.com/iStandaarden/iWlz-indicatie/master/api-specificatie/indicatieregister.yaml -->
     <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze">
         <valueCodeableConcept>
-            <!-- Codelijst unknown -->
-            <!--<system value=""/>
-            <code value=""/>
-            <display value=""/>-->
+            <coding>
+                <system value="https://www.istandaarden.nl/ibieb/codesystemen/COD1001"/>
+                <code value="1"/>
+                <display value="Telefonisch"/>
+            </coding>
         </valueCodeableConcept>
     </extension>
     <name>
@@ -68,10 +69,11 @@
         </extension>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze">
             <valueCodeableConcept>
-                <!-- Codelijst unknown -->
-                <!--<system value=""/>
-                <code value=""/>
-                <display value=""/>-->
+                <coding>
+                    <system value="https://www.istandaarden.nl/ibieb/codesystemen/COD1001"/>
+                    <code value="2"/>
+                    <display value="E-mail"/>
+                </coding>
             </valueCodeableConcept>
         </extension>
         <relationship>
