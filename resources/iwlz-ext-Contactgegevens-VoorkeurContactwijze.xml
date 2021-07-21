@@ -24,11 +24,13 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <binding>
-        <strength value="required" />
-        <description value="TODO" />
-        <valueSetUri value="TODO" />
-      </binding>
+        <binding>
+            <strength value="required" />
+            <description value="COD1001: Voorkeur contactwijze" />
+            <valueSetReference>
+                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD1001" />
+            </valueSetReference>
+        </binding>
     </element>
   </differential>
 </StructureDefinition>

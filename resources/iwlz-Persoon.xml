@@ -71,13 +71,6 @@
     <element id="Patient.extension:voorkeurContactwijze.valueCodeableConcept:valueCodeableConcept">
       <path value="Patient.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-        <binding>
-            <strength value="required" />
-            <description value="COD1001: Voorkeur contactwijze" />
-            <valueSetReference>
-                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD1001" />
-            </valueSetReference>
-        </binding>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-50" />
@@ -399,13 +392,6 @@
     <element id="Patient.contact.extension:voorkeurContactwijze.valueCodeableConcept:valueCodeableConcept">
       <path value="Patient.contact.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-        <binding>
-            <strength value="required" />
-            <description value="COD1001: Voorkeur contactwijze" />
-            <valueSetReference>
-                <reference value="http://istandaarden.nl/ibieb/codelijsten/COD1001" />
-            </valueSetReference>
-        </binding>
       <mapping>
         <identity value="iwlz-gegevensmatrix" />
         <map value="iwlz-dataelement-79" />
