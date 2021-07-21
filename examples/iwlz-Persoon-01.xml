@@ -90,15 +90,12 @@
         </relationship>
         <name>
             <use value="official"/>
-            <family value="van Putten XXX_Helleman">
+            <family value="van Putten">
                 <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
                     <valueString value="van"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
                     <valueString value="Putten"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
-                    <valueString value="XXX_Helleman"/>
                 </extension>
             </family>
             <given value="Jannie">
