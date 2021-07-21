@@ -63,10 +63,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze" />
       </type>
-      <binding>
-        <strength value="required" />
-        <valueSetUri value="TODO" />
-      </binding>
     </element>
     <element id="Patient.extension:voorkeurContactwijze.valueCodeableConcept:valueCodeableConcept">
       <path value="Patient.extension.valueCodeableConcept" />
