@@ -143,8 +143,11 @@
         <fullUrl value="urn:uuid:5fb0878a-4c97-4c7e-9720-69cfd2e2d9bb"/>
         <resource>
             <QuestionnaireResponse>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-QuestionnaireResponse"/>
+                </meta>
                 <questionnaire>
-                    <reference value="Questionnaire/iwlz-Voorkeurscriteria-Questionnaire-01"/>
+                    <reference value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-Questionnaire"/>
                 </questionnaire>
                 <status value="completed"/>
                 <subject>
