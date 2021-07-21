@@ -69,7 +69,6 @@
     <element id="Condition.category">
       <path value="Condition.category" />
       <min value="1" />
-      <max value="1" />
       <binding>
         <strength value="required" />
         <description value="COD736: Grondslag zorg" />
@@ -109,6 +108,7 @@
     <element id="Condition.code.extension:diagnoseCodelijst">
       <path value="Condition.code.extension" />
       <sliceName value="diagnoseCodelijst" />
+      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -243,6 +243,7 @@
     </element>
     <element id="Condition.note">
       <path value="Condition.note" />
+        <max value="1" />
         <mapping>
             <identity value="iwlz-gegevensmatrix" />
             <map value="iwlz-dataelement-9" />

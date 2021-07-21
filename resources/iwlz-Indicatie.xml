@@ -179,7 +179,6 @@
     <element id="Composition.section:grondslagen">
       <path value="Composition.section" />
       <sliceName value="grondslagen" />
-      <min value="1" />
       <max value="2" />
     </element>
     <element id="Composition.section:grondslagen.title">
@@ -241,7 +240,6 @@
     <element id="Composition.section:geindiceerdZorgzwaartepakket">
       <path value="Composition.section" />
       <sliceName value="geindiceerdZorgzwaartepakket" />
-      <max value="1" />
     </element>
     <element id="Composition.section:geindiceerdZorgzwaartepakket.title">
       <path value="Composition.section.title" />
