@@ -78,7 +78,7 @@
                         <display value="iwlz-StoornisScore-01"/>
                     </entry>
                     <entry>
-                        <reference value="urn:uuid:a776e6d9-2047-4daa-a875-4c160f7158f1"/>
+                        <reference value="urn:uuid:57b7a4f0-9cc5-4168-9949-5f50e1459c64"/>
                         <display value="iwlz-BeperkingScore-01"/>
                     </entry>
                 </section>
@@ -127,7 +127,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="urn:uuid:a776e6d9-2047-4daa-a875-4c160f7158f1"/>
+        <fullUrl value="urn:uuid:57b7a4f0-9cc5-4168-9949-5f50e1459c64"/>
         <resource>
             <Observation>
                 <!-- snip -->
