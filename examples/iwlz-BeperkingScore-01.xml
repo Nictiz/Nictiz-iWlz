@@ -1,0 +1,50 @@
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
+    <id value="iwlz-BeperkingScore-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD539"/>
+            <code value="2"/>
+            <display value="Mobiliteit"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD825"/>
+            <code value="0208"/>
+            <display value="Mobiliteit - Zich voortbewegen binnenshuis, zonder hulp of hulpmiddelen"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/iwlz-Persoon-01"/>
+        <display value="Johan XXX_Helleman"/>
+    </subject>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD828"/>
+            <code value="2"/>
+            <display value="Kan dit slechts met veel moeite/iemand anders moet helpen"/>
+        </coding>
+    </valueCodeableConcept>
+    <comment value="Dit is een voorbeeld van hoe een toelichting op de Stoornis in het bericht eruit kan zien."/>
+    <component>
+        <code>
+            <!-- Needs a better code! -->
+            <coding>
+                <system value="https://informatiemodel.istandaarden.nl/iWlz22/"/>
+                <code value="LDT_Duur"/>
+                <display value="LDT_Duur"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://istandaarden.nl/ibieb/codesystemen/COD749"/>
+                <code value="3"/>
+                <display value="Zes tot twaalf maanden"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+</Observation>

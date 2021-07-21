@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="COD1001-ValueSet"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="http://istandaarden.nl/ibieb/codelijsten/COD1001"/>
+    <version value="1.1-20201001"/>
+    <name value="COD1001"/>
+    <title value="COD1001: Voorkeur contactwijze"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="Zorginstituut Nederland"/>
+    <contact>
+        <name value="Zorginstituut Nederland"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@istandaarden.nl"/>
+        </telecom>
+    </contact>
+    <description value="Gecodeerde aanduiding van de voorkeur van de client ten aanzien van de wijze waarop contact opgenomen kan worden."/>
+    <immutable value="false"/>
+    <purpose value="This ValueSet resource represents the the COD1001 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://github.com/iStandaarden/iWlz-codelijsten-APiWlz/tree/main/codelijsten/COD1001."/>
+    <compose>
+        <include>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD1001"/>
+            <version value="1.1-20201001"/>
+        </include>
+    </compose>
+</ValueSet>

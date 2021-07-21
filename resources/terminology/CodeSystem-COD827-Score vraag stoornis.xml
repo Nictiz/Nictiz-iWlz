@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="COD827-CodeSystem"/>
+   <language value="nl-NL"/>
+   <url value="https://www.istandaarden.nl/ibieb/codesystemen/COD827"/>
+   <version value="1.1-20201001"/>
+   <name value="COD827"/>
+   <title value="COD827: Score vraag stoornis"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Zorginstituut Nederland"/>
+   <contact>
+      <name value="Zorginstituut Nederland"/>
+      <telecom>
+         <system value="email"/>
+         <value value="info@istandaarden.nl"/>
+      </telecom>
+   </contact>
+   <description value="Gecodeerde aanduiding van de score op een vraag over een stoornis."/>
+   <purpose value="This CodeSystem resource represents the the COD827 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
+   <caseSensitive value="false"/>
+   <content value="not-present"/>
+</CodeSystem>

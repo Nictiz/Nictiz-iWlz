@@ -1,0 +1,69 @@
+<Composition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/Composition.xsd">
+    <id value="iwlz-Indicatie-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Indicatie"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Meerzorg">
+        <valueBoolean value="true"/>
+    </extension>
+    <identifier>
+        <system value="http://example.istandaarden.nl/ibieb/namingsystem/besluitnummer"/>
+        <value value="987654123"/>
+    </identifier>
+    <status value="final"/>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="304784009"/>
+            <display value="Administrative form"/>
+        </coding>
+    </type>
+    <class>
+        <coding>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD169"/>
+            <code value="1"/>
+            <display value="CIZ indicatie"/>
+        </coding>
+    </class>
+    <subject>
+        <reference value="Patient/iwlz-Persoon-01"/>
+        <display value="Johan XXX_Helleman"/>
+    </subject>
+    <date value="2021-05-06T15:11:32+01:00"/>
+    <author>
+        <reference value="Practitioner/nl-core-practitioner-01"/>
+        <display value="Henk de Vries"/>
+    </author>
+    <title value="Indicatie"/>
+    <event>
+        <period>
+            <start value="2021-05-06"/>
+            <end value="2031-05-06"/>
+        </period>
+    </event>
+    <section>
+        <title value="Grondslagen"/>
+        <code>
+            <coding>
+                <system value="http://istandaarden.nl/ibieb/codesystemen/COD736"/>
+                <code value="04"/>
+                <display value="lichamelijke handicap (functiestoornis)"/>
+            </coding>
+        </code>
+        <entry>
+            <reference value="Condition/iwlz-Stoornis-01"/>
+        </entry>
+        <entry>
+            <reference value="Observation/iwlz-StoornisScore-01"/>
+        </entry>
+        <entry>
+            <reference value="Observation/iwlz-BeperkingScore-01"/>
+        </entry>
+    </section>
+    <section>
+        <title value="GeindiceerdZorgzwaartepakket"/>
+        <entry>
+            <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-01"/>
+        </entry>
+    </section>
+</Composition>

@@ -1,0 +1,32 @@
+<QuestionnaireResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/QuestionnaireResponse.xsd">
+    <id value="iwlz-Voorkeurscriteria-QuestionnaireResponse-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-QuestionnaireResponse"/>
+    </meta>
+    <questionnaire>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-Questionnaire"/>
+    </questionnaire>
+    <status value="completed"/>
+    <subject>
+        <reference value="Patient/iwlz-Persoon-01"/>
+        <display value="Johan XXX_Helleman"/>
+    </subject>
+    <item>
+        <linkId value="1"/>
+        <answer>
+            <valueString value="Geen verdere voorkeuren"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="2"/>
+        <answer>
+            <valueString value="Rode Kruis Ziekenhuis Beverwijk"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="3"/>
+        <answer>
+            <valueBoolean value="true"/>
+        </answer>
+    </item>
+</QuestionnaireResponse>

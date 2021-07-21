@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-ext-Contactpersoon-Organisatienaam" />
+    <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactpersoon-Organisatienaam" />
+    <name value="iwlz-ext-Contactpersoon-Organisatienaam" />
+    <title value="iWlz ext Contactpersoon Organisatienaam" />
+  <status value="draft" />
+    <description value="De naam van een organisatie die betrokken is bij de zorg van de cliënt." />
+  <fhirVersion value="3.0.2" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+    <contextType value="resource" />
+    <context value="Patient.contact" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+        <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactpersoon-Organisatienaam" />
+    </element>
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

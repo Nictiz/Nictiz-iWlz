@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-Persoon" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Persoon" />
+  <name value="iwlz-Persoon" />
+  <title value="iWlz Persoon" />
+  <status value="draft" />
+  <description value="Een natuurlijk persoon&#xD;&#xA;&#xD;&#xA;Includes iwlz-Relatie" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="iwlz-gegevensmatrix" />
+    <uri value="https://decor.nictiz.nl/decor/services/RetrieveDataSet?id=2.16.840.1.113883.2.4.3.11.60.128.1.1&amp;language=nl-NL&amp;effectiveDate=2021-05-19T17:43:12&amp;format=html" />
+    <name value="iWlz Gegevensmatrix" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-54" />
+        <comment value="Patient" />
+      </mapping>
+    </element>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.extension:preferredPharmacy">
+      <path value="Patient.extension" />
+      <sliceName value="preferredPharmacy" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:nationality">
+      <path value="Patient.extension" />
+      <sliceName value="nationality" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:legalStatus">
+      <path value="Patient.extension" />
+      <sliceName value="legalStatus" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:lifeStance">
+      <path value="Patient.extension" />
+      <sliceName value="lifeStance" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:voorkeurContactwijze">
+      <path value="Patient.extension" />
+      <sliceName value="voorkeurContactwijze" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze" />
+      </type>
+    </element>
+    <element id="Patient.extension:voorkeurContactwijze.valueCodeableConcept:valueCodeableConcept">
+      <path value="Patient.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-50" />
+        <comment value="Voorkeur contactwijze" />
+      </mapping>
+    </element>
+    <element id="Patient.active">
+      <path value="Patient.active" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-55" />
+        <comment value="Naamgegevens" />
+      </mapping>
+    </element>
+    <element id="Patient.name.extension">
+      <path value="Patient.name.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.name.extension:humannameAssemblyOrder">
+      <path value="Patient.name.extension" />
+      <sliceName value="humannameAssemblyOrder" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name.use">
+      <path value="Patient.name.use" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name.text">
+      <path value="Patient.name.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-112" />
+        <comment value="Geslachtsnaam" />
+      </mapping>
+    </element>
+    <element id="Patient.name.family.extension">
+      <path value="Patient.name.family.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.name.family.extension:humannameOwnPrefix">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="humannameOwnPrefix" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-113" />
+        <comment value="Voorvoegsels" />
+      </mapping>
+    </element>
+    <element id="Patient.name.family.extension:humannameOwnName">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="humannameOwnName" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-114" />
+        <comment value="Achternaam" />
+      </mapping>
+    </element>
+    <element id="Patient.name.family.extension:humannamePartnerPrefix">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="humannamePartnerPrefix" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name.family.extension:humannamePartnerName">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="humannamePartnerName" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <comment value="To be conformant to the iWlz implementation of NameInformation, at least the following qualifiers SHALL be supported: CL. The qualifier 'CL' maps to GivenName." />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-110" />
+        <comment value="Roepnaam" />
+      </mapping>
+    </element>
+    <element id="Patient.name.given.extension">
+      <path value="Patient.name.given.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.name.given.extension:iso21090EnQualifier">
+      <path value="Patient.name.given.extension" />
+      <sliceName value="iso21090EnQualifier" />
+      <min value="1" />
+    </element>
+    <element id="Patient.name.given.extension:iso21090EnQualifier.valueCode:valueCode">
+      <path value="Patient.name.given.extension.valueCode" />
+      <sliceName value="valueCode" />
+      <fixedCode value="CL" />
+    </element>
+    <element id="Patient.name.prefix">
+      <path value="Patient.name.prefix" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name.suffix">
+      <path value="Patient.name.suffix" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name.period">
+      <path value="Patient.name.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.telecom">
+      <path value="Patient.telecom" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-59" />
+        <comment value="Contactgegevens" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-84" />
+        <comment value="Telefoonnummers" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-88" />
+        <comment value="EmailAdressen" />
+      </mapping>
+    </element>
+    <element id="Patient.telecom.extension">
+      <path value="Patient.telecom.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.telecom.extension:toelichting">
+      <path value="Patient.telecom.extension" />
+      <sliceName value="toelichting" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Toelichting" />
+      </type>
+    </element>
+    <element id="Patient.telecom.extension:toelichting.valueString:valueString">
+      <path value="Patient.telecom.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-119" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Patient.telecom.value">
+      <path value="Patient.telecom.value" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-85" />
+        <comment value="Telefoonnummer" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-89" />
+        <comment value="EmailAdres" />
+      </mapping>
+    </element>
+    <element id="Patient.telecom.use">
+      <path value="Patient.telecom.use" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-87" />
+        <comment value="NummerSoort" />
+      </mapping>
+    </element>
+    <element id="Patient.telecom.rank">
+      <path value="Patient.telecom.rank" />
+      <comment value="iWlz defines separate ranks for 'Emailadressen' and 'Telefoonnummers', so there may be multiple telecom.rank's with the same value. These ranks combined with the value of Patient.extension:voorkeurContactwijze leads to the order in which clients would like to be contacted. Note that rank does not necessarily follow the order in which the contacts are represented in the instance." />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-77" />
+        <comment value="Volgnummer-email" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-78" />
+        <comment value="Volgnummer-telefoon" />
+      </mapping>
+    </element>
+    <element id="Patient.telecom.period">
+      <path value="Patient.telecom.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-63" />
+        <comment value="Geslacht" />
+      </mapping>
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <max value="0" />
+    </element>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address.country.extension">
+      <path value="Patient.address.country.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.address.country.extension:countryCode">
+      <path value="Patient.address.country.extension" />
+      <sliceName value="countryCode" />
+    </element>
+    <element id="Patient.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
+      <path value="Patient.address.country.extension.valueCodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.maritalStatus">
+      <path value="Patient.maritalStatus" />
+      <max value="0" />
+    </element>
+    <element id="Patient.multipleBirth[x]">
+      <path value="Patient.multipleBirth[x]" />
+      <max value="0" />
+    </element>
+    <element id="Patient.photo">
+      <path value="Patient.photo" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact">
+      <path value="Patient.contact" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-67" />
+        <comment value="Contactpersoon" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.extension">
+      <path value="Patient.contact.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.extension:organisatienaam">
+      <path value="Patient.contact.extension" />
+      <sliceName value="organisatienaam" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactpersoon-Organisatienaam" />
+      </type>
+    </element>
+    <element id="Patient.contact.extension:organisatienaam.valueString:valueString">
+      <path value="Patient.contact.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-76" />
+        <comment value="Organisatie naam" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.extension:voorkeurContactwijze">
+      <path value="Patient.contact.extension" />
+      <sliceName value="voorkeurContactwijze" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze" />
+      </type>
+    </element>
+    <element id="Patient.contact.extension:voorkeurContactwijze.valueCodeableConcept:valueCodeableConcept">
+      <path value="Patient.contact.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-79" />
+        <comment value="Voorkeur contactwijze" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.relationship:relationship">
+      <path value="Patient.contact.relationship" />
+      <sliceName value="relationship" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-75" />
+        <comment value="Relatie" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.relationship:role">
+      <path value="Patient.contact.relationship" />
+      <sliceName value="role" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-74" />
+        <comment value="Rol" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name">
+      <path value="Patient.contact.name" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-68" />
+        <comment value="Naamgegevens" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.extension">
+      <path value="Patient.contact.name.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.name.extension:humannameAssemblyOrder">
+      <path value="Patient.contact.name.extension" />
+      <sliceName value="humannameAssemblyOrder" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.name.use">
+      <path value="Patient.contact.name.use" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.name.text">
+      <path value="Patient.contact.name.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.name.family">
+      <path value="Patient.contact.name.family" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-95" />
+        <comment value="Geslachtsnaam" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.family.extension">
+      <path value="Patient.contact.name.family.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.name.family.extension:humannameOwnPrefix">
+      <path value="Patient.contact.name.family.extension" />
+      <sliceName value="humannameOwnPrefix" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-96" />
+        <comment value="Voorvoegsels" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.family.extension:humannameOwnName">
+      <path value="Patient.contact.name.family.extension" />
+      <sliceName value="humannameOwnName" />
+      <min value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-97" />
+        <comment value="Achternaam" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.family.extension:humannamePartnerPrefix">
+      <path value="Patient.contact.name.family.extension" />
+      <sliceName value="humannamePartnerPrefix" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.name.family.extension:humannamePartnerName">
+      <path value="Patient.contact.name.family.extension" />
+      <sliceName value="humannamePartnerName" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.name.given">
+      <path value="Patient.contact.name.given" />
+      <comment value="To be conformant to the iWlz implementation of NameInformation, at least the following qualifiers SHALL be supported: CL. The qualifier 'CL' maps to GivenName." />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-93" />
+        <comment value="Roepnaam" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.given.extension">
+      <path value="Patient.contact.name.given.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.name.given.extension:iso21090EnQualifier">
+      <path value="Patient.contact.name.given.extension" />
+      <sliceName value="iso21090EnQualifier" />
+      <min value="1" />
+    </element>
+    <element id="Patient.contact.name.given.extension:iso21090EnQualifier.valueCode:valueCode">
+      <path value="Patient.contact.name.given.extension.valueCode" />
+      <sliceName value="valueCode" />
+      <fixedCode value="CL" />
+    </element>
+    <element id="Patient.contact.name.prefix">
+      <path value="Patient.contact.name.prefix" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.name.suffix">
+      <path value="Patient.contact.name.suffix" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.name.period">
+      <path value="Patient.contact.name.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.telecom">
+      <path value="Patient.contact.telecom" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-70" />
+        <comment value="Contactgegevens" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-101" />
+        <comment value="Telefoonnummers" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-105" />
+        <comment value="EmailAdressen" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.telecom.extension">
+      <path value="Patient.contact.telecom.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.telecom.extension:toelichting">
+      <path value="Patient.contact.telecom.extension" />
+      <sliceName value="toelichting" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Toelichting" />
+      </type>
+    </element>
+    <element id="Patient.contact.telecom.extension:toelichting.valueString:valueString">
+      <path value="Patient.contact.telecom.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-118" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.telecom.value">
+      <path value="Patient.contact.telecom.value" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-102" />
+        <comment value="Telefoonnummer" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-106" />
+        <comment value="EmailAdres" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.telecom.use">
+      <path value="Patient.contact.telecom.use" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-104" />
+        <comment value="NummerSoort" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.telecom.rank">
+      <path value="Patient.contact.telecom.rank" />
+      <comment value="iWlz defines separate ranks for 'Emailadressen' and 'Telefoonnummers', so there may be multiple telecom.rank's with the same value. These ranks combined with the value of Patient.contact.extension:voorkeurContactwijze leads to the order in which contacts would like to be contacted. Note that rank does not necessarily follow the order in which the contacts are represented in the instance." />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-81" />
+        <comment value="Volgnummer-email" />
+      </mapping>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-80" />
+        <comment value="Volgnummer-telefoon" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.telecom.period">
+      <path value="Patient.contact.telecom.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.address">
+      <path value="Patient.contact.address" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.address.country.extension">
+      <path value="Patient.contact.address.country.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.address.country.extension:countryCode">
+      <path value="Patient.contact.address.country.extension" />
+      <sliceName value="countryCode" />
+    </element>
+    <element id="Patient.contact.address.country.extension:countryCode.valueCodeableConcept:valueCodeableConcept.coding">
+      <path value="Patient.contact.address.country.extension.valueCodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.gender">
+      <path value="Patient.contact.gender" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.organization">
+      <path value="Patient.contact.organization" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact.period">
+      <path value="Patient.contact.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.animal">
+      <path value="Patient.animal" />
+      <max value="0" />
+    </element>
+    <element id="Patient.communication">
+      <path value="Patient.communication" />
+      <max value="0" />
+    </element>
+    <element id="Patient.generalPractitioner">
+      <path value="Patient.generalPractitioner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.managingOrganization">
+      <path value="Patient.managingOrganization" />
+      <max value="0" />
+    </element>
+    <element id="Patient.link">
+      <path value="Patient.link" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

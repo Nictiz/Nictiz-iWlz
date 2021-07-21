@@ -1,0 +1,65 @@
+<QuestionnaireResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/QuestionnaireResponse.xsd">
+    <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
+    <questionnaire>
+        <reference value="Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+    </questionnaire>
+    <status value="completed"/>
+    <subject>
+        <reference value="Patient/iwlz-Persoon-01"/>
+        <display value="Johan XXX_Helleman"/>
+    </subject>
+    <item>
+        <linkId value="1"/>
+        <answer>
+            <valueCoding>
+                <system value="http://istandaarden.nl/ibieb/codelijsten/COD163"/>
+                <code value="756"/>
+                <display value="Beschermd wonen met zeer intensieve zorg, vanwege specifieke aandoeningen, met nadruk op begeleiding"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="2"/>
+        <answer>
+            <valueDate value="2021-01-01"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="3"/>
+        <answer>
+            <valueDate value="2025-01-01"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="4"/>
+        <answer>
+            <valueCoding>
+                <system value="http://istandaarden.nl/ibieb/codelijsten/COD756"/>
+                <code value="KD15"/>
+                <display value="Vijftien dagdelen per week"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="5"/>
+        <answer>
+            <valueCoding>
+                <system value="http://istandaarden.nl/ibieb/codelijsten/COD999"/>
+                <code value="2"/>
+                <display value="Persoonsgebonden budget (PGB)"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="6"/>
+        <answer>
+            <valueString value="01526596"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="7"/>
+        <answer>
+            <valueString value="voorbeeld van commentaar"/>
+        </answer>
+    </item>
+</QuestionnaireResponse>

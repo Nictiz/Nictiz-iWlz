@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse" />
+  <name value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse" />
+  <title value="iWlz GeindiceerdZorgzwaartepakket QuestionnaireResponse" />
+  <status value="draft" />
+  <description value="Gegevens over een geindiceerd zorgzwaartepakket." />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="iwlz-gegevensmatrix" />
+    <uri value="https://decor.nictiz.nl/decor/services/RetrieveDataSet?id=2.16.840.1.113883.2.4.3.11.60.128.1.1&amp;language=nl-NL&amp;effectiveDate=2021-05-19T17:43:12&amp;format=html" />
+    <name value="iWlz Gegevensmatrix" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="QuestionnaireResponse" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="QuestionnaireResponse">
+      <path value="QuestionnaireResponse" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-22" />
+        <comment value="Geindiceerd zorgzwaartepakket" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.identifier">
+      <path value="QuestionnaireResponse.identifier" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.basedOn">
+      <path value="QuestionnaireResponse.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.parent">
+      <path value="QuestionnaireResponse.parent" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.questionnaire">
+      <path value="QuestionnaireResponse.questionnaire" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.subject">
+      <path value="QuestionnaireResponse.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Persoon" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.context">
+      <path value="QuestionnaireResponse.context" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.authored">
+      <path value="QuestionnaireResponse.authored" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.author">
+      <path value="QuestionnaireResponse.author" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.source">
+      <path value="QuestionnaireResponse.source" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item">
+      <path value="QuestionnaireResponse.item" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="linkId" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="3" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="zzpCode" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Gecodeerde aanduiding van een zorgzwaartepakket." />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="COD163: Zorgzwaartepakket" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD163" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-23" />
+        <comment value="ZZPcode" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:zzpCode.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="ingangsdatum" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="De datum die aangeeft vanaf welke datum de geindiceerde zorgeenheid rechtsgeldig is." />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.answer.value[x]:valueDate">
+      <path value="QuestionnaireResponse.item.answer.valueDate" />
+      <sliceName value="valueDate" />
+      <min value="1" />
+      <type>
+        <code value="date" />
+      </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-24" />
+        <comment value="Ingangsdatum" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="einddatum" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.answer.value[x]:valueDate">
+      <path value="QuestionnaireResponse.item.answer.valueDate" />
+      <sliceName value="valueDate" />
+      <min value="1" />
+      <type>
+        <code value="date" />
+      </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-25" />
+        <comment value="Einddatum" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:einddatum.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="klasse" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Gegevens over een geindiceerd zorgzwaartepakket" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="COD756: Klasse" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD756" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-26" />
+        <comment value="Klasse" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="voorkeurClient" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Gecodeerde aanduiding van de voorkeur van de client ten aanzien van plaats en vorm van zorglevering." />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="COD999: Voorkeur client" />
+        <valueSetReference>
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD999" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-27" />
+        <comment value="Voorkeur client" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="instellingVoorkeur" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Identificerende code van de instelling die de voorkeur heeft van de client." />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.answer.value[x]:valueString">
+      <path value="QuestionnaireResponse.item.answer.valueString" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <constraint>
+        <key value="RS036" />
+        <requirements value="AGB-code" />
+        <severity value="error" />
+        <human value="Vullen met 8 cijfers." />
+        <expression value="matches('[0-9]{8}')" />
+      </constraint>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-28" />
+        <comment value="Instelling voorkeur" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="commentaar" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Vrije tekst (bijvoorbeeld toelichting) in een bericht." />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.answer.value[x]:valueString">
+      <path value="QuestionnaireResponse.item.answer.valueString" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-29" />
+        <comment value="Commentaar" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="iwlz-Voorkeurscriteria-QuestionnaireResponse" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-QuestionnaireResponse" />
+  <name value="iwlz-Voorkeurscriteria-QuestionnaireResponse" />
+  <title value="iWlz Voorkeurscriteria QuestionnaireResponse" />
+  <status value="draft" />
+  <description value="Gegevens over een geindiceerd zorgzwaartepakket." />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="iwlz-gegevensmatrix" />
+    <uri value="https://decor.nictiz.nl/decor/services/RetrieveDataSet?id=2.16.840.1.113883.2.4.3.11.60.128.1.1&amp;language=nl-NL&amp;effectiveDate=2021-05-19T17:43:12&amp;format=html" />
+    <name value="iWlz Gegevensmatrix" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="QuestionnaireResponse" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="QuestionnaireResponse">
+      <path value="QuestionnaireResponse" />
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-49" />
+        <comment value="Voorkeurscriteria" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.identifier">
+      <path value="QuestionnaireResponse.identifier" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.basedOn">
+      <path value="QuestionnaireResponse.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.parent">
+      <path value="QuestionnaireResponse.parent" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.questionnaire">
+      <path value="QuestionnaireResponse.questionnaire" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/Questionnaire/iwlz-Voorkeurscriteria-Questionnaire" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.subject">
+      <path value="QuestionnaireResponse.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Persoon" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.context">
+      <path value="QuestionnaireResponse.context" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.authored">
+      <path value="QuestionnaireResponse.authored" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.author">
+      <path value="QuestionnaireResponse.author" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.source">
+      <path value="QuestionnaireResponse.source" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item">
+      <path value="QuestionnaireResponse.item" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="linkId" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="3" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="voorkeurZorg" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Voorkeuren van de client m.b.t. de zorg" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.answer.value[x]:valueString">
+      <path value="QuestionnaireResponse.item.answer.valueString" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-53" />
+        <comment value="Voorkeur zorg" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="voorkeurlocaties" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Voorkeurlocatie(s)" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.answer.value[x]:valueString">
+      <path value="QuestionnaireResponse.item.answer.valueString" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-51" />
+        <comment value="Voorkeurlocatie(s)" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname">
+      <path value="QuestionnaireResponse.item" />
+      <sliceName value="partneropname" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <fixedString value="Wens van de client om zijn niet- geindiceerde partner ook mee te verhuizen naar een Wlz-instelling. Of verhuizen naar zijn partner met een Wlz-indicatie die al verblijft in een instelling." />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.subject">
+      <path value="QuestionnaireResponse.item.subject" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.answer.value[x]:valueBoolean">
+        <path value="QuestionnaireResponse.item.answer.valueBoolean" />
+      <sliceName value="valueBoolean" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="iwlz-gegevensmatrix" />
+        <map value="iwlz-dataelement-52" />
+        <comment value="Partneropname" />
+      </mapping>
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

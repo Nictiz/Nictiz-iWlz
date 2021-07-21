@@ -1,0 +1,125 @@
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/Patient.xsd">
+    <id value="iwlz-Persoon-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Persoon"/>
+    </meta>
+    <!-- Contents based on a mix of nl-core-patient examples and SwaggerUI Viewer contents at https://petstore.swagger.io/?url=https://raw.githubusercontent.com/iStandaarden/iWlz-indicatie/master/api-specificatie/indicatieregister.yaml -->
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze">
+        <valueCodeableConcept>
+            <coding>
+                <system value="https://www.istandaarden.nl/ibieb/codesystemen/COD1001"/>
+                <code value="1"/>
+                <display value="Telefonisch"/>
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <name>
+        <family value="XXX_Helleman">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                <valueString value="XXX_Helleman"/>
+            </extension>
+        </family>
+        <given value="Johan">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="CL"/>
+            </extension>
+        </given>
+    </name>
+    <telecom>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                    <code value="LL"/>
+                    <display value="Primary Home Land Line"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Toelichting">
+            <valueString value="niet tijdens kantooruren"/>
+        </extension>
+        <system value="phone"/>
+        <value value="+31207863450"/>
+        <use value="home"/>
+        <rank value="1"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="XXX_Helleman@hotmail.com"/>
+        <use value="home"/>
+        <rank value="1"/>
+    </telecom>
+    <gender value="male">
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/v3/AdministrativeGender"/>
+                    <code value="M"/>
+                    <display value="Man"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+    </gender>
+    <contact>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactpersoon-Organisatienaam">
+            <valueString value="string"/>
+        </extension>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="https://www.istandaarden.nl/ibieb/codesystemen/COD1001"/>
+                    <code value="2"/>
+                    <display value="E-mail"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <relationship>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.22.472"/>
+                <code value="1"/>
+                <display value="Eerste relatie/contactpersoon"/>
+            </coding>
+        </relationship>
+        <relationship>
+            <coding>
+                <system value="http://hl7.org/fhir/v3/RoleCode"/>
+                <code value="WIFE"/>
+                <display value="Wife"/>
+            </coding>
+        </relationship>
+        <name>
+            <family value="van Putten">
+                <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+                    <valueString value="van"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                    <valueString value="Putten"/>
+                </extension>
+            </family>
+            <given value="Jannie">
+                <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                    <valueCode value="CL"/>
+                </extension>
+            </given>
+        </name>
+        <telecom>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                        <code value="MC"/>
+                        <display value="Mobiel telefoonnummer"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <system value="phone"/>
+            <value value="+31611234567"/>
+            <use value="work"/>
+        </telecom>
+        <telecom>
+            <system value="email"/>
+            <value value="test2@testmail.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+</Patient>

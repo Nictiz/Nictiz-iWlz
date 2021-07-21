@@ -1,0 +1,64 @@
+<Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/condition.xsd">
+    <id value="iwlz-Stoornis-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-Prognose">
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://istandaarden.nl/ibieb/codesystemen/COD737"/>
+                <code value="01"/>
+                <display value="Uitzicht op volledig herstel binnen 1 jaar"/>
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <category>
+        <coding>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD736"/>
+            <code value="04"/>
+            <display value="lichamelijke handicap (functiestoornis)"/>
+        </coding>
+    </category>
+    <code>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-DiagnoseCodelijst">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://istandaarden.nl/ibieb/codesystemen/COD392"/>
+                    <code value="014"/>
+                    <display value="Classificatie van ziekten (ZIN/ICD-10)"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-DiagnoseSubcodelijst">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://istandaarden.nl/ibieb/codesystemen/COD770"/>
+                    <code value="03"/>
+                    <display value="Fysiek"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <coding>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD923"/>
+            <code value="19"/>
+            <display value="Letsel en gevolgen van uitwendige oorzaken"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/iwlz-Persoon-01"/>
+        <display value="Johan XXX_Helleman"/>
+    </subject>
+    <evidence>
+        <detail>
+            <reference value="Observation/iwlz-StoornisScore-01"/>
+            <display value="Motorisch functioneren - Handhaving hoofdbalans - continu hulp, toezicht of sturing nodig"/>
+        </detail>
+        <detail>
+            <reference value="Observation/iwlz-BeperkingScore-01"/>
+            <display value="Mobiliteit - Zich voortbewegen binnenshuis - Kan dit slechts met veel moeite"/>
+        </detail>
+    </evidence>
+    <note>
+        <text value="Dit is een voorbeeld van hoe een toelichting op de Stoornis in het bericht eruit kan zien."/>
+    </note>
+</Condition>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="COD824-CodeSystem"/>
+   <language value="nl-NL"/>
+   <url value="https://www.istandaarden.nl/ibieb/codesystemen/COD824"/>
+   <version value="1.1-20201001"/>
+   <name value="COD824"/>
+   <title value="COD824: Vraag stoornis"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="Zorginstituut Nederland"/>
+   <contact>
+      <name value="Zorginstituut Nederland"/>
+      <telecom>
+         <system value="email"/>
+         <value value="info@istandaarden.nl"/>
+      </telecom>
+   </contact>
+   <description value="Gecodeerde aanduiding van de vraag over stoornissen."/>
+   <purpose value="This CodeSystem resource represents the the COD824 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
+   <caseSensitive value="false"/>
+   <content value="not-present"/>
+</CodeSystem>
