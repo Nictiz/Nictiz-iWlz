@@ -32,9 +32,6 @@
                 <xsl:result-document method="xml" indent="yes" href="{concat($sheetPath,'/../../../../CodeSystem-', $codeSystemCode, '-', $codeSystemName, '.xml')}">
                     <CodeSystem xmlns="http://hl7.org/fhir">
                         <id value="{$codeSystemCode}-CodeSystem"/>
-                        <meta>
-                            <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
-                        </meta>
                         <language value="nl-NL"/>
                         <url value="https://www.istandaarden.nl/ibieb/codesystemen/{$codeSystemCode}"/>
                         <version value="1.1-20201001"/>
@@ -53,7 +50,7 @@
                         <description value="{$documentation}"/>
                         <purpose value="This CodeSystem resource represents the the {$codeSystemCode} 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
                         <caseSensitive value="false"/>
-                        <content value="complete"/>
+                        <content value="not-present"/>
                     </CodeSystem>
                 </xsl:result-document>
                 <xsl:result-document method="xml" indent="yes" href="{concat($sheetPath,'/../../../../', $codeSystemCode, '-', $codeSystemName, '.xml')}">

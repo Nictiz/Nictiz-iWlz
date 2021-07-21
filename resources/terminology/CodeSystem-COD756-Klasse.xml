@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
    <id value="COD756-CodeSystem"/>
-   <meta>
-      <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
-   </meta>
    <language value="nl-NL"/>
    <url value="https://www.istandaarden.nl/ibieb/codesystemen/COD756"/>
    <version value="1.1-20201001"/>
@@ -22,5 +19,5 @@
    <description value="Gecodeerde aanduiding van de mate van zorg betreffende een functie, uitgedrukt in een klasse."/>
    <purpose value="This CodeSystem resource represents the the COD756 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
    <caseSensitive value="false"/>
-   <content value="complete"/>
+   <content value="not-present"/>
 </CodeSystem>
