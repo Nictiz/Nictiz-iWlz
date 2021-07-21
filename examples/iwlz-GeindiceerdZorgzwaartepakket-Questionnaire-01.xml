@@ -48,7 +48,7 @@
     </item>
     <item>
         <linkId value="6"/>
-        <text value="Identificerende code van de instelling die de voorkeur heeft van de client."/>
+        <text value="Identificerende AGB-code van de instelling die de voorkeur heeft van de client."/>
         <type value="string"/>
         <required value="false"/>
     </item>
