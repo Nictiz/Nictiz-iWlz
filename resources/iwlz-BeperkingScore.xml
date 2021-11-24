@@ -104,9 +104,9 @@
       </type>
       <binding>
         <strength value="required" />
-        <description value="COD827: Score vraag stoornis" />
+        <description value="COD828: Score beperking" />
         <valueSetReference>
-          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD827" />
+          <reference value="http://istandaarden.nl/ibieb/codelijsten/COD828" />
         </valueSetReference>
       </binding>
       <mapping>
