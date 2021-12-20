@@ -218,7 +218,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Beperking" />
       </type>
       <type>
         <code value="Reference" />
