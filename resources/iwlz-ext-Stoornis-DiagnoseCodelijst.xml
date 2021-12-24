@@ -39,11 +39,6 @@
           <reference value="http://istandaarden.nl/ibieb/codelijsten/COD392" />
         </valueSetReference>
       </binding>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-6" />
-            <comment value="Diagnose Codelijst" />
-        </mapping>
     </element>
   </differential>
 </StructureDefinition>

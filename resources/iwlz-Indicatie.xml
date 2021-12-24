@@ -12,6 +12,11 @@
     <uri value="https://decor.nictiz.nl/decor/services/RetrieveDataSet?id=2.16.840.1.113883.2.4.3.11.60.128.1.1&amp;language=nl-NL&amp;effectiveDate=2021-05-19T17:43:12&amp;format=html" />
     <name value="iWlz Gegevensmatrix" />
   </mapping>
+    <mapping>
+        <identity value="iwlz-graphql" />
+        <uri value="https://github.com/iStandaarden/iWlz-indicatie/blob/master/gql-specificatie/Indicatieregister.graphql" />
+        <name value="iWlz Graphql schema" />
+    </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Composition" />
@@ -54,13 +59,30 @@
         <comment value="Meerzorg" />
       </mapping>
     </element>
+      <element id="Composition.extension:besluitnummer">
+          <path value="Composition.extension" />
+          <sliceName value="besluitnummer" />
+          <max value="1" />
+          <type>
+              <code value="Extension" />
+              <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Besluitnummer" />
+          </type>
+      </element>
+      <element id="Composition.extension:besluitnummer.valueInteger:valueInteger">
+          <path value="Composition.extension.valueInteger" />
+          <sliceName value="valueInteger" />
+          <mapping>
+              <identity value="iwlz-gegevensmatrix" />
+              <map value="iwlz-dataelement-14" />
+              <comment value="Besluitnummer" />
+          </mapping>
+      </element>
     <element id="Composition.identifier">
       <path value="Composition.identifier" />
       <min value="1" />
       <mapping>
-        <identity value="iwlz-gegevensmatrix" />
-        <map value="iwlz-dataelement-14" />
-        <comment value="Besluitnummer" />
+        <identity value="iwlz-graphql" />
+          <map value="wlzindicatieID" />
       </mapping>
     </element>
     <element id="Composition.identifier.system">
@@ -218,7 +240,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Beperking" />
       </type>
       <type>
         <code value="Reference" />

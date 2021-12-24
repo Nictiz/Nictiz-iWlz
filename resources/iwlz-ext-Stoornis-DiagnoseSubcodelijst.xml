@@ -39,11 +39,6 @@
           <reference value="http://istandaarden.nl/ibieb/codelijsten/COD770" />
         </valueSetReference>
       </binding>
-        <mapping>
-            <identity value="iwlz-gegevensmatrix" />
-            <map value="iwlz-dataelement-5" />
-            <comment value="Diagnose Subcodelijst" />
-        </mapping>
     </element>
   </differential>
 </StructureDefinition>
