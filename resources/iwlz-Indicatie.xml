@@ -116,6 +116,27 @@
         <comment value="Afgifte datum" />
       </mapping>
     </element>
+    <element id="Composition.author.extension">
+      <path value="Composition.author.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Composition.author.extension:practitionerRole">
+      <path value="Composition.author.extension" />
+      <sliceName value="practitionerRole" />
+      <comment value="The practitionerrole-reference extension is added to be able to reference an Organization as author via a PractitionerRole. This workaround will be fixed in future versions of FHIR." />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
+      </type>
+    </element>
     <element id="Composition.confidentiality">
       <path value="Composition.confidentiality" />
       <max value="0" />
