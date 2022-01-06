@@ -12,11 +12,6 @@
     <uri value="https://decor.nictiz.nl/decor/services/RetrieveDataSet?id=2.16.840.1.113883.2.4.3.11.60.128.1.1&amp;language=nl-NL&amp;effectiveDate=2021-05-19T17:43:12&amp;format=html" />
     <name value="iWlz Gegevensmatrix" />
   </mapping>
-    <mapping>
-        <identity value="iwlz-graphql" />
-        <uri value="https://github.com/iStandaarden/iWlz-indicatie/blob/master/gql-specificatie/Indicatieregister.graphql" />
-        <name value="iWlz Graphql schema" />
-    </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Composition" />
@@ -77,22 +72,6 @@
               <comment value="Besluitnummer" />
           </mapping>
       </element>
-    <element id="Composition.identifier">
-      <path value="Composition.identifier" />
-      <min value="1" />
-      <mapping>
-        <identity value="iwlz-graphql" />
-          <map value="wlzindicatieID" />
-      </mapping>
-    </element>
-    <element id="Composition.identifier.system">
-      <path value="Composition.identifier.system" />
-      <min value="1" />
-    </element>
-    <element id="Composition.identifier.value">
-      <path value="Composition.identifier.value" />
-      <min value="1" />
-    </element>
     <element id="Composition.type">
       <path value="Composition.type" />
       <patternCodeableConcept>
