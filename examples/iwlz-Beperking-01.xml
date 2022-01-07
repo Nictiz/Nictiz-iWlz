@@ -1,0 +1,35 @@
+<Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/condition.xsd">
+    <id value="iwlz-Beperking-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Beperking"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Beperking-Duur">
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://istandaarden.nl/ibieb/codesystemen/COD749"/>
+                <code value="3"/>
+                <display value="Zes tot twaalf maanden"/>
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <category>
+        <coding>
+            <system value="http://istandaarden.nl/ibieb/codesystemen/COD539"/>
+            <code value="2"/>
+            <display value="Mobiliteit"/>
+        </coding>
+    </category>
+    <subject>
+        <reference value="Patient/iwlz-Persoon-01"/>
+        <display value="Johan XXX_Helleman"/>
+    </subject>
+    <evidence>
+        <detail>
+            <reference value="Observation/iwlz-BeperkingScore-01"/>
+            <display value="Mobiliteit - Zich voortbewegen binnenshuis - Kan dit slechts met veel moeite"/>
+        </detail>
+    </evidence>
+    <note>
+        <text value="Dit is een voorbeeld van hoe een toelichting op de Beperking in het bericht eruit kan zien."/>
+    </note>
+</Condition>

@@ -53,10 +53,6 @@
             <reference value="Observation/iwlz-StoornisScore-01"/>
             <display value="Motorisch functioneren - Handhaving hoofdbalans - continu hulp, toezicht of sturing nodig"/>
         </detail>
-        <detail>
-            <reference value="Observation/iwlz-BeperkingScore-01"/>
-            <display value="Mobiliteit - Zich voortbewegen binnenshuis - Kan dit slechts met veel moeite"/>
-        </detail>
     </evidence>
     <note>
         <text value="Dit is een voorbeeld van hoe een toelichting op de Stoornis in het bericht eruit kan zien."/>
