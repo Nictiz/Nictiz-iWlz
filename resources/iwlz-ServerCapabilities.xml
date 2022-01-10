@@ -28,6 +28,9 @@
         <reference value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Indicatie" />
     </profile>
     <profile>
+        <reference value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Beperking" />
+    </profile>
+    <profile>
         <reference value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore" />
     </profile>
     <profile>
@@ -47,6 +50,12 @@
     </profile>
     <profile>
         <reference value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-QuestionnaireResponse" />
+    </profile>
+    <profile>
+        <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole" />
+    </profile>
+    <profile>
+        <reference value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
     </profile>
     <rest>
         <mode value="server" />

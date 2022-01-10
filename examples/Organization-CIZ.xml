@@ -1,0 +1,25 @@
+<Organization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/organization.xsd">
+    <id value="Organization-CIZ"/>
+    <meta>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+    </meta>
+    <name value="Centrum Indicatiestelling Zorg (CIZ)"/>
+    <telecom>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                    <code value="LL"/>
+                    <display value="Vast telefoonnummer"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <system value="phone"/>
+        <value value="088 - 789 10 00"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="info@ciz.nl"/>
+    </telecom>
+</Organization>

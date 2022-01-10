@@ -6,10 +6,9 @@
     <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Meerzorg">
         <valueBoolean value="true"/>
     </extension>
-    <identifier>
-        <system value="http://example.istandaarden.nl/ibieb/namingsystem/besluitnummer"/>
-        <value value="987654123"/>
-    </identifier>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Besluitnummer">
+        <valueInteger value="987654123"/>
+    </extension>
     <status value="final"/>
     <type>
         <coding>
@@ -31,10 +30,14 @@
     </subject>
     <date value="2021-05-06T15:11:32+01:00"/>
     <author>
-        <reference value="Practitioner/nl-core-practitioner-01"/>
-        <display value="Henk de Vries"/>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+            <valueReference>
+                <reference value="PractitionerRole/PractitionerRole-CIZ"/>
+                <display value="PractitionerRole CIZ"/>
+            </valueReference>
+        </extension>
     </author>
-    <title value="Indicatie"/>
+    <title value="Indicatiebesluit #987654123"/>
     <event>
         <period>
             <start value="2021-05-06"/>
@@ -57,13 +60,13 @@
             <reference value="Observation/iwlz-StoornisScore-01"/>
         </entry>
         <entry>
-            <reference value="Observation/iwlz-BeperkingScore-01"/>
+            <reference value="Condition/iwlz-Beperking-01"/>
         </entry>
     </section>
     <section>
         <title value="GeindiceerdZorgzwaartepakket"/>
         <entry>
-            <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-01"/>
+            <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
         </entry>
     </section>
 </Composition>

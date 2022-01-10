@@ -3,7 +3,7 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire"/>
     </meta>
-    <url value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket"/>
+    <url value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
     <name value="GeindiceerdZorgzwaartepakket"/>
     <title value="GeindiceerdZorgzwaartepakket"/>
     <status value="active"/>

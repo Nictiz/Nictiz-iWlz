@@ -45,7 +45,7 @@
                 <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Beperking-Duur"/>
             </type>
         </element>
-        <element id="Condition.extension:prognose.valueCodeableConcept:valueCodeableConcept">
+        <element id="Condition.extension:duur.valueCodeableConcept:valueCodeableConcept">
             <path value="Condition.extension.valueCodeableConcept"/>
             <sliceName value="valueCodeableConcept"/>
             <mapping>

@@ -15,19 +15,17 @@
     <entry>
         <fullUrl value="https://example.com/fhir/Composition/iwlz-Indicatie-01"/>
         <resource>
-            <Composition>
+            <Composition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/Composition.xsd">
                 <id value="iwlz-Indicatie-01"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Indicatie"/>
                 </meta>
-                <extension
-                    url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Meerzorg">
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Meerzorg">
                     <valueBoolean value="true"/>
                 </extension>
-                <identifier>
-                    <system value="http://example.istandaarden.nl/ibieb/namingsystem/besluitnummer"/>
-                    <value value="987654123"/>
-                </identifier>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Besluitnummer">
+                    <valueInteger value="987654123"/>
+                </extension>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -49,10 +47,14 @@
                 </subject>
                 <date value="2021-05-06T15:11:32+01:00"/>
                 <author>
-                    <reference value="urn:uuid:a776e6d9-2047-4daa-a875-4c160f7158f1"/>
-                    <display value="Henk de Vries"/>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                        <valueReference>
+                            <reference value="PractitionerRole/PractitionerRole-CIZ"/>
+                            <display value="PractitionerRole CIZ"/>
+                        </valueReference>
+                    </extension>
                 </author>
-                <title value="Indicatie"/>
+                <title value="Indicatiebesluit #987654123"/>
                 <event>
                     <period>
                         <start value="2021-05-06"/>
@@ -69,40 +71,28 @@
                         </coding>
                     </code>
                     <entry>
-                        <reference value="urn:uuid:b65b7311-59aa-481d-87a9-e8b4b447306b"/>
-                        <display value="iwlz-Stoornis-01"/>
+                        <reference value="Condition/iwlz-Stoornis-01"/>
                     </entry>
                     <entry>
-                        <reference value="urn:uuid:5996fc7a-a1de-4c83-bd37-0775ae8f2604"/>
-                        <display value="iwlz-StoornisScore-01"/>
+                        <reference value="Observation/iwlz-StoornisScore-01"/>
                     </entry>
                     <entry>
-                        <reference value="urn:uuid:57b7a4f0-9cc5-4168-9949-5f50e1459c64"/>
-                        <display value="iwlz-BeperkingScore-01"/>
+                        <reference value="Condition/iwlz-Beperking-01"/>
                     </entry>
                 </section>
                 <section>
                     <title value="GeindiceerdZorgzwaartepakket"/>
                     <entry>
-                        <reference value="urn:uuid:5fb0878a-4c97-4c7e-9720-69cfd2e2d9bb"/>
-                        <display value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
+                        <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
                     </entry>
                 </section>
             </Composition>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="urn:uuid:a776e6d9-2047-4daa-a875-4c160f7158f1"/>
-        <resource>
-            <Practitioner>
-                <!-- snip -->
-            </Practitioner>
-        </resource>
-    </entry>
-    <entry>
         <fullUrl value="https://example.com/fhir/Patient/iwlz-Persoon-01"/>
         <resource>
-            <Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/Patient.xsd">
+            <Patient>
                 <id value="iwlz-Persoon-01"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Persoon"/>
@@ -230,9 +220,54 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="urn:uuid:b65b7311-59aa-481d-87a9-e8b4b447306b"/>
+        <fullUrl value="https://example.com/fhir/PractitionerRole/PractitionerRole-CIZ"/>
         <resource>
-            <Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/condition.xsd">
+            <PractitionerRole>
+                <id value="PractitionerRole-CIZ"/>
+                <meta>
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"/>
+                </meta>
+                <organization>
+                    <reference value="Organization/Organization-CIZ"/>
+                    <display value="Organization CIZ"/>
+                </organization>
+            </PractitionerRole>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Organization/Organization-CIZ"/>
+        <resource>
+            <Organization>
+                <id value="Organization-CIZ"/>
+                <meta>
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+                </meta>
+                <name value="Centrum Indicatiestelling Zorg (CIZ)"/>
+                <telecom>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                                <code value="LL"/>
+                                <display value="Vast telefoonnummer"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <system value="phone"/>
+                    <value value="088 - 789 10 00"/>
+                    <use value="work"/>
+                </telecom>
+                <telecom>
+                    <system value="email"/>
+                    <value value="info@ciz.nl"/>
+                </telecom>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Condition/iwlz-Stoornis-01"/>
+        <resource>
+            <Condition>
                 <id value="iwlz-Stoornis-01"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis"/>
@@ -287,10 +322,6 @@
                         <reference value="Observation/iwlz-StoornisScore-01"/>
                         <display value="Motorisch functioneren - Handhaving hoofdbalans - continu hulp, toezicht of sturing nodig"/>
                     </detail>
-                    <detail>
-                        <reference value="Observation/iwlz-BeperkingScore-01"/>
-                        <display value="Mobiliteit - Zich voortbewegen binnenshuis - Kan dit slechts met veel moeite"/>
-                    </detail>
                 </evidence>
                 <note>
                     <text value="Dit is een voorbeeld van hoe een toelichting op de Stoornis in het bericht eruit kan zien."/>
@@ -299,9 +330,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="urn:uuid:5996fc7a-a1de-4c83-bd37-0775ae8f2604"/>
+        <fullUrl value="https://example.com/fhir/Observation/iwlz-StoornisScore-01"/>
         <resource>
-            <Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
+            <Observation>
                 <id value="iwlz-StoornisScore-01"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-StoornisScore"/>
@@ -330,14 +361,22 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="urn:uuid:57b7a4f0-9cc5-4168-9949-5f50e1459c64"/>
+        <fullUrl value="https://example.com/fhir/Condition/iwlz-Beperking-01"/>
         <resource>
-            <Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
-                <id value="iwlz-BeperkingScore-01"/>
+            <Condition>
+                <id value="iwlz-Beperking-01"/>
                 <meta>
-                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore"/>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Beperking"/>
                 </meta>
-                <status value="final"/>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Beperking-Duur">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://istandaarden.nl/ibieb/codesystemen/COD749"/>
+                            <code value="3"/>
+                            <display value="Zes tot twaalf maanden"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
                 <category>
                     <coding>
                         <system value="http://istandaarden.nl/ibieb/codesystemen/COD539"/>
@@ -345,6 +384,31 @@
                         <display value="Mobiliteit"/>
                     </coding>
                 </category>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Johan XXX_Helleman"/>
+                </subject>
+                <evidence>
+                    <detail>
+                        <reference value="Observation/iwlz-BeperkingScore-01"/>
+                        <display value="Mobiliteit - Zich voortbewegen binnenshuis - Kan dit slechts met veel moeite"/>
+                    </detail>
+                </evidence>
+                <note>
+                    <text value="Dit is een voorbeeld van hoe een toelichting op de Beperking in het bericht eruit kan zien."/>
+                </note>
+            </Condition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Observation/iwlz-BeperkingScore-01"/>
+        <resource>
+            <Observation>
+                <id value="iwlz-BeperkingScore-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore"/>
+                </meta>
+                <status value="final"/>
                 <code>
                     <coding>
                         <system value="http://istandaarden.nl/ibieb/codesystemen/COD825"/>
@@ -363,34 +427,17 @@
                         <display value="Kan dit slechts met veel moeite/iemand anders moet helpen"/>
                     </coding>
                 </valueCodeableConcept>
-                <comment value="Dit is een voorbeeld van hoe een toelichting op de Stoornis in het bericht eruit kan zien."/>
-                <component>
-                    <code>
-                        <!-- Needs a better code! -->
-                        <coding>
-                            <system value="https://informatiemodel.istandaarden.nl/iWlz22/"/>
-                            <code value="LDT_Duur"/>
-                            <display value="LDT_Duur"/>
-                        </coding>
-                    </code>
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://istandaarden.nl/ibieb/codesystemen/COD749"/>
-                            <code value="3"/>
-                            <display value="Zes tot twaalf maanden"/>
-                        </coding>
-                    </valueCodeableConcept>
-                </component>
+                <comment value="Dit is een voorbeeld van hoe een toelichting op de BeperkingScore in het bericht eruit kan zien."/>
             </Observation>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="urn:uuid:5fb0878a-4c97-4c7e-9720-69cfd2e2d9bb"/>
+        <fullUrl value="https://example.com/fhir/QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
         <resource>
-            <QuestionnaireResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/QuestionnaireResponse.xsd">
+            <QuestionnaireResponse>
                 <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
                 <questionnaire>
-                    <reference value="Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+                    <reference value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
                 </questionnaire>
                 <status value="completed"/>
                 <subject>
@@ -452,6 +499,75 @@
                     </answer>
                 </item>
             </QuestionnaireResponse>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+        <resource>
+            <Questionnaire>
+                <id value="iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire"/>
+                </meta>
+                <url value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+                <name value="GeindiceerdZorgzwaartepakket"/>
+                <title value="GeindiceerdZorgzwaartepakket"/>
+                <status value="active"/>
+                <item>
+                    <linkId value="1"/>
+                    <text value="Gecodeerde aanduiding van een zorgzwaartepakket."/>
+                    <type value="choice"/>
+                    <required value="true"/>
+                    <options>
+                        <reference value="http://istandaarden.nl/ibieb/codelijsten/COD163"/>
+                        <display value="COD163: Zorgzwaartepakket"/>
+                    </options>
+                </item>
+                <item>
+                    <linkId value="2"/>
+                    <text value="De datum die aangeeft vanaf welke datum de geindiceerde zorgeenheid rechtsgeldig is. "/>
+                    <type value="date"/>
+                    <required value="true"/>
+                </item>
+                <item>
+                    <linkId value="3"/>
+                    <text value="De datum die aangeeft tot en met welke datum de geindiceerde zorgeenheid rechtsgeldig is."/>
+                    <type value="date"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="4"/>
+                    <text value="Gegevens over een geindiceerd zorgzwaartepakket"/>
+                    <type value="choice"/>
+                    <required value="true"/>
+                    <options>
+                        <reference value="http://istandaarden.nl/ibieb/codelijsten/COD756"/>
+                        <display value="COD756: Klasse"/>
+                    </options>
+                </item>
+                <item>
+                    <linkId value="5"/>
+                    <text value="Gecodeerde aanduiding van de voorkeur van de client ten aanzien van plaats en vorm van zorglevering. "/>
+                    <type value="choice"/>
+                    <required value="false"/>
+                    <options>
+                        <reference value="http://istandaarden.nl/ibieb/codelijsten/COD999"/>
+                        <display value="COD999: Voorkeur client"/>
+                    </options>
+                </item>
+                <item>
+                    <linkId value="6"/>
+                    <text value="Identificerende AGB-code van de instelling die de voorkeur heeft van de client."/>
+                    <type value="string"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="7"/>
+                    <text value="Vrije tekst (bijvoorbeeld toelichting) in een bericht."/>
+                    <type value="string"/>
+                    <required value="false"/>
+                </item>
+            </Questionnaire>
         </resource>
     </entry>
 </Bundle>
