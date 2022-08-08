@@ -1,5 +1,5 @@
 <QuestionnaireResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/QuestionnaireResponse.xsd">
-    <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
+    <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-03"/>
     <questionnaire>
         <reference value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
     </questionnaire>
@@ -21,7 +21,7 @@
     <item>
         <linkId value="2"/>
         <answer>
-            <valueDate value="2022-01-10"/>
+            <valueDate value="2022-06-15"/>
         </answer>
     </item>
     <item>
@@ -48,6 +48,12 @@
         <linkId value="6"/>
         <answer>
             <valueString value="42420001"/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="7"/>
+        <answer>
+            <valueString value="Commentaarveld bij het Geindiceerde ZZP"/>
         </answer>
     </item>
 </QuestionnaireResponse>

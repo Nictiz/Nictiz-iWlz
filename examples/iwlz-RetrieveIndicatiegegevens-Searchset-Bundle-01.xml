@@ -1,0 +1,962 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="iwlz-Retrieve-Indicatiegegevens-Searchset-Bundle-01"/>
+    <identifier>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
+        <value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c6e0"/>
+    </identifier>
+    <type value="searchset"/>
+    <link>
+        <relation value="self"/>
+        <url value="https://example.com/fhir/Composition/$indications"/>
+    </link>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Composition/iwlz-Indicatie-01"/>
+        <resource>
+            <Composition>
+                <id value="iwlz-Indicatie-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Indicatie"/>
+                </meta>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Meerzorg">
+                    <valueBoolean value="false"/>
+                </extension>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Besluitnummer">
+                    <valueInteger value="301"/>
+                </extension>
+                <identifier>
+                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
+                    <value value="754fe29b-44e5-4bbf-a089-020000000000"/>
+                </identifier>
+                <status value="final"/>
+                <type>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="304784009"/>
+                        <display value="Administrative form"/>
+                    </coding>
+                </type>
+                <class>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD169"/>
+                        <code value="1"/>
+                        <display value="CIZ indicatie"/>
+                    </coding>
+                </class>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <date value="2022-01-10"/>
+                <author>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                        <valueReference>
+                            <reference value="PractitionerRole/PractitionerRole-CIZ"/>
+                            <display value="PractitionerRole CIZ"/>
+                        </valueReference>
+                    </extension>
+                </author>
+                <title value="Indicatiebesluit #301"/>
+                <event>
+                    <period>
+                        <start value="2022-01-10"/>
+                    </period>
+                </event>
+                <section>
+                    <title value="Grondslagen"/>
+                    <code>
+                        <coding>
+                            <system value="http://istandaarden.nl/ibieb/codesystemen/COD736"/>
+                            <code value="02"/>
+                            <display value="psychogeriatrische ziekte/aandoening"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <reference value="Condition/iwlz-Stoornis-01"/>
+                        <display value="Stoornis: Globale psychosociale functies"/>
+                    </entry>
+                    <entry>
+                        <reference value="Observation/iwlz-StoornisScore-01"/>
+                        <display value="Stoornis score: Psychosociale functies - Geheugen en denken"/>
+                    </entry>
+                    <entry>
+                        <reference value="Condition/iwlz-Beperking-01"/>
+                        <display value="Beperking: Sociale redzaamheid"/>
+                    </entry>
+                </section>
+                <section>
+                    <title value="Geindiceerd Zorgzwaartepakket"/>
+                    <entry>
+                        <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
+                        <display value="Geindiceerd zorgzwaartepakket: 4VV"/>
+                    </entry>
+                </section>
+            </Composition>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Composition/iwlz-Indicatie-02"/>
+        <resource>
+            <Composition>
+                <id value="iwlz-Indicatie-02"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Indicatie"/>
+                </meta>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Besluitnummer">
+                    <valueInteger value="302"/>
+                </extension>
+                <identifier>
+                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
+                    <value value="8f51fcfb-8c83-41c8-a0ed-020000000000"/>
+                </identifier>
+                <status value="final"/>
+                <type>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="304784009"/>
+                        <display value="Administrative form"/>
+                    </coding>
+                </type>
+                <class>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD169"/>
+                        <code value="1"/>
+                        <display value="CIZ indicatie"/>
+                    </coding>
+                </class>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <date value="2022-03-15"/>
+                <author>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                        <valueReference>
+                            <reference value="PractitionerRole/PractitionerRole-CIZ"/>
+                            <display value="PractitionerRole CIZ"/>
+                        </valueReference>
+                    </extension>
+                </author>
+                <title value="Indicatiebesluit #302"/>
+                <event>
+                    <period>
+                        <start value="2022-03-15"/>
+                    </period>
+                </event>
+                <section>
+                    <title value="Grondslagen"/>
+                    <code>
+                        <coding>
+                            <system value="http://istandaarden.nl/ibieb/codesystemen/COD736"/>
+                            <code value="02"/>
+                            <display value="psychogeriatrische ziekte/aandoening"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <reference value="Condition/iwlz-Stoornis-02"/>
+                        <display value="Stoornis: Globale psychosociale functies"/>
+                    </entry>
+                    <entry>
+                        <reference value="Observation/iwlz-StoornisScore-02"/>
+                        <display value="Stoornis score: Psychosociale functies - Geheugen en denken"/>
+                    </entry>
+                    <entry>
+                        <reference value="Condition/iwlz-Beperking-02"/>
+                        <display value="Beperking: Sociale redzaamheid"/>
+                    </entry>
+                </section>
+                <section>
+                    <title value="Geindiceerd Zorgzwaartepakket"/>
+                    <entry>
+                        <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-02"/>
+                        <display value="Geindiceerd zorgzwaartepakket: 9VV B"/>
+                    </entry>
+                </section>
+                <section>
+                    <title value="Geindiceerd Zorgzwaartepakket"/>
+                    <entry>
+                        <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-03"/>
+                        <display value="Geindiceerd zorgzwaartepakket: 4VV"/>
+                    </entry>
+                </section>
+            </Composition>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Patient/iwlz-Persoon-01"/>
+        <resource>
+            <Patient>
+                <id value="iwlz-Persoon-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Persoon"/>
+                </meta>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Contactgegevens-VoorkeurContactwijze">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="https://www.istandaarden.nl/ibieb/codesystemen/COD1001"/>
+                            <code value="1"/>
+                            <display value="Telefonisch"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <identifier>
+                    <system value="http://fhir.nl/fhir/NamingSystem/bsn"/>
+                    <value>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+                            <valueCode value="masked"/>
+                        </extension>
+                    </value>
+                </identifier>
+                <identifier>
+                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
+                    <value value="73e6a51c-0421-11ec-4500-020000000000"/>
+                </identifier>
+                <name>
+                    <family value="Van der Molen">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+                            <valueString value="Van der"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                            <valueString value="Molen"/>
+                        </extension>
+                    </family>
+                    <given value="Johan">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="CL"/>
+                        </extension>
+                    </given>
+                </name>
+                <telecom>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                                <code value="LL"/>
+                                <display value="Vast telefoonnummer"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <system value="phone"/>
+                    <value value="+31123456789"/>
+                    <use value="home"/>
+                    <rank value="1"/>
+                </telecom>
+                <gender value="female">
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/v3/AdministrativeGender"/>
+                                <code value="V"/>
+                                <display value="Vrouw"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                </gender>
+                <contact>
+                    <relationship>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+                            <code value="DAUC"/>
+                            <display value="Dochter"/>
+                        </coding>
+                    </relationship>
+                    <name>
+                        <family value="Jansen">
+                            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                                <valueString value="Jansen"/>
+                            </extension>
+                        </family>
+                        <given value="Petra">
+                            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                                <valueCode value="CL"/>
+                            </extension>
+                        </given>
+                    </name>
+                    <telecom>
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                                    <code value="LL"/>
+                                    <display value="Vast telefoonnummer"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <system value="phone"/>
+                        <value value="+31222233445"/>
+                        <use value="home"/>
+                    </telecom>
+                    <telecom>
+                        <system value="email"/>
+                        <value value="janseniwlz@mail.com"/>
+                        <use value="home"/>
+                    </telecom>
+                </contact>
+            </Patient>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/PractitionerRole/PractitionerRole-CIZ"/>
+        <resource>
+            <PractitionerRole>
+                <id value="PractitionerRole-CIZ"/>
+                <meta>
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"/>
+                </meta>
+                <organization>
+                    <reference value="Organization/Organization-CIZ"/>
+                    <display value="Organization CIZ"/>
+                </organization>
+            </PractitionerRole>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Organization/Organization-CIZ"/>
+        <resource>
+            <Organization>
+                <id value="Organization-CIZ"/>
+                <meta>
+                    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
+                </meta>
+                <name value="Centrum Indicatiestelling Zorg (CIZ)"/>
+                <telecom>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                                <code value="LL"/>
+                                <display value="Vast telefoonnummer"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <system value="phone"/>
+                    <value value="088 - 789 10 00"/>
+                    <use value="work"/>
+                </telecom>
+                <telecom>
+                    <system value="email"/>
+                    <value value="info@ciz.nl"/>
+                </telecom>
+            </Organization>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Condition/iwlz-Stoornis-01"/>
+        <resource>
+            <Condition>
+                <id value="iwlz-Stoornis-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis"/>
+                </meta>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-Prognose">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://istandaarden.nl/ibieb/codesystemen/COD737"/>
+                            <code value="2"/>
+                            <display value="Uitzicht op gedeeltelijk herstel/verbetering binnen 1 jaar"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <category>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD736"/>
+                        <code value="02"/>
+                        <display value="psychogeriatrische ziekte/aandoening"/>
+                    </coding>
+                </category>
+                <code>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-DiagnoseCodelijst">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://istandaarden.nl/ibieb/codesystemen/COD392"/>
+                                <code value="021"/>
+                                <display value="Internationale classificatie van functioneren (ICF)"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-DiagnoseSubcodelijst">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://istandaarden.nl/ibieb/codesystemen/COD770"/>
+                                <code value="01"/>
+                                <display value="Mentaal"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD925"/>
+                        <code value="b122"/>
+                        <display value="Globale psychosociale functies"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <evidence>
+                    <detail>
+                        <reference value="Observation/iwlz-StoornisScore-01"/>
+                        <display value="Stoornis score: Psychosociale functies - Geheugen en denken"/>
+                    </detail>
+                </evidence>
+                <note>
+                    <text value="Globale psychosociale functies"/>
+                </note>
+            </Condition>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Observation/iwlz-StoornisScore-01"/>
+        <resource>
+            <Observation>
+                <id value="iwlz-StoornisScore-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-StoornisScore"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD824"/>
+                        <code value="2020"/>
+                        <display value="Psychosociale functies - Geheugen en denken"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD827"/>
+                        <code value="2"/>
+                        <display value="Wel probleem: vaak hulp, toezicht of sturing nodig"/>
+                    </coding>
+                </valueCodeableConcept>
+                <comment value="Commentaarveld"/>
+            </Observation>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Condition/iwlz-Beperking-01"/>
+        <resource>
+            <Condition>
+                <id value="iwlz-Beperking-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Beperking"/>
+                </meta>
+                <category>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD539"/>
+                        <code value="1"/>
+                        <display value="Sociale redzaamheid"/>
+                    </coding>
+                </category>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <evidence>
+                    <detail>
+                        <reference value="Observation/iwlz-BeperkingScore-01"/>
+                        <display value="Beperking score: Sociale redzaamheid - Problemen oplossen, besluiten nemen en gevolgen inschatten"/>
+                    </detail>
+                </evidence>
+            </Condition>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Observation/iwlz-BeperkingScore-01"/>
+        <resource>
+            <Observation>
+                <id value="iwlz-BeperkingScore-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD825"/>
+                        <code value="0101"/>
+                        <display value="Sociale redzaamheid - Problemen oplossen, besluiten nemen en gevolgen inschatten"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD828"/>
+                        <code value="3"/>
+                        <display value="Kan dit niet zelfstandig/iemand anders moet dit overnemen"/>
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
+        <resource>
+            <QuestionnaireResponse>
+                <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
+                <questionnaire>
+                    <reference value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+                </questionnaire>
+                <status value="completed"/>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <item>
+                    <linkId value="1"/>
+                    <answer>
+                        <valueCoding>
+                            <system value="http://istandaarden.nl/ibieb/codelijsten/COD163"/>
+                            <code value="753"/>
+                            <display value="4VV: Beschut wonen met intensieve begeleiding en uitgebreide verzorging"/>
+                        </valueCoding>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="2"/>
+                    <answer>
+                        <valueDate value="2022-01-10"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="4"/>
+                    <answer>
+                        <valueCoding>
+                            <system value="http://istandaarden.nl/ibieb/codelijsten/COD756"/>
+                            <code value="KE7"/>
+                            <display value="Zeven etmalen per week"/>
+                        </valueCoding>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="5"/>
+                    <answer>
+                        <valueCoding>
+                            <system value="http://istandaarden.nl/ibieb/codelijsten/COD999"/>
+                            <code value="4"/>
+                            <display value="Verblijf"/>
+                        </valueCoding>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="6"/>
+                    <answer>
+                        <valueString value="42420001"/>
+                    </answer>
+                </item>
+            </QuestionnaireResponse>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+        <resource>
+            <Questionnaire>
+                <id value="iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire"/>
+                </meta>
+                <url value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+                <name value="GeindiceerdZorgzwaartepakket"/>
+                <title value="GeindiceerdZorgzwaartepakket"/>
+                <status value="active"/>
+                <item>
+                    <linkId value="1"/>
+                    <text value="Gecodeerde aanduiding van een zorgzwaartepakket."/>
+                    <type value="choice"/>
+                    <required value="true"/>
+                    <options>
+                        <reference value="http://istandaarden.nl/ibieb/codelijsten/COD163"/>
+                        <display value="COD163: Zorgzwaartepakket"/>
+                    </options>
+                </item>
+                <item>
+                    <linkId value="2"/>
+                    <text value="De datum die aangeeft vanaf welke datum de geindiceerde zorgeenheid rechtsgeldig is. "/>
+                    <type value="date"/>
+                    <required value="true"/>
+                </item>
+                <item>
+                    <linkId value="3"/>
+                    <text value="De datum die aangeeft tot en met welke datum de geindiceerde zorgeenheid rechtsgeldig is."/>
+                    <type value="date"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="4"/>
+                    <text value="Gegevens over een geindiceerd zorgzwaartepakket"/>
+                    <type value="choice"/>
+                    <required value="true"/>
+                    <options>
+                        <reference value="http://istandaarden.nl/ibieb/codelijsten/COD756"/>
+                        <display value="COD756: Klasse"/>
+                    </options>
+                </item>
+                <item>
+                    <linkId value="5"/>
+                    <text value="Gecodeerde aanduiding van de voorkeur van de client ten aanzien van plaats en vorm van zorglevering. "/>
+                    <type value="choice"/>
+                    <required value="false"/>
+                    <options>
+                        <reference value="http://istandaarden.nl/ibieb/codelijsten/COD999"/>
+                        <display value="COD999: Voorkeur client"/>
+                    </options>
+                </item>
+                <item>
+                    <linkId value="6"/>
+                    <text value="Identificerende AGB-code van de instelling die de voorkeur heeft van de client."/>
+                    <type value="string"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="7"/>
+                    <text value="Vrije tekst (bijvoorbeeld toelichting) in een bericht."/>
+                    <type value="string"/>
+                    <required value="false"/>
+                </item>
+            </Questionnaire>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Condition/iwlz-Stoornis-02"/>
+        <resource>
+            <Condition>
+                <id value="iwlz-Stoornis-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Stoornis"/>
+                </meta>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-Prognose">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://istandaarden.nl/ibieb/codesystemen/COD737"/>
+                            <code value="2"/>
+                            <display value="Uitzicht op gedeeltelijk herstel/verbetering binnen 1 jaar"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <category>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD736"/>
+                        <code value="02"/>
+                        <display value="psychogeriatrische ziekte/aandoening"/>
+                    </coding>
+                </category>
+                <code>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-DiagnoseCodelijst">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://istandaarden.nl/ibieb/codesystemen/COD392"/>
+                                <code value="021"/>
+                                <display value="Internationale classificatie van functioneren (ICF)"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Stoornis-DiagnoseSubcodelijst">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://istandaarden.nl/ibieb/codesystemen/COD770"/>
+                                <code value="01"/>
+                                <display value="Mentaal"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD925"/>
+                        <code value="b122"/>
+                        <display value="Globale psychosociale functies"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <evidence>
+                    <detail>
+                        <reference value="Observation/iwlz-StoornisScore-01"/>
+                        <display value="Stoornis score: Psychosociale functies - Geheugen en denken"/>
+                    </detail>
+                </evidence>
+                <note>
+                    <text value="Globale psychosociale functies"/>
+                </note>
+            </Condition>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Observation/iwlz-StoornisScore-02"/>
+        <resource>
+            <Observation>
+                <id value="iwlz-StoornisScore-02"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-StoornisScore"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD824"/>
+                        <code value="2020"/>
+                        <display value="Psychosociale functies - Geheugen en denken"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD827"/>
+                        <code value="2"/>
+                        <display value="Wel probleem: vaak hulp, toezicht of sturing nodig"/>
+                    </coding>
+                </valueCodeableConcept>
+                <comment value="Commentaarveld"/>
+            </Observation>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Condition/iwlz-Beperking-02"/>
+        <resource>
+            <Condition>
+                <id value="iwlz-Beperking-02"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Beperking"/>
+                </meta>
+                <category>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD539"/>
+                        <code value="1"/>
+                        <display value="Sociale redzaamheid"/>
+                    </coding>
+                </category>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <evidence>
+                    <detail>
+                        <reference value="Observation/iwlz-BeperkingScore-01"/>
+                        <display value="Beperking score: Sociale redzaamheid - Problemen oplossen, besluiten nemen en gevolgen inschatten"/>
+                    </detail>
+                </evidence>
+            </Condition>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/Observation/iwlz-BeperkingScore-02"/>
+        <resource>
+            <Observation>
+                <id value="iwlz-BeperkingScore-02"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-BeperkingScore"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD825"/>
+                        <code value="0101"/>
+                        <display value="Sociale redzaamheid - Problemen oplossen, besluiten nemen en gevolgen inschatten"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://istandaarden.nl/ibieb/codesystemen/COD828"/>
+                        <code value="3"/>
+                        <display value="Kan dit niet zelfstandig/iemand anders moet dit overnemen"/>
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-02"/>
+        <resource>
+            <QuestionnaireResponse>
+                <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-02"/>
+                <questionnaire>
+                    <reference value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+                </questionnaire>
+                <status value="completed"/>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <item>
+                    <linkId value="1"/>
+                    <answer>
+                        <valueCoding>
+                            <system value="http://istandaarden.nl/ibieb/codelijsten/COD163"/>
+                            <code value="191"/>
+                            <display value="9VV B: Herstelgerichte behandeling met verpleging en verzorging"/>
+                        </valueCoding>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="2"/>
+                    <answer>
+                        <valueDate value="2022-03-15"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="3"/>
+                    <answer>
+                        <valueDate value="2022-06-14"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="4"/>
+                    <answer>
+                        <valueCoding>
+                            <system value="http://istandaarden.nl/ibieb/codelijsten/COD756"/>
+                            <code value="KE7"/>
+                            <display value="Zeven etmalen per week"/>
+                        </valueCoding>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="5"/>
+                    <answer>
+                        <valueCoding>
+                            <system value="http://istandaarden.nl/ibieb/codelijsten/COD999"/>
+                            <code value="4"/>
+                            <display value="Verblijf"/>
+                        </valueCoding>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="6"/>
+                    <answer>
+                        <valueString value="42420001"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="7"/>
+                    <answer>
+                        <valueString value="Commentaarveld bij het Geindiceerde ZZP"/>
+                    </answer>
+                </item>
+            </QuestionnaireResponse>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://example.com/fhir/QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-03"/>
+        <resource>
+            <QuestionnaireResponse>
+                <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-03"/>
+                <questionnaire>
+                    <reference value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
+                </questionnaire>
+                <status value="completed"/>
+                <subject>
+                    <reference value="Patient/iwlz-Persoon-01"/>
+                    <display value="Marie Van der Molen"/>
+                </subject>
+                <item>
+                    <linkId value="1"/>
+                    <answer>
+                        <valueCoding>
+                            <system value="http://istandaarden.nl/ibieb/codelijsten/COD163"/>
+                            <code value="753"/>
+                            <display value="4VV: Beschut wonen met intensieve begeleiding en uitgebreide verzorging"/>
+                        </valueCoding>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="2"/>
+                    <answer>
+                        <valueDate value="2022-06-15"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="4"/>
+                    <answer>
+                        <valueCoding>
+                            <system value="http://istandaarden.nl/ibieb/codelijsten/COD756"/>
+                            <code value="KE7"/>
+                            <display value="Zeven etmalen per week"/>
+                        </valueCoding>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="5"/>
+                    <answer>
+                        <valueCoding>
+                            <system value="http://istandaarden.nl/ibieb/codelijsten/COD999"/>
+                            <code value="4"/>
+                            <display value="Verblijf"/>
+                        </valueCoding>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="6"/>
+                    <answer>
+                        <valueString value="42420001"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="7"/>
+                    <answer>
+                        <valueString value="Commentaarveld bij het Geindiceerde ZZP"/>
+                    </answer>
+                </item>
+            </QuestionnaireResponse>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+</Bundle>

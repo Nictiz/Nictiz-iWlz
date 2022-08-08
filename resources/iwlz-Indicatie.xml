@@ -266,7 +266,7 @@
     <element id="Composition.section:geindiceerdZorgzwaartepakket.title">
       <path value="Composition.section.title" />
       <min value="1" />
-      <fixedString value="GeindiceerdZorgzwaartepakket" />
+      <fixedString value="Geindiceerd Zorgzwaartepakket" />
     </element>
     <element id="Composition.section:geindiceerdZorgzwaartepakket.code">
       <path value="Composition.section.code" />

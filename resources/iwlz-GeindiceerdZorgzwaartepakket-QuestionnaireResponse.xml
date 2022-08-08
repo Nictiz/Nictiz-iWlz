@@ -87,6 +87,10 @@
       <min value="1" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:zzpCode.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="1" />
+    </element>
     <element id="QuestionnaireResponse.item:zzpCode.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
@@ -138,6 +142,10 @@
       <min value="1" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:ingangsdatum.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="2" />
+    </element>
     <element id="QuestionnaireResponse.item:ingangsdatum.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
@@ -181,6 +189,10 @@
       <sliceName value="einddatum" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:einddatum.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="3" />
+    </element>
     <element id="QuestionnaireResponse.item:einddatum.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
@@ -220,6 +232,10 @@
       <sliceName value="klasse" />
       <min value="1" />
       <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:klasse.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="4" />
     </element>
     <element id="QuestionnaireResponse.item:klasse.definition">
       <path value="QuestionnaireResponse.item.definition" />
@@ -271,6 +287,10 @@
       <sliceName value="voorkeurClient" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:voorkeurClient.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="5" />
+    </element>
     <element id="QuestionnaireResponse.item:voorkeurClient.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
@@ -321,6 +341,10 @@
       <sliceName value="instellingVoorkeur" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:instellingVoorkeur.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="6" />
+    </element>
     <element id="QuestionnaireResponse.item:instellingVoorkeur.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
@@ -370,6 +394,10 @@
       <path value="QuestionnaireResponse.item" />
       <sliceName value="commentaar" />
       <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:commentaar.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="7" />
     </element>
     <element id="QuestionnaireResponse.item:commentaar.definition">
       <path value="QuestionnaireResponse.item.definition" />

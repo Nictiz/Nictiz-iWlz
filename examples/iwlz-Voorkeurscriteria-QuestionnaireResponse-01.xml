@@ -9,18 +9,12 @@
     <status value="completed"/>
     <subject>
         <reference value="Patient/iwlz-Persoon-01"/>
-        <display value="Johan XXX_Helleman"/>
+        <display value="Marie Van der Molen"/>
     </subject>
     <item>
         <linkId value="1"/>
         <answer>
             <valueString value="Geen verdere voorkeuren"/>
-        </answer>
-    </item>
-    <item>
-        <linkId value="2"/>
-        <answer>
-            <valueString value="Rode Kruis Ziekenhuis Beverwijk"/>
         </answer>
     </item>
     <item>
