@@ -1,17 +1,14 @@
 <Composition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/Composition.xsd">
-    <id value="iwlz-Indicatie-01"/>
+    <id value="iwlz-Indicatie-02"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Indicatie"/>
     </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Meerzorg">
-        <valueBoolean value="false"/>
-    </extension>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/iwlz-ext-Indicatie-Besluitnummer">
-        <valueInteger value="301"/>
+        <valueInteger value="302"/>
     </extension>
     <identifier>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
-        <value value="754fe29b-44e5-4bbf-a089-020000000000"/>
+        <value value="8f51fcfb-8c83-41c8-a0ed-020000000000"/>
     </identifier>
     <status value="final"/>
     <type>
@@ -32,7 +29,7 @@
         <reference value="Patient/iwlz-Persoon-01"/>
         <display value="Marie Van der Molen"/>
     </subject>
-    <date value="2022-01-10"/>
+    <date value="2022-03-15"/>
     <author>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
             <valueReference>
@@ -41,10 +38,10 @@
             </valueReference>
         </extension>
     </author>
-    <title value="Indicatiebesluit #301"/>
+    <title value="Indicatiebesluit #302"/>
     <event>
         <period>
-            <start value="2022-01-10"/>
+            <start value="2022-03-15"/>
         </period>
     </event>
     <section>
@@ -57,22 +54,29 @@
             </coding>
         </code>
         <entry>
-            <reference value="Condition/iwlz-Stoornis-01"/>
+            <reference value="Condition/iwlz-Stoornis-02"/>
             <display value="Stoornis: Globale psychosociale functies"/>
         </entry>
         <entry>
-            <reference value="Observation/iwlz-StoornisScore-01"/>
+            <reference value="Observation/iwlz-StoornisScore-02"/>
             <display value="Stoornis score: Psychosociale functies - Geheugen en denken"/>
         </entry>
         <entry>
-            <reference value="Condition/iwlz-Beperking-01"/>
+            <reference value="Condition/iwlz-Beperking-02"/>
             <display value="Beperking: Sociale redzaamheid"/>
         </entry>
     </section>
     <section>
         <title value="Geindiceerd Zorgzwaartepakket"/>
         <entry>
-            <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-01"/>
+            <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-02"/>
+            <display value="Geindiceerd zorgzwaartepakket: 9VV B"/>
+        </entry>
+    </section>
+    <section>
+        <title value="Geindiceerd Zorgzwaartepakket"/>
+        <entry>
+            <reference value="QuestionnaireResponse/iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-03"/>
             <display value="Geindiceerd zorgzwaartepakket: 4VV"/>
         </entry>
     </section>
