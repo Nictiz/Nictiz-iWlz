@@ -1,5 +1,5 @@
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="iwlz-Retrieve-Indicatiegegevens-Document-Bundle-01"/>
+    <id value="iwlz-Retrieve-Indicatiegegevens-Searchset-Bundle-01"/>
     <identifier>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"/>
         <value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c6e0"/>
