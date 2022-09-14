@@ -17,7 +17,7 @@
       </telecom>
    </contact>
    <description value="Code die aangeeft welke subcode van een diagnosecodelijst gebruikt is."/>
-   <purpose value="This CodeSystem resource represents the the COD770 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
+   <purpose value="This CodeSystem resource represents the the COD770 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/binaries/content/assets/istandaarden/iwlz/iwlz-2.2.1/codelijsten-iwlz-2.2.1.xlsx (Excel)."/>
    <caseSensitive value="false"/>
    <content value="not-present"/>
 </CodeSystem>
