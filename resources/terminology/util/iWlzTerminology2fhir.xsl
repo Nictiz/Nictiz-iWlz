@@ -48,7 +48,7 @@
                             </telecom>
                         </contact>
                         <description value="{$documentation}"/>
-                        <purpose value="This CodeSystem resource represents the the {$codeSystemCode} 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
+                        <purpose value="This CodeSystem resource represents the the {$codeSystemCode} 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/binaries/content/assets/istandaarden/iwlz/iwlz-2.2.1/codelijsten-iwlz-2.2.1.xlsx (Excel)."/>
                         <caseSensitive value="false"/>
                         <content value="not-present"/>
                     </CodeSystem>
@@ -75,7 +75,7 @@
                         </contact>
                         <description value="Indicatie van het soort toewijzing."/>
                         <immutable value="false"/>
-                        <purpose value="This ValueSet resource represents the the {$codeSystemCode} 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/ibieb/codelijsten-iwlz-221 (Excel)."/>
+                        <purpose value="This ValueSet resource represents the the {$codeSystemCode} 'codelijst' as defined by Zorginstituut Nederland. Its contents can be found at https://www.istandaarden.nl/binaries/content/assets/istandaarden/iwlz/iwlz-2.2.1/codelijsten-iwlz-2.2.1.xlsx (Excel)."/>
                         <compose>
                             <include>
                                 <system value="http://istandaarden.nl/ibieb/codesystemen/{$codeSystemCode}"/>
