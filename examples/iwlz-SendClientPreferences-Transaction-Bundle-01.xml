@@ -116,7 +116,7 @@
             </Patient>
         </resource>
         <request> 
-            <method value="PUT"/> 
+            <method value="POST"/> 
             <url value="Patient/iwlz-Persoon-01"/> 
         </request>
     </entry>
