@@ -40,11 +40,7 @@
     </element>
     <element id="QuestionnaireResponse.questionnaire">
       <path value="QuestionnaireResponse.questionnaire" />
-      <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/Questionnaire/iwlz-Voorkeurscriteria-Questionnaire" />
-      </type>
+      <max value="0" />
     </element>
     <element id="QuestionnaireResponse.subject">
       <path value="QuestionnaireResponse.subject" />

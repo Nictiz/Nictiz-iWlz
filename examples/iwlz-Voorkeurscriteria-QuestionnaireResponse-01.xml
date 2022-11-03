@@ -3,9 +3,6 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-QuestionnaireResponse"/>
     </meta>
-    <questionnaire>
-        <reference value="http://nictiz.nl/fhir/StructureDefinition/iwlz-Voorkeurscriteria-Questionnaire"/>
-    </questionnaire>
     <status value="completed"/>
     <subject>
         <reference value="Patient/iwlz-Persoon-01"/>
