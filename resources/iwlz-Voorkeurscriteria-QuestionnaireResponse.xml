@@ -82,6 +82,10 @@
       <sliceName value="voorkeurZorg" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="1" />
+    </element>
     <element id="QuestionnaireResponse.item:voorkeurZorg.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
@@ -125,6 +129,10 @@
       <sliceName value="voorkeurlocaties" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="2" />
+    </element>
     <element id="QuestionnaireResponse.item:voorkeurlocaties.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
@@ -167,6 +175,10 @@
       <path value="QuestionnaireResponse.item" />
       <sliceName value="partneropname" />
       <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item:partneropname.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="3" />
     </element>
     <element id="QuestionnaireResponse.item:partneropname.definition">
       <path value="QuestionnaireResponse.item.definition" />
