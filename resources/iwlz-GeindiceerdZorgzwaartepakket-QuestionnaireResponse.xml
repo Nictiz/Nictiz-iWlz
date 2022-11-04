@@ -40,11 +40,6 @@
     </element>
     <element id="QuestionnaireResponse.questionnaire">
       <path value="QuestionnaireResponse.questionnaire" />
-      <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket" />
-      </type>
     </element>
     <element id="QuestionnaireResponse.subject">
       <path value="QuestionnaireResponse.subject" />

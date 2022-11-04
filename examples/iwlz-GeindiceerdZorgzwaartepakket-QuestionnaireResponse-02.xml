@@ -1,8 +1,5 @@
 <QuestionnaireResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/QuestionnaireResponse.xsd">
     <id value="iwlz-GeindiceerdZorgzwaartepakket-QuestionnaireResponse-02"/>
-    <questionnaire>
-        <reference value="http://nictiz.nl/fhir/Questionnaire/iwlz-GeindiceerdZorgzwaartepakket-Questionnaire-01"/>
-    </questionnaire>
     <status value="completed"/>
     <subject>
         <reference value="Patient/iwlz-Persoon-01"/>

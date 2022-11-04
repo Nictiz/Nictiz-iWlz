@@ -40,11 +40,7 @@
     </element>
     <element id="QuestionnaireResponse.questionnaire">
       <path value="QuestionnaireResponse.questionnaire" />
-      <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/Questionnaire/iwlz-Voorkeurscriteria-Questionnaire" />
-      </type>
+      <max value="0" />
     </element>
     <element id="QuestionnaireResponse.subject">
       <path value="QuestionnaireResponse.subject" />
@@ -86,13 +82,20 @@
       <sliceName value="voorkeurZorg" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:voorkeurZorg.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="1" />
+    </element>
     <element id="QuestionnaireResponse.item:voorkeurZorg.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
     </element>
     <element id="QuestionnaireResponse.item:voorkeurZorg.text">
       <path value="QuestionnaireResponse.item.text" />
-      <fixedString value="Voorkeuren van de client m.b.t. de zorg" />
+      <example>
+        <label value="question1" />
+        <valueString value="Voorkeuren van de client m.b.t. de zorg" />
+      </example>
     </element>
     <element id="QuestionnaireResponse.item:voorkeurZorg.subject">
       <path value="QuestionnaireResponse.item.subject" />
@@ -129,13 +132,20 @@
       <sliceName value="voorkeurlocaties" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:voorkeurlocaties.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="2" />
+    </element>
     <element id="QuestionnaireResponse.item:voorkeurlocaties.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
     </element>
     <element id="QuestionnaireResponse.item:voorkeurlocaties.text">
       <path value="QuestionnaireResponse.item.text" />
-      <fixedString value="Voorkeurlocatie(s)" />
+      <example>
+        <label value="question2" />
+        <valueString value="Voorkeurlocatie(s)" />
+      </example>
     </element>
     <element id="QuestionnaireResponse.item:voorkeurlocaties.subject">
       <path value="QuestionnaireResponse.item.subject" />
@@ -172,13 +182,20 @@
       <sliceName value="partneropname" />
       <max value="1" />
     </element>
+    <element id="QuestionnaireResponse.item:partneropname.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <fixedString value="3" />
+    </element>
     <element id="QuestionnaireResponse.item:partneropname.definition">
       <path value="QuestionnaireResponse.item.definition" />
       <max value="0" />
     </element>
     <element id="QuestionnaireResponse.item:partneropname.text">
       <path value="QuestionnaireResponse.item.text" />
-      <fixedString value="Wens van de client om zijn niet- geindiceerde partner ook mee te verhuizen naar een Wlz-instelling. Of verhuizen naar zijn partner met een Wlz-indicatie die al verblijft in een instelling." />
+      <example>
+        <label value="question3" />
+        <valueString value="Wens van de client om zijn niet- geindiceerde partner ook mee te verhuizen naar een Wlz-instelling. Of verhuizen naar zijn partner met een Wlz-indicatie die al verblijft in een instelling." />
+      </example>
     </element>
     <element id="QuestionnaireResponse.item:partneropname.subject">
       <path value="QuestionnaireResponse.item.subject" />
